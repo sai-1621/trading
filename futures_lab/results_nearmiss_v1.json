@@ -1,0 +1,38 @@
+{
+ "variant": "T don55 long_only (near miss)",
+ "holdout": {
+  "days": 667,
+  "total_return_pct": -39.0,
+  "cagr_pct": -23.7,
+  "sharpe": -0.51,
+  "t": -0.69,
+  "max_dd_pct": -57.8,
+  "worst_day_pct": -14.3,
+  "avg_leverage": 0.66,
+  "funding_pct": -2.0,
+  "costs_pct": -4.9,
+  "positive_months_pct": 41.0,
+  "trades": 74,
+  "win_pct": 40.5
+ },
+ "btc_buy_hold_holdout_pct": -14.1,
+ "yearly_pct": {
+  "2021": 0.0,
+  "2022": -20.2,
+  "2023": 36.1,
+  "2024": 126.3,
+  "2025": -17.9,
+  "2026": -25.8
+ },
+ "holdout_equity_by_quarter_pct": {
+  "2025-03-31": -13.8,
+  "2025-06-30": -10.3,
+  "2025-09-30": 3.2,
+  "2025-12-31": -17.9,
+  "2026-03-31": -31.7,
+  "2026-06-30": -46.3,
+  "2026-09-30": -32.8,
+  "2026-12-31": -39.0
+ },
+ "passed": false
+}

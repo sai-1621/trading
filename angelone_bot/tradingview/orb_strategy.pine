@@ -1,0 +1,68 @@
+//@version=5
+// Angel One bot: opening-range breakout, the same rule as the Python bot (skills/entry.py + exit_plan.py).
+// Use on a 5-minute NSE chart (e.g. NSE:RELIANCE). Strategy Tester shows TradingView's own backtest.
+// Webhook: create an alert on this script, condition "Any alert() function call", Webhook URL = your tunnel
+// URL + /tv, and set the secret below to the TV_SECRET in the bot's .env.
+strategy("Angel bot - Opening Range Breakout", overlay = true, initial_capital = 100000,
+     default_qty_type = strategy.cash, default_qty_value = 40000,
+     commission_type = strategy.commission.percent, commission_value = 0.05, slippage = 1,
+     process_orders_on_close = true)
+
+orMinutes  = input.int(15, "Opening range (minutes from 9:15)", minval = 5, step = 5)
+stopRule   = input.string("or-mid", "Stop", options = ["or-mid", "or-low"])
+targetR    = input.float(2.0, "Target (R)", minval = 0.5, step = 0.5)
+volX       = input.float(1.0, "Trigger volume vs range average (0 = off)", minval = 0)
+useTrend   = input.bool(true, "Only above the 20-day average")
+entryFrom  = input.int(930, "No entries before (HHMM)")
+entryTo    = input.int(1430, "No entries after (HHMM)")
+flatBy     = input.int(1510, "Flat by (HHMM)")
+secret     = input.string("CHANGE_ME", "Webhook secret (TV_SECRET)")
+
+tz = "Asia/Kolkata"
+hhmm = hour(time_close, tz) * 100 + minute(time_close, tz)       // bar CLOSE time, like the bot
+startMin = hour(time, tz) * 60 + minute(time, tz)                // bar START, in minutes since midnight
+inRange = startMin < 9 * 60 + 15 + orMinutes
+newDay = dayofmonth(time, tz) != dayofmonth(time[1], tz)
+
+var float orHigh = na
+var float orLow = na
+var float volSum = 0.0
+var int volN = 0
+var bool broke = false
+if newDay
+    orHigh := na
+    orLow := na
+    volSum := 0.0
+    volN := 0
+    broke := false
+if inRange
+    orHigh := na(orHigh) ? high : math.max(orHigh, high)
+    orLow := na(orLow) ? low : math.min(orLow, low)
+    volSum += volume
+    volN += 1
+
+trendOk = request.security(syminfo.tickerid, "D", close[1] > ta.sma(close, 20)[1], lookahead = barmerge.lookahead_on)
+firstClose = not inRange and not broke and not na(orHigh) and close > orHigh
+if firstClose
+    broke := true   // only the FIRST close above the range can trigger, as in the bot
+volOk = volX == 0 or (volN > 0 and volume >= volX * volSum / volN)
+windowOk = hhmm >= entryFrom and hhmm <= entryTo
+trigger = firstClose and volOk and windowOk and (not useTrend or trendOk) and strategy.position_size == 0
+
+stopPx = stopRule == "or-mid" ? (orHigh + orLow) / 2 : orLow
+riskPx = close - stopPx
+targetPx = close + targetR * riskPx
+if trigger and riskPx > 0
+    strategy.entry("ORB", strategy.long)
+    strategy.exit("ORB exit", "ORB", stop = stopPx, limit = targetPx)
+    alert('{"secret":"' + secret + '","symbol":"' + syminfo.ticker + '","action":"buy","price":' + str.tostring(close) +
+          ',"stop":' + str.tostring(stopPx, "#.##") + ',"target":' + str.tostring(targetPx, "#.##") + '}', alert.freq_once_per_bar_close)
+
+if strategy.position_size > 0 and hhmm >= flatBy
+    strategy.close_all(comment = "flat by")
+    alert('{"secret":"' + secret + '","symbol":"' + syminfo.ticker + '","action":"exit"}', alert.freq_once_per_bar_close)
+
+plot(orHigh, "Range high", color.new(color.green, 0), style = plot.style_linebr)
+plot(orLow, "Range low", color.new(color.red, 0), style = plot.style_linebr)
+plot(stopRule == "or-mid" ? (orHigh + orLow) / 2 : na, "Range mid", color.new(color.gray, 40), style = plot.style_linebr)
+plotshape(trigger, "Trigger", shape.triangleup, location.belowbar, color.green, size = size.small)

@@ -1,0 +1,93 @@
+{"market": "none", "chop": "none", "exit": "low20"}        pick: ret   145.9% sharpe 0.92 dd -42.6% win 51.5% trades 130 lev 0.6
+{"market": "none", "chop": "none", "exit": "trail3"}       pick: ret   152.4% sharpe 0.96 dd -37.8% win 52.5% trades 141 lev 0.53
+{"market": "none", "chop": "none", "exit": "tp_trail"}     pick: ret   156.1% sharpe 0.97 dd -38.3% win 54.6% trades 141 lev 0.53
+{"market": "none", "chop": "er30", "exit": "low20"}        pick: ret    84.9% sharpe 0.83 dd -42.2% win 50.9% trades 55 lev 0.36
+{"market": "none", "chop": "er30", "exit": "trail3"}       pick: ret    94.9% sharpe 0.92 dd -31.5% win 45.9% trades 61 lev 0.28
+{"market": "none", "chop": "er30", "exit": "tp_trail"}     pick: ret    87.8% sharpe 0.89 dd -32.5% win 49.2% trades 61 lev 0.27
+{"market": "btc200", "chop": "none", "exit": "low20"}      pick: ret   106.5% sharpe 0.91 dd -37.5% win 52.9% trades 102 lev 0.41
+{"market": "btc200", "chop": "none", "exit": "trail3"}     pick: ret   113.6% sharpe 0.98 dd -38.1% win 56.9% trades 109 lev 0.37
+{"market": "btc200", "chop": "none", "exit": "tp_trail"}   pick: ret    99.3% sharpe 0.9 dd -38.0% win 59.6% trades 109 lev 0.37
+{"market": "btc200", "chop": "er30", "exit": "low20"}      pick: ret   147.0% sharpe 1.2 dd -24.9% win 53.8% trades 52 lev 0.27
+{"market": "btc200", "chop": "er30", "exit": "trail3"}     pick: ret   144.5% sharpe 1.23 dd -20.9% win 49.1% trades 57 lev 0.23
+{"market": "btc200", "chop": "er30", "exit": "tp_trail"}   pick: ret   134.1% sharpe 1.19 dd -21.4% win 52.6% trades 57 lev 0.23
+{
+ "run_at": "2026-11-03T09:38:26.533949",
+ "eligible": 3,
+ "chosen": {
+  "market": "btc200",
+  "chop": "er30",
+  "exit": "low20"
+ },
+ "chosen_pick": {
+  "days": 1096,
+  "total_return_pct": 147.0,
+  "cagr_pct": 35.1,
+  "sharpe": 1.2,
+  "t": 2.07,
+  "max_dd_pct": -24.9,
+  "worst_day_pct": -9.6,
+  "avg_leverage": 0.27,
+  "funding_pct": -7.9,
+  "costs_pct": -2.8,
+  "positive_months_pct": 28.0,
+  "trades": 52,
+  "win_pct": 53.8
+ },
+ "fresh_chosen": {
+  "days": 1399,
+  "total_return_pct": 389.3,
+  "cagr_pct": 51.3,
+  "sharpe": 1.5,
+  "t": 2.94,
+  "max_dd_pct": -30.7,
+  "worst_day_pct": -12.2,
+  "avg_leverage": 0.21,
+  "funding_pct": -22.3,
+  "costs_pct": -3.3,
+  "positive_months_pct": 30.0,
+  "trades": 74,
+  "win_pct": 52.7
+ },
+ "fresh_unfixed_v1": {
+  "days": 1399,
+  "total_return_pct": 425.8,
+  "cagr_pct": 54.2,
+  "sharpe": 1.29,
+  "t": 2.53,
+  "max_dd_pct": -44.2,
+  "worst_day_pct": -15.7,
+  "avg_leverage": 0.36,
+  "funding_pct": -30.8,
+  "costs_pct": -5.0,
+  "positive_months_pct": 50.0,
+  "trades": 98,
+  "win_pct": 62.2
+ },
+ "fresh_btc_buy_hold_pct": 357.6,
+ "seen_2025_26_reported_only": {
+  "days": 667,
+  "total_return_pct": -11.2,
+  "cagr_pct": -6.3,
+  "sharpe": -0.1,
+  "t": -0.13,
+  "max_dd_pct": -41.8,
+  "worst_day_pct": -6.8,
+  "avg_leverage": 0.27,
+  "funding_pct": -2.3,
+  "costs_pct": -1.8,
+  "positive_months_pct": 27.0
+ },
+ "yearly_pct": {
+  "2017": 0.0,
+  "2018": 0.0,
+  "2019": 30.0,
+  "2020": 68.5,
+  "2021": 123.3,
+  "2022": 0.0,
+  "2023": 23.6,
+  "2024": 99.8,
+  "2025": -18.6,
+  "2026": 9.0
+ },
+ "passed": false
+}

@@ -1,0 +1,34 @@
+
+LONG  top 8 settings by pick-period average (then check period, placebo)
+  gap>=2.0%  mid stop=c1   1R any  | pick n=  5102 won 52.4% avg +0.307% | check n=  8976 won 48.0% avg -0.236% | placebo check avg -0.181
+  gap>=2.0%  mid stop=c1   2R any  | pick n= 11063 won 36.5% avg +0.065% | check n= 18749 won 34.5% avg -0.174% | placebo check avg -0.224
+  gap>=1.0%  mid stop=c1   1R any  | pick n= 19401 won 50.4% avg -0.006% | check n= 33726 won 48.7% avg -0.171% | placebo check avg -0.227
+  gap>=2.0% edge stop=c1   1R any  | pick n= 13769 won 49.3% avg -0.011% | check n= 22812 won 47.7% avg -0.260% | placebo check avg -0.248
+  gap>=2.0%  mid stop=c1   3R with | pick n=  8670 won 30.6% avg -0.029% | check n= 16146 won 29.3% avg -0.215% | placebo check avg -0.268
+  gap>=1.0%  mid stop=c1   2R any  | pick n= 36607 won 35.0% avg -0.036% | check n= 61882 won 34.1% avg -0.170% | placebo check avg -0.209
+  gap>=2.0%  mid stop=c1   2R with | pick n=  7124 won 35.8% avg -0.054% | check n= 12901 won 34.5% avg -0.233% | placebo check avg -0.276
+  gap>=2.0%  mid stop=c1   3R any  | pick n= 13063 won 31.0% avg -0.063% | check n= 22871 won 29.8% avg -0.123% | placebo check avg -0.182
+  gap>=0.5%  mid stop=c1   2R with | pick n= 47562 won 34.3% avg -0.102% | check n= 75253 won 34.0% avg -0.159% | placebo check avg -0.201
+  gap>=0.5%  mid stop=c1   2R with | pick n= 57138 won 35.4% avg -0.147% | check n=106505 won 36.1% avg -0.092% | placebo check avg -0.129
+
+SHORT  top 8 settings by pick-period average (then check period, placebo)
+  gap>=0.5% edge stop=c1   2R with | pick n= 76148 won 37.1% avg -0.108% | check n=140120 won 36.9% avg -0.135% | placebo check avg -0.116
+  gap>=0.5% edge stop=c1   3R with | pick n= 80888 won 31.8% avg -0.119% | check n=148053 won 32.1% avg -0.132% | placebo check avg -0.108
+  gap>=1.0% edge stop=edge 3R with | pick n= 36493 won 28.1% avg -0.144% | check n= 61942 won 27.4% avg -0.244% | placebo check avg -0.098
+  gap>=0.5%  mid stop=c1   3R with | pick n= 66677 won 29.4% avg -0.145% | check n=124737 won 29.9% avg -0.098% | placebo check avg -0.118
+  gap>=0.5% edge stop=c1   1R any  | pick n= 88717 won 50.0% avg -0.146% | check n=153902 won 50.7% avg -0.138% | placebo check avg -0.152
+  gap>=0.5% edge stop=edge 3R with | pick n= 66595 won 26.5% avg -0.147% | check n=120891 won 25.9% avg -0.203% | placebo check avg -0.127
+  gap>=0.5%  mid stop=c1   2R any  | pick n= 85010 won 35.1% avg -0.147% | check n=149190 won 36.5% avg -0.061% | placebo check avg -0.148
+  gap>=0.5%  mid stop=c1   2R with | pick n= 57138 won 35.4% avg -0.147% | check n=106505 won 36.1% avg -0.092% | placebo check avg -0.129
+  gap>=0.5%  mid stop=c1   2R with | pick n= 47562 won 34.3% avg -0.102% | check n= 75253 won 34.0% avg -0.159% | placebo check avg -0.201
+  gap>=0.5%  mid stop=c1   2R with | pick n= 57138 won 35.4% avg -0.147% | check n=106505 won 36.1% avg -0.092% | placebo check avg -0.129
+
+PORTFOLIO (100 USDT a trade, max 5 open)
+  fvg long 0.02 mid c1 1 any               pick: n=3373 won 48.7% avg -0.164% P&L -552.2  check: n=5434 won 48.9% avg -0.151% P&L -818.3  all: n=8807 won 48.8% avg -0.156% P&L -1370.4  years {2021: np.float64(25.7), 2022: np.float64(-1.1), 2023: np.float64(-201.0), 2024: np.float64(-375.8), 2025: np.float64(-252.6), 2026: np.float64(-565.7)}
+  fvg short 0.005 edge c1 2 with           pick: n=7173 won 37.6% avg 0.026% P&L +189.6  check: n=5110 won 37.0% avg -0.026% P&L -132.9  all: n=12277 won 37.3% avg 0.006% P&L +74.0  years {2021: np.float64(40.1), 2022: np.float64(491.9), 2023: np.float64(-286.0), 2024: np.float64(-56.5), 2025: np.float64(28.5), 2026: np.float64(-144.2)}
+  fvg long 0.005 mid c1 2 with             pick: n=9470 won 33.8% avg -0.11% P&L -1044.7  check: n=7193 won 33.1% avg -0.216% P&L -1552.4  all: n=16662 won 33.5% avg -0.155% P&L -2583.5  years {2021: np.float64(209.9), 2022: np.float64(111.5), 2023: np.float64(-606.4), 2024: np.float64(-759.7), 2025: np.float64(-657.1), 2026: np.float64(-881.8)}
+  fvg short 0.005 mid c1 2 with            pick: n=8976 won 35.8% avg -0.081% P&L -726.1  check: n=6799 won 36.0% avg -0.009% P&L -60.8  all: n=15765 won 35.9% avg -0.05% P&L -784.7  years {2021: np.float64(2.6), 2022: np.float64(189.5), 2023: np.float64(-420.9), 2024: np.float64(-497.3), 2025: np.float64(146.6), 2026: np.float64(-205.2)}
+  placebo long 0.02 mid c1 1 any           pick: n=3335 won 48.5% avg -0.234% P&L -779.5  check: n=3932 won 48.1% avg -0.232% P&L -910.7  all: n=7265 won 48.3% avg -0.233% P&L -1692.9  years {2021: np.float64(-3.6), 2022: np.float64(-196.6), 2023: np.float64(-212.1), 2024: np.float64(-367.2), 2025: np.float64(-699.0), 2026: np.float64(-214.4)}
+  placebo short 0.005 edge c1 2 with       pick: n=9047 won 37.2% avg -0.067% P&L -604.1  check: n=4994 won 39.3% avg 0.104% P&L +518.3  all: n=14030 won 38.0% avg -0.002% P&L -35.0  years {2021: np.float64(-61.3), 2022: np.float64(197.1), 2023: np.float64(-523.8), 2024: np.float64(-216.0), 2025: np.float64(429.8), 2026: np.float64(139.2)}
+pick: 2/144 settings positive
+check: 0/144 settings positive

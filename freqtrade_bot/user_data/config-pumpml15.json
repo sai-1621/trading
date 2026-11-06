@@ -1,0 +1,7 @@
+{
+  "bot_name": "crypto_pumpml15",
+  "strategy": "PumpML15",
+  "stake_amount": 100,
+  "max_open_trades": 5,
+  "dry_run_wallet": 1000
+}

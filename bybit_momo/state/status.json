@@ -1,0 +1,27 @@
+{
+ "mode": "paper",
+ "market": "linear",
+ "testnet": false,
+ "updated": "2026-11-01T16:06:41+00:00",
+ "universe": 231,
+ "equity": 1000.0,
+ "start_capital": 1000.0,
+ "day_pnl": 0.0,
+ "open": {},
+ "pending_entries": [],
+ "stalking": 0,
+ "stalkers": [],
+ "last_candle": "2026-11-01T16:00:00+00:00",
+ "candles_processed": 462,
+ "recent_signals": [],
+ "settings": {
+  "risk_pct": 1.0,
+  "max_open": 5,
+  "max_position_usdt": 250.0,
+  "legs": [
+   "ignition",
+   "flag"
+  ],
+  "chase_max_pct": 0.2
+ }
+}

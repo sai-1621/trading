@@ -1,0 +1,61 @@
+
+
+=== us ===
+
+
+  60 stocks, 3600 full sessions                              
+
+  2026-08-03 to 2026-10-26: pick 40 days, check 20 days (from 2026-09-29)
+
+
+
+  Baseline, the bots' current opening-range breakout: pick -0.158R (702 trades) | check -0.123R (354 trades)  [R per trade after charges]
+
+
+
+  VWAP pullback: 48 setting combinations, 0 of 48 made money on the check days, median -0.3035R
+
+    settings                                                       | PICK n  win%  R net | CHECK n  win%  R net
+
+    long k=3 stop=atr:1.0 target=2.0 trend=True                    |    492  39.2 -0.186 |     230  36.1 -0.236
+
+    long k=3 stop=atr:1.0 target=1.5 trend=True                    |    492  41.7 -0.191 |     230  39.1 -0.231
+
+    long k=3 stop=atr:1.0 target=2.0 trend=False                   |    910  38.8 -0.193 |     418  33.3 -0.284
+
+    long k=3 stop=atr:1.0 target=1.0 trend=True                    |    492  48.0 -0.194 |     230  45.2 -0.228
+
+    long k=3 stop=atr:1.0 target=1.0 trend=False                   |    910  47.7 -0.203 |     418  43.3 -0.262
+
+    long k=3 stop=atr:1.0 target=1.5 trend=False                   |    910  41.0 -0.208 |     418  36.6 -0.273
+
+    best on pick + Time Machine gate, check days: 30 of 230 trades taken, -0.123R per trade after charges
+
+    NO RELIABLE EDGE: the best settings on the pick days made -0.236R per trade after charges on the check days (230 trades).
+
+
+
+  Order block: 96 setting combinations, 0 of 96 made money on the check days, median -0.362R
+
+    settings                                                       | PICK n  win%  R net | CHECK n  win%  R net
+
+    long zone=wick fvg=True target=leg trend=False wait=24         |   1195  47.2 -0.254 |     589  43.8 -0.354
+
+    long zone=wick fvg=True target=1.0 trend=False wait=24         |   1195  51.8 -0.265 |     589  49.2  -0.31
+
+    long zone=wick fvg=True target=2.0 trend=False wait=24         |   1195  36.4  -0.27 |     589  34.1 -0.331
+
+    long zone=wick fvg=True target=1.0 trend=False wait=12         |   1061  51.0 -0.279 |     542  48.9 -0.316
+
+    long zone=wick fvg=True target=leg trend=False wait=12         |   1061  47.5 -0.289 |     542  43.5 -0.369
+
+    long zone=wick fvg=True target=2.0 trend=False wait=12         |   1061  35.3 -0.295 |     542  33.6  -0.35
+
+    best on pick + Time Machine gate, check days: 13 of 589 trades taken, 0.224R per trade after charges
+
+    NO RELIABLE EDGE: the best settings on the pick days made -0.354R per trade after charges on the check days (589 trades).
+
+
+
+  saved results/us.json (114s)
+

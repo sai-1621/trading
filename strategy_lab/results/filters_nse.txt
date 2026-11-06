@@ -1,0 +1,51 @@
+Scanner: DUMMYHEG skipped (404 Client Error: Not Found for url: https://query1.finance.yahoo.com/v8/finance/chart/DUMMYHEG.NS?interval=1d&range=3mo)
+
+=== nse: market-trend and relative-strength filters ===
+  loading 1/100 HDFCBANK        loading 2/100 INFY            loading 3/100 RELIANCE        loading 4/100 BSE             loading 5/100 ICICIBANK       loading 6/100 BHARTIARTL      loading 7/100 TCS             loading 8/100 KOTAKBANK       loading 9/100 SBIN            loading 10/100 AXISBANK        loading 11/100 ETERNAL         loading 12/100 LT              loading 13/100 BAJFINANCE      loading 14/100 CUPID           loading 15/100 M&M             loading 16/100 TECHM           loading 17/100 NETWEB          loading 18/100 HCLTECH         loading 19/100 PAYTM           loading 20/100 ITC             loading 21/100 APOLLOHOSP      loading 22/100 BHEL            loading 23/100 ATHERENERG      loading 24/100 MARUTI          loading 25/100 ADANIPORTS      loading 26/100 DIVISLAB        loading 27/100 CHENNPETRO      loading 28/100 WIPRO           loading 29/100 MCX             loading 30/100 SHRIRAMFIN      loading 31/100 POLICYBZR       loading 32/100 GROWW           loading 33/100 COFORGE         loading 34/100 INDHOTEL        loading 35/100 ADANIENT        loading 36/100 MEESHO          loading 37/100 ADANIPOWER      loading 38/100 PERSISTENT      loading 39/100 POLYCAB         loading 40/100 TATASTEEL       loading 41/100 SWIGGY          loading 42/100 POWERINDIA      loading 43/100 WELCORP         loading 44/100 BEL             loading 45/100 MRPL            loading 46/100 KALYANKJIL      loading 47/100 HINDALCO        loading 48/100 TITAN           loading 49/100 VAML            loading 50/100 HAL             loading 51/100 TRENT           loading 52/100 BAJAJ-AUTO      loading 53/100 AZAD            loading 54/100 LAURUSLABS      loading 55/100 ULTRACEMCO      loading 56/100 INDIGO          loading 57/100 MAXHEALTH       loading 58/100 DRREDDY         loading 59/100 DIXON           loading 60/100 PFC             loading 61/100 FEDERALBNK      loading 62/100 TARIL           loading 63/100 ADANIGREEN      loading 64/100 TDPOWERSYS      loading 65/100 HINDUNILVR      loading 66/100 JIOFIN          loading 67/100 GVT&D           loading 68/100 EICHERMOT       loading 69/100 TVSMOTOR        loading 70/100 LENSKART        loading 71/100 DMART           loading 72/100 SOLARINDS       loading 73/100 SUNPHARMA       loading 74/100 NTPC            loading 75/100 SAIL            loading 76/100 HBLENGINE       loading 77/100 UNIONBANK       loading 78/100 HEROMOTOCO      loading 79/100 VEDL            loading 80/100 KAYNES          loading 81/100 CANBK           loading 82/100 SONACOMS        loading 83/100 NESTLEIND       loading 84/100 CHOLAFIN        loading 85/100 ADANIENSOL      loading 86/100 CGPOWER         loading 87/100 PINELABS        loading 88/100 IFCI            loading 89/100 TMPV            loading 90/100 GALLANTT        loading 91/100 POWERGRID       loading 92/100 LICI            loading 93/100 COALINDIA       loading 94/100 ACUTAAS         loading 95/100 TMCV            loading 96/100 ONGC            loading 97/100 JSWSTEEL        loading 98/100 LTTS            loading 99/100 RECLTD          loading 100/100 SBILIFE         100 stocks, 5767 full sessions                              
+
+  Test A: 100 stocks, 5m bars 2026-08-04 to 2026-10-28 (58 days, check from 2026-09-28)
+  index above its 50-day average on 16 of these days, above its 200-day on 0
+
+  --- Test A: bot's exact rule, 5-minute bars ---
+  Bot's rule (or-mid 2.0R trend on), R per trade after charges over all days, by filter:
+                                any stock       beats index 1m       beats index 3m    beats index 1m+3m  top 30% vs index 3m
+    any market              -0.34 ( 862)       -0.327 ( 765)       -0.337 ( 631)       -0.325 ( 579)       -0.187 ( 382)
+    index > 50d            -0.461 ( 398)       -0.457 ( 334)       -0.501 ( 285)       -0.489 ( 256)        -0.32 ( 152)
+    index > 200d                - (   0)            - (   0)            - (   0)            - (   0)            - (   0)
+    index > both                - (   0)            - (   0)            - (   0)            - (   0)            - (   0)
+  no filters  pick -0.407R (657) | check -0.122R (205, 42.4% won)
+  PROPOSED    pick -R (0) | check -R (0, -% won)
+  240 combinations; 0 of 60 made money on both pick and check
+    or-low 2.0R trend on   index > 50d   top 30% vs index 3m  pick -0.144 ( 152) | check      - (   0, -%)
+    or-low 2.0R trend off  index > 50d   top 30% vs index 3m  pick -0.146 ( 171) | check      - (   0, -%)
+    or-low 1.5R trend on   index > 50d   top 30% vs index 3m  pick -0.155 ( 152) | check      - (   0, -%)
+    or-low 1.5R trend off  index > 50d   top 30% vs index 3m  pick -0.157 ( 171) | check      - (   0, -%)
+    or-low 1.0R trend off  index > 50d   top 30% vs index 3m  pick -0.166 ( 171) | check      - (   0, -%)
+  verdict: NO RELIABLE EDGE
+  hourly 1/100 ACUTAAS         hourly 2/100 ADANIENSOL      hourly 3/100 ADANIENT        hourly 4/100 ADANIGREEN      hourly 5/100 ADANIPORTS      hourly 6/100 ADANIPOWER      hourly 7/100 APOLLOHOSP      hourly 8/100 ATHERENERG      hourly 9/100 AXISBANK        hourly 10/100 AZAD          
+  AZAD skipped: 422 Client Error: Unprocessable Entity for url: https://query1.finance.yahoo.com/v8/finance/chart/AZAD.NS?interval=60m&range=730d
+  hourly 11/100 BAJAJ-AUTO      hourly 12/100 BAJFINANCE      hourly 13/100 BEL             hourly 14/100 BHARTIARTL      hourly 15/100 BHEL            hourly 16/100 BSE             hourly 17/100 CANBK           hourly 18/100 CGPOWER         hourly 19/100 CHENNPETRO      hourly 20/100 CHOLAFIN        hourly 21/100 COALINDIA       hourly 22/100 COFORGE         hourly 23/100 CUPID           hourly 24/100 DIVISLAB        hourly 25/100 DIXON           hourly 26/100 DMART           hourly 27/100 DRREDDY         hourly 28/100 EICHERMOT       hourly 29/100 ETERNAL         hourly 30/100 FEDERALBNK      hourly 31/100 GALLANTT        hourly 32/100 GROWW           hourly 33/100 GVT&D           hourly 34/100 HAL             hourly 35/100 HBLENGINE       hourly 36/100 HCLTECH         hourly 37/100 HDFCBANK        hourly 38/100 HEROMOTOCO      hourly 39/100 HINDALCO        hourly 40/100 HINDUNILVR      hourly 41/100 ICICIBANK       hourly 42/100 IFCI            hourly 43/100 INDHOTEL        hourly 44/100 INDIGO          hourly 45/100 INFY            hourly 46/100 ITC             hourly 47/100 JIOFIN          hourly 48/100 JSWSTEEL        hourly 49/100 KALYANKJIL      hourly 50/100 KAYNES          hourly 51/100 KOTAKBANK       hourly 52/100 LAURUSLABS      hourly 53/100 LENSKART        hourly 54/100 LICI            hourly 55/100 LT              hourly 56/100 LTTS            hourly 57/100 M&M             hourly 58/100 MARUTI          hourly 59/100 MAXHEALTH       hourly 60/100 MCX             hourly 61/100 MEESHO          hourly 62/100 MRPL            hourly 63/100 NESTLEIND       hourly 64/100 NETWEB          hourly 65/100 NTPC            hourly 66/100 ONGC            hourly 67/100 PAYTM           hourly 68/100 PERSISTENT      hourly 69/100 PFC             hourly 70/100 PINELABS        hourly 71/100 POLICYBZR       hourly 72/100 POLYCAB         hourly 73/100 POWERGRID       hourly 74/100 POWERINDIA      hourly 75/100 RECLTD          hourly 76/100 RELIANCE        hourly 77/100 SAIL            hourly 78/100 SBILIFE         hourly 79/100 SBIN            hourly 80/100 SHRIRAMFIN      hourly 81/100 SOLARINDS       hourly 82/100 SONACOMS        hourly 83/100 SUNPHARMA       hourly 84/100 SWIGGY          hourly 85/100 TARIL           hourly 86/100 TATASTEEL       hourly 87/100 TCS             hourly 88/100 TDPOWERSYS      hourly 89/100 TECHM           hourly 90/100 TITAN           hourly 91/100 TMCV            hourly 92/100 TMPV            hourly 93/100 TRENT           hourly 94/100 TVSMOTOR        hourly 95/100 ULTRACEMCO      hourly 96/100 UNIONBANK       hourly 97/100 VAML            hourly 98/100 VEDL            hourly 99/100 WELCORP         hourly 100/100 WIPRO         
+
+  Test B: hourly bars 2024-02-19 to 2026-10-28 (659 days, check from 2025-12-03); index above 50d on 375 days, above 200d on 413
+
+  --- Test B: first-hour range, hourly bars, ~3 years ---
+  Bot's rule (or-mid 2.0R trend on), R per trade after charges over all days, by filter:
+                                any stock       beats index 1m       beats index 3m    beats index 1m+3m  top 30% vs index 3m
+    any market             -0.226 (9124)       -0.213 (7349)       -0.223 (6333)       -0.216 (5558)       -0.198 (3622)
+    index > 50d            -0.244 (6158)       -0.228 (4726)       -0.243 (4132)       -0.233 (3507)       -0.206 (2204)
+    index > 200d           -0.246 (6043)       -0.231 (4717)       -0.232 (4132)       -0.223 (3559)        -0.22 (2318)
+    index > both           -0.255 (4780)       -0.239 (3592)       -0.242 (3190)       -0.234 (2665)       -0.223 (1687)
+  no filters  pick -0.224R (6184) | check -0.23R (2940, 34.7% won)
+  PROPOSED    pick -0.232R (2924) | check -0.356R (266, 28.2% won)
+  240 combinations; 0 of 240 made money on both pick and check
+    or-low 2.0R trend off  index > 200d  top 30% vs index 3m  pick -0.121 (2654) | check -0.151 ( 463, 32.8%)
+    or-low 2.0R trend off  any market    top 30% vs index 3m  pick -0.122 (3359) | check -0.112 (1771, 38.7%)
+    or-low 2.0R trend off  index > 50d   top 30% vs index 3m  pick -0.123 (2079) | check -0.116 ( 730, 37.8%)
+    or-low 1.5R trend off  index > 200d  top 30% vs index 3m  pick -0.123 (2654) | check -0.149 ( 463, 33.0%)
+    or-low 1.5R trend off  any market    top 30% vs index 3m  pick -0.124 (3359) | check -0.113 (1771, 38.7%)
+  verdict: NO RELIABLE EDGE
+  proposed, by year: {'2024': (-0.211, 1679), '2025': (-0.273, 1404), '2026': (-0.334, 107)}
+  no filters, by year: {'2024': (-0.199, 3014), '2025': (-0.257, 3408), '2026': (-0.217, 2702)}
+
+  saved results/filters_nse.json (239s)
+nse exit 0

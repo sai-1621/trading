@@ -1,0 +1,139 @@
+{
+ "coins": 361,
+ "stalk_episodes": 6622,
+ "taker ignition": {
+  "trades": 9609,
+  "win_pct": 24.4,
+  "avg_R": -0.325,
+  "median_R": -0.582,
+  "avg_ret_pct": -0.34,
+  "profit_factor": 0.47,
+  "t": -25.3,
+  "best_R": 18.5,
+  "share_R_ge_3": 2.2,
+  "avg_stop_pct": 1.44,
+  "avg_hold_min": 77.0,
+  "portfolio": {
+   "trades": 6704,
+   "pnl_usdt": -4995.6,
+   "return_pct": -499.6
+  },
+  "first_half_avg_R": -0.318,
+  "second_half_avg_R": -0.333
+ },
+ "taker flag": {
+  "trades": 118,
+  "win_pct": 26.3,
+  "avg_R": 0.009,
+  "median_R": -0.394,
+  "avg_ret_pct": 0.17,
+  "profit_factor": 1.02,
+  "t": 0.06,
+  "best_R": 14.3,
+  "share_R_ge_3": 2.5,
+  "avg_stop_pct": 4.78,
+  "avg_hold_min": 68.0,
+  "portfolio": {
+   "trades": 118,
+   "pnl_usdt": 6.2,
+   "return_pct": 0.6
+  },
+  "first_half_avg_R": 0.122,
+  "second_half_avg_R": -0.081
+ },
+ "taker both": {
+  "trades": 9727,
+  "win_pct": 24.4,
+  "avg_R": -0.321,
+  "median_R": -0.579,
+  "avg_ret_pct": -0.334,
+  "profit_factor": 0.48,
+  "t": -25.02,
+  "best_R": 18.5,
+  "share_R_ge_3": 2.2,
+  "avg_stop_pct": 1.48,
+  "avg_hold_min": 77.0,
+  "portfolio": {
+   "trades": 6798,
+   "pnl_usdt": -4894.7,
+   "return_pct": -489.5
+  },
+  "first_half_avg_R": -0.313,
+  "second_half_avg_R": -0.329
+ },
+ "chase ignition": {
+  "trades": 9609,
+  "win_pct": 27.8,
+  "avg_R": -0.217,
+  "median_R": -0.513,
+  "avg_ret_pct": -0.205,
+  "profit_factor": 0.63,
+  "t": -14.66,
+  "best_R": 23.8,
+  "share_R_ge_3": 2.9,
+  "avg_stop_pct": 1.35,
+  "avg_hold_min": 77.0,
+  "portfolio": {
+   "trades": 6704,
+   "pnl_usdt": -3162.1,
+   "return_pct": -316.2
+  },
+  "first_half_avg_R": -0.211,
+  "second_half_avg_R": -0.223
+ },
+ "chase flag": {
+  "trades": 118,
+  "win_pct": 27.1,
+  "avg_R": 0.046,
+  "median_R": -0.363,
+  "avg_ret_pct": 0.305,
+  "profit_factor": 1.12,
+  "t": 0.29,
+  "best_R": 14.9,
+  "share_R_ge_3": 3.4,
+  "avg_stop_pct": 4.69,
+  "avg_hold_min": 68.0,
+  "portfolio": {
+   "trades": 118,
+   "pnl_usdt": 38.7,
+   "return_pct": 3.9
+  },
+  "first_half_avg_R": 0.164,
+  "second_half_avg_R": -0.047
+ },
+ "chase both": {
+  "trades": 9727,
+  "win_pct": 27.8,
+  "avg_R": -0.214,
+  "median_R": -0.508,
+  "avg_ret_pct": -0.199,
+  "profit_factor": 0.63,
+  "t": -14.49,
+  "best_R": 23.8,
+  "share_R_ge_3": 2.9,
+  "avg_stop_pct": 1.39,
+  "avg_hold_min": 77.0,
+  "portfolio": {
+   "trades": 6798,
+   "pnl_usdt": -3032.5,
+   "return_pct": -303.2
+  },
+  "first_half_avg_R": -0.207,
+  "second_half_avg_R": -0.221
+ },
+ "placebo ignition": {
+  "trades": 9609,
+  "avg_R": -0.246,
+  "win_pct": 14.3
+ },
+ "placebo flag": {
+  "trades": 118,
+  "avg_R": -0.125,
+  "win_pct": 18.6
+ },
+ "placebo both": {
+  "trades": 9727,
+  "avg_R": -0.244,
+  "win_pct": 14.4
+ }
+}

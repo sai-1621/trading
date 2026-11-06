@@ -1,0 +1,63 @@
+# --- secrets: never commit ---
+.env
+.env.*
+!.env.example
+*secret*
+*credential*
+*.pem
+*.key
+**/cache/angel_tokens.json
+freqtrade_bot/user_data/config-private.json
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.idea/
+
+# --- third-party source with its own git history ---
+freqtrade_bot/freqtrade/
+
+# --- market data, caches and models (large, re-downloadable) ---
+data/
+data_*/
+cache/
+**/user_data/data*/
+**/user_data/backtest_results/
+**/user_data/hyperopt_results/
+**/user_data/plot/
+**/user_data/models/
+*.feather
+*.parquet
+*.npy
+*.npz
+*.h5
+*.joblib
+*.pkl
+*.zip
+*.gz
+
+# --- bot runtime state, logs, databases ---
+trader/
+logs/
+*.log
+*.pid
+*.lock
+*.sqlite
+*.sqlite-*
+*.db
+*.jsonl
+*.bak*
+state.json
+**/user_data/*.dryrun*
+
+# --- generated pages ---
+dashboard/share/
+
+# --- large generated results (>5 MB) ---
+strategy_lab/results/candidates_*.json
+meta_lab/results/iter1_trades.csv
+meta_lab/results/iter2_trades.csv

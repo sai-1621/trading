@@ -1,0 +1,199 @@
+{
+ "market": "us",
+ "candidates": 42590,
+ "test_months": [
+  "2024-09",
+  "2026-10"
+ ],
+ "runs": {
+  "bots' rule: every long breakout": {
+   "trades": 17744,
+   "win_pct": 42.1,
+   "avg_r_gross": -0.032,
+   "avg_r_net": -0.104,
+   "total_r_net": -1841.6,
+   "months_positive": "2/26",
+   "longs": 17744,
+   "shorts": 0,
+   "by_year": {
+    "2024": {
+     "trades": 2707,
+     "avg_r_net": -0.128,
+     "total_r_net": -346.5
+    },
+    "2025": {
+     "trades": 8589,
+     "avg_r_net": -0.102,
+     "total_r_net": -872.9
+    },
+    "2026": {
+     "trades": 6448,
+     "avg_r_net": -0.097,
+     "total_r_net": -622.3
+    }
+   }
+  },
+  "every short breakdown": {
+   "trades": 16643,
+   "win_pct": 40.1,
+   "avg_r_gross": -0.044,
+   "avg_r_net": -0.115,
+   "total_r_net": -1908.5,
+   "months_positive": "3/26",
+   "longs": 0,
+   "shorts": 16643,
+   "by_year": {
+    "2024": {
+     "trades": 2645,
+     "avg_r_net": -0.127,
+     "total_r_net": -334.7
+    },
+    "2025": {
+     "trades": 7932,
+     "avg_r_net": -0.121,
+     "total_r_net": -957.9
+    },
+    "2026": {
+     "trades": 6066,
+     "avg_r_net": -0.102,
+     "total_r_net": -615.9
+    }
+   }
+  },
+  "both sides, every signal": {
+   "trades": 34387,
+   "win_pct": 41.1,
+   "avg_r_gross": -0.038,
+   "avg_r_net": -0.109,
+   "total_r_net": -3750.1,
+   "months_positive": "1/26",
+   "longs": 17744,
+   "shorts": 16643,
+   "by_year": {
+    "2024": {
+     "trades": 5352,
+     "avg_r_net": -0.127,
+     "total_r_net": -681.2
+    },
+    "2025": {
+     "trades": 16521,
+     "avg_r_net": -0.111,
+     "total_r_net": -1830.7
+    },
+    "2026": {
+     "trades": 12514,
+     "avg_r_net": -0.099,
+     "total_r_net": -1238.2
+    }
+   }
+  },
+  "ML >= 0.0R": {
+   "trades": 7762,
+   "win_pct": 42.8,
+   "avg_r_gross": -0.013,
+   "avg_r_net": -0.08,
+   "total_r_net": -621.6,
+   "months_positive": "4/26",
+   "longs": 4158,
+   "shorts": 3604,
+   "by_year": {
+    "2024": {
+     "trades": 1692,
+     "avg_r_net": -0.141,
+     "total_r_net": -237.8
+    },
+    "2025": {
+     "trades": 3918,
+     "avg_r_net": -0.028,
+     "total_r_net": -109.5
+    },
+    "2026": {
+     "trades": 2152,
+     "avg_r_net": -0.127,
+     "total_r_net": -274.2
+    }
+   }
+  },
+  "ML >= 0.1R": {
+   "trades": 3688,
+   "win_pct": 41.4,
+   "avg_r_gross": -0.024,
+   "avg_r_net": -0.091,
+   "total_r_net": -336.6,
+   "months_positive": "6/26",
+   "longs": 1728,
+   "shorts": 1960,
+   "by_year": {
+    "2024": {
+     "trades": 1112,
+     "avg_r_net": -0.154,
+     "total_r_net": -171.1
+    },
+    "2025": {
+     "trades": 1867,
+     "avg_r_net": -0.026,
+     "total_r_net": -48.1
+    },
+    "2026": {
+     "trades": 709,
+     "avg_r_net": -0.165,
+     "total_r_net": -117.3
+    }
+   }
+  },
+  "ML >= 0.2R": {
+   "trades": 1855,
+   "win_pct": 40.3,
+   "avg_r_gross": -0.047,
+   "avg_r_net": -0.114,
+   "total_r_net": -212.2,
+   "months_positive": "7/26",
+   "longs": 701,
+   "shorts": 1154,
+   "by_year": {
+    "2024": {
+     "trades": 656,
+     "avg_r_net": -0.23,
+     "total_r_net": -150.8
+    },
+    "2025": {
+     "trades": 962,
+     "avg_r_net": -0.017,
+     "total_r_net": -16.4
+    },
+    "2026": {
+     "trades": 237,
+     "avg_r_net": -0.19,
+     "total_r_net": -45.0
+    }
+   }
+  },
+  "ML >= 0.1R, max 3 a day (main)": {
+   "trades": 886,
+   "win_pct": 42.0,
+   "avg_r_gross": -0.031,
+   "avg_r_net": -0.103,
+   "total_r_net": -90.9,
+   "months_positive": "6/26",
+   "longs": 448,
+   "shorts": 438,
+   "by_year": {
+    "2024": {
+     "trades": 205,
+     "avg_r_net": -0.158,
+     "total_r_net": -32.3
+    },
+    "2025": {
+     "trades": 438,
+     "avg_r_net": -0.071,
+     "total_r_net": -31.0
+    },
+    "2026": {
+     "trades": 243,
+     "avg_r_net": -0.114,
+     "total_r_net": -27.6
+    }
+   }
+  }
+ }
+}

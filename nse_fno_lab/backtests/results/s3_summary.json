@@ -1,0 +1,71 @@
+{
+ "base": {
+  "sessions": 50,
+  "trades": 85,
+  "win_pct": 27.1,
+  "avg_pnl": -502.6,
+  "total_pnl": -42719.0,
+  "return_pct": -14.24,
+  "avg_win": 1002.0,
+  "avg_loss": -1061.0,
+  "max_drawdown": 43798.0,
+  "charges": 40877.0,
+  "pnl_before_charges": -1842.0,
+  "days_green": "10/44",
+  "exits": {
+   "stop hit": 57,
+   "target hit": 17,
+   "time stop: under 0.5R after 12 bars": 11
+  },
+  "t_stat_per_trade": -4.4,
+  "avg_R": -0.529,
+  "by_side": {
+   "long": {
+    "size": 49,
+    "sum": -34209.0
+   },
+   "short": {
+    "size": 36,
+    "sum": -8510.0
+   }
+  }
+ },
+ "slippage 0.05%": {
+  "sessions": 50,
+  "trades": 88,
+  "win_pct": 33.0,
+  "avg_pnl": -310.7,
+  "total_pnl": -27339.0,
+  "return_pct": -9.11,
+  "avg_win": 1006.0,
+  "avg_loss": -958.0,
+  "max_drawdown": 31032.0,
+  "charges": 26240.0,
+  "pnl_before_charges": -1099.0,
+  "days_green": "13/44",
+  "exits": {
+   "stop hit": 58,
+   "target hit": 18,
+   "time stop: under 0.5R after 12 bars": 12
+  },
+  "t_stat_per_trade": -2.75,
+  "avg_R": -0.32,
+  "by_side": {
+   "long": {
+    "size": 52,
+    "sum": -25701.0
+   },
+   "short": {
+    "size": 36,
+    "sum": -1638.0
+   }
+  }
+ },
+ "placebo_avg5": {
+  "trades": 61.6,
+  "win_pct": 32.2,
+  "avg_pnl": -383.68,
+  "total_pnl": -23645.2,
+  "avg_R": -0.44
+ }
+}

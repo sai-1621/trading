@@ -1,0 +1,22 @@
+{
+ "prereg": "PREREG_forward_1p5.md",
+ "updated": "2026-11-06T02:45:56.607960+00:00",
+ "events_logged": 0,
+ "first_event": null,
+ "rules": {
+  "B1.5 ranked (shadow)": {
+   "summary": {
+    "signals": 0,
+    "taken": 0
+   },
+   "trades": []
+  },
+  "B0.5 as they come (current rule)": {
+   "summary": {
+    "signals": 0,
+    "taken": 0
+   },
+   "trades": []
+  }
+ }
+}

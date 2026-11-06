@@ -1,0 +1,49 @@
+58 stocks loaded (7s)
+pick period done: 128 variants (15s)
+{
+ "run_at": "2026-11-02T17:31:18.272449",
+ "pick_period": [
+  "2024-12-03",
+  "2025-12-31"
+ ],
+ "holdout": [
+  "2026-01-01",
+  "2026-10-30"
+ ],
+ "variants": 128,
+ "eligible": 0,
+ "live_rules_pick": {
+  "or_minutes": 15,
+  "stop_rule": "or-mid",
+  "target_r": 2.0,
+  "entry_to": "14:30",
+  "market": "none",
+  "trades": 1552,
+  "win_pct": 36.1,
+  "avg_r_net": -0.277,
+  "avg_r_gross": -0.022,
+  "t": -9.35,
+  "rupees": -100697,
+  "targets": 263,
+  "stops": 731
+ },
+ "passed": false,
+ "note": "no variant met the pre-registered choice rule on the pick period; holdout not looked at"
+}
+top 15 on the pick period by t:
+  30 pct:1.0 2.0R to 10:30 nifty20 n=676 win=36.8% avgR=-0.204 gross=-0.026 t=-4.96
+  15 or-low  1.5R to 10:30 nifty20 n=779 win=40.1% avgR=-0.156 gross=0.003 t=-4.97
+  15 atr:3   2.0R to 10:30 nifty20 n=779 win=39.0% avgR=-0.147 gross=-0.007 t=-5.17
+  15 or-low  2.0R to 10:30 nifty20 n=779 win=38.6% avgR=-0.168 gross=-0.009 t=-5.19
+  30 pct:1.0 2.0R to 10:30 none    n=890 win=38.2% avgR=-0.189 gross=-0.01 t=-5.21
+  15 atr:3   1.5R to 10:30 nifty20 n=779 win=39.5% avgR=-0.146 gross=-0.006 t=-5.32
+  30 pct:1.0 1.5R to 10:30 nifty20 n=676 win=38.9% avgR=-0.207 gross=-0.029 t=-5.41
+  30 atr:3   2.0R to 10:30 nifty20 n=676 win=37.6% avgR=-0.187 gross=-0.029 t=-5.5
+  30 or-low  1.5R to 10:30 nifty20 n=676 win=38.5% avgR=-0.173 gross=-0.022 t=-5.53
+  15 pct:1.0 2.0R to 10:30 nifty20 n=779 win=36.1% avgR=-0.217 gross=-0.039 t=-5.58
+  30 pct:1.0 1.5R to 10:30 none    n=890 win=40.2% avgR=-0.19 gross=-0.012 t=-5.63
+  30 atr:3   1.5R to 10:30 nifty20 n=676 win=38.5% avgR=-0.186 gross=-0.028 t=-5.67
+  15 or-low  2.0R to 10:30 none    n=1043 win=39.3% avgR=-0.159 gross=-0.002 t=-5.69
+  30 or-low  2.0R to 10:30 nifty20 n=676 win=37.4% avgR=-0.183 gross=-0.032 t=-5.73
+  15 atr:3   2.0R to 10:30 none    n=1043 win=39.8% avgR=-0.143 gross=-0.003 t=-5.74
+done in 15s

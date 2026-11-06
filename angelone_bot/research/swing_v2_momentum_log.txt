@@ -1,0 +1,46 @@
+{
+ "holdout_trades": {
+  "trades": 874,
+  "win_pct": 34.3,
+  "avg_ret_pct": 0.678,
+  "avg_gross_pct": 1.213,
+  "t": 1.13,
+  "avg_days": 29.8,
+  "stops": 0
+ },
+ "portfolio": {
+  "final_rupees": 114849,
+  "total_return_pct": 14.8,
+  "cagr_pct": 7.9,
+  "max_drawdown_pct": -21.3,
+  "closed_trades": 61,
+  "closed_win_pct": 39.3,
+  "nifty_buy_hold_pct": -2.9
+ },
+ "passed": false
+}
+monthly curve: [('2025-01-06', 97621), ('2025-05-05', 88046), ('2025-09-01', 83129), ('2026-01-05', 113520), ('2026-05-04', 113467), ('2026-09-07', 121504)]
+  n50 atr3  none  none     n=488 win=38.5% avg=2.091% t=2.32
+  n50 atr3  ma200 none     n=435 win=37.9% avg=2.029% t=2.06
+  n20 atr3  ma200 none     n=599 win=36.7% avg=1.439% t=1.79
+  n50 low20 none  none     n=537 win=37.6% avg=1.513% t=1.78
+  n20 atr3  none  none     n=796 win=35.7% avg=1.158% t=1.76
+  n50 low20 ma200 none     n=482 win=35.9% avg=1.368% t=1.47
+  n20 atr3  none  nifty200 n=453 win=32.9% avg=1.204% t=1.32
+  n20 atr3  ma200 nifty200 n=371 win=35.3% avg=1.18% t=1.26
+  n20 low20 ma200 none     n=661 win=34.6% avg=0.913% t=1.23
+  n20 low20 none  none     n=874 win=34.3% avg=0.678% t=1.13
+  n50 atr3  none  nifty200 n=307 win=35.8% avg=0.89% t=0.95
+  n50 atr3  ma200 nifty200 n=281 win=35.6% avg=0.757% t=0.76
+  n50 low20 none  nifty200 n=327 win=34.6% avg=0.649% t=0.69
+  n20 low20 ma200 nifty200 n=401 win=32.9% avg=0.464% t=0.54
+  n50 low20 ma200 nifty200 n=301 win=34.2% avg=0.513% t=0.51
+  n20 low20 none  nifty200 n=485 win=31.3% avg=0.211% t=0.29
+  n50 low10 ma200 none     n=690 win=33.3% avg=-0.057% t=-0.14
+  n50 low10 none  none     n=776 win=33.9% avg=-0.079% t=-0.21
+  n20 low10 ma200 none     n=930 win=33.2% avg=-0.184% t=-0.53
+  n50 low10 ma200 nifty200 n=428 win=29.9% avg=-0.523% t=-1.14
+  n20 low10 ma200 nifty200 n=566 win=30.9% avg=-0.468% t=-1.18
+  n50 low10 none  nifty200 n=470 win=30.9% avg=-0.511% t=-1.19
+  n20 low10 none  none     n=1229 win=32.7% avg=-0.405% t=-1.41
+  n20 low10 none  nifty200 n=688 win=30.4% avg=-0.712% t=-2.07

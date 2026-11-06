@@ -1,0 +1,926 @@
+{
+ "NIFTY 5m base": {
+  "sessions": 9,
+  "trades": 4,
+  "win_pct": 75.0,
+  "avg_pnl": 1552.3,
+  "total_pnl": 6209.0,
+  "return_pct": 2.07,
+  "avg_win": 2081.0,
+  "avg_loss": -35.0,
+  "max_drawdown": 35.0,
+  "charges": 1130.0,
+  "pnl_before_charges": 7339.0,
+  "days_green": "3/4",
+  "exits": {
+   "profit take 40% of credit": 2,
+   "square-off 15:15": 1,
+   "upper breakeven breached again / too late to adjust": 1
+  },
+  "expiry_days": 9,
+  "t_stat_per_trade": 2.87,
+  "by_year": {
+   "2026": {
+    "size": 4,
+    "sum": 6209.0
+   }
+  }
+ },
+ "NIFTY 5m IV = 0.6 x VIX": {
+  "trades": 0,
+  "sessions": 9,
+  "expiry_days": 9
+ },
+ "NIFTY 5m IV = 0.7 x VIX": {
+  "sessions": 9,
+  "trades": 3,
+  "win_pct": 66.7,
+  "avg_pnl": 1078.9,
+  "total_pnl": 3237.0,
+  "return_pct": 1.08,
+  "avg_win": 2069.0,
+  "avg_loss": -901.0,
+  "max_drawdown": 0.0,
+  "charges": 1177.0,
+  "pnl_before_charges": 4414.0,
+  "days_green": "2/3",
+  "exits": {
+   "profit take 40% of credit": 2,
+   "lower breakeven breached again / too late to adjust": 1
+  },
+  "expiry_days": 9,
+  "t_stat_per_trade": 0.89,
+  "by_year": {
+   "2026": {
+    "size": 3,
+    "sum": 3237.0
+   }
+  }
+ },
+ "NIFTY 5m IV = 0.8 x VIX": {
+  "sessions": 9,
+  "trades": 3,
+  "win_pct": 66.7,
+  "avg_pnl": 1119.9,
+  "total_pnl": 3360.0,
+  "return_pct": 1.12,
+  "avg_win": 1859.0,
+  "avg_loss": -358.0,
+  "max_drawdown": 0.0,
+  "charges": 886.0,
+  "pnl_before_charges": 4246.0,
+  "days_green": "2/3",
+  "exits": {
+   "profit take 40% of credit": 2,
+   "lower breakeven breached again / too late to adjust": 1
+  },
+  "expiry_days": 9,
+  "t_stat_per_trade": 1.49,
+  "by_year": {
+   "2026": {
+    "size": 3,
+    "sum": 3360.0
+   }
+  }
+ },
+ "NIFTY 5m IV = 1.2 x VIX": {
+  "sessions": 9,
+  "trades": 5,
+  "win_pct": 100.0,
+  "avg_pnl": 2857.2,
+  "total_pnl": 14286.0,
+  "return_pct": 4.76,
+  "avg_win": 2857.0,
+  "avg_loss": 0,
+  "max_drawdown": 0.0,
+  "charges": 1396.0,
+  "pnl_before_charges": 15682.0,
+  "days_green": "5/5",
+  "exits": {
+   "profit take 40% of credit": 4,
+   "square-off 15:15": 1
+  },
+  "expiry_days": 9,
+  "t_stat_per_trade": 4.51,
+  "by_year": {
+   "2026": {
+    "size": 5,
+    "sum": 14286.0
+   }
+  }
+ },
+ "NIFTY 5m extra slippage 0.5 pt/leg": {
+  "sessions": 9,
+  "trades": 4,
+  "win_pct": 75.0,
+  "avg_pnl": 1227.3,
+  "total_pnl": 4909.0,
+  "return_pct": 1.64,
+  "avg_win": 1735.0,
+  "avg_loss": -295.0,
+  "max_drawdown": 295.0,
+  "charges": 2430.0,
+  "pnl_before_charges": 7339.0,
+  "days_green": "3/4",
+  "exits": {
+   "profit take 40% of credit": 2,
+   "square-off 15:15": 1,
+   "upper breakeven breached again / too late to adjust": 1
+  },
+  "expiry_days": 9,
+  "t_stat_per_trade": 2.33,
+  "by_year": {
+   "2026": {
+    "size": 4,
+    "sum": 4909.0
+   }
+  }
+ },
+ "NIFTY 5m no regime filters": {
+  "sessions": 9,
+  "trades": 9,
+  "win_pct": 66.7,
+  "avg_pnl": 1534.9,
+  "total_pnl": 13814.0,
+  "return_pct": 4.6,
+  "avg_win": 2856.0,
+  "avg_loss": -1108.0,
+  "max_drawdown": 2291.0,
+  "charges": 3201.0,
+  "pnl_before_charges": 17015.0,
+  "days_green": "6/9",
+  "exits": {
+   "profit take 40% of credit": 5,
+   "lower breakeven breached again / too late to adjust": 2,
+   "square-off 15:15": 1,
+   "upper breakeven breached again / too late to adjust": 1
+  },
+  "expiry_days": 9,
+  "t_stat_per_trade": 2.11,
+  "by_year": {
+   "2026": {
+    "size": 9,
+    "sum": 13814.0
+   }
+  }
+ },
+ "NIFTY 1h base": {
+  "sessions": 151,
+  "trades": 98,
+  "win_pct": 80.6,
+  "avg_pnl": 2503.2,
+  "total_pnl": 245313.0,
+  "return_pct": 81.77,
+  "avg_win": 3723.0,
+  "avg_loss": -2568.0,
+  "max_drawdown": 6985.0,
+  "charges": 26893.0,
+  "pnl_before_charges": 272206.0,
+  "days_green": "79/98",
+  "exits": {
+   "profit take 40% of credit": 63,
+   "square-off 15:15": 20,
+   "stop: loss 60% of max loss": 7,
+   "upper breakeven breached again / too late to adjust": 5,
+   "lower breakeven breached again / too late to adjust": 3
+  },
+  "expiry_days": 151,
+  "t_stat_per_trade": 8.42,
+  "by_year": {
+   "2023": {
+    "size": 2,
+    "sum": 6280.0
+   },
+   "2024": {
+    "size": 34,
+    "sum": 84795.0
+   },
+   "2025": {
+    "size": 41,
+    "sum": 97450.0
+   },
+   "2026": {
+    "size": 21,
+    "sum": 56789.0
+   }
+  }
+ },
+ "NIFTY 1h IV = 0.6 x VIX": {
+  "sessions": 151,
+  "trades": 33,
+  "win_pct": 45.5,
+  "avg_pnl": -289.3,
+  "total_pnl": -9548.0,
+  "return_pct": -3.18,
+  "avg_win": 3364.0,
+  "avg_loss": -3333.0,
+  "max_drawdown": 29689.0,
+  "charges": 10174.0,
+  "pnl_before_charges": 626.0,
+  "days_green": "15/33",
+  "exits": {
+   "profit take 40% of credit": 14,
+   "stop: loss 60% of max loss": 11,
+   "square-off 15:15": 3,
+   "lower breakeven breached again / too late to adjust": 3,
+   "upper breakeven breached again / too late to adjust": 2
+  },
+  "expiry_days": 151,
+  "t_stat_per_trade": -0.45,
+  "by_year": {
+   "2023": {
+    "size": 1,
+    "sum": 2100.0
+   },
+   "2024": {
+    "size": 12,
+    "sum": 5522.0
+   },
+   "2025": {
+    "size": 12,
+    "sum": -19843.0
+   },
+   "2026": {
+    "size": 8,
+    "sum": 2673.0
+   }
+  }
+ },
+ "NIFTY 1h IV = 0.7 x VIX": {
+  "sessions": 151,
+  "trades": 48,
+  "win_pct": 64.6,
+  "avg_pnl": 900.0,
+  "total_pnl": 43198.0,
+  "return_pct": 14.4,
+  "avg_win": 3082.0,
+  "avg_loss": -3078.0,
+  "max_drawdown": 8678.0,
+  "charges": 14171.0,
+  "pnl_before_charges": 57369.0,
+  "days_green": "31/48",
+  "exits": {
+   "profit take 40% of credit": 23,
+   "square-off 15:15": 10,
+   "stop: loss 60% of max loss": 8,
+   "upper breakeven breached again / too late to adjust": 5,
+   "lower breakeven breached again / too late to adjust": 2
+  },
+  "expiry_days": 151,
+  "t_stat_per_trade": 1.87,
+  "by_year": {
+   "2023": {
+    "size": 1,
+    "sum": -2473.0
+   },
+   "2024": {
+    "size": 15,
+    "sum": 10695.0
+   },
+   "2025": {
+    "size": 20,
+    "sum": 29116.0
+   },
+   "2026": {
+    "size": 12,
+    "sum": 5860.0
+   }
+  }
+ },
+ "NIFTY 1h IV = 0.8 x VIX": {
+  "sessions": 151,
+  "trades": 65,
+  "win_pct": 67.7,
+  "avg_pnl": 1251.0,
+  "total_pnl": 81316.0,
+  "return_pct": 27.11,
+  "avg_win": 2898.0,
+  "avg_loss": -2199.0,
+  "max_drawdown": 11411.0,
+  "charges": 18632.0,
+  "pnl_before_charges": 99948.0,
+  "days_green": "44/65",
+  "exits": {
+   "profit take 40% of credit": 32,
+   "square-off 15:15": 18,
+   "stop: loss 60% of max loss": 9,
+   "lower breakeven breached again / too late to adjust": 4,
+   "upper breakeven breached again / too late to adjust": 2
+  },
+  "expiry_days": 151,
+  "t_stat_per_trade": 3.63,
+  "by_year": {
+   "2023": {
+    "size": 2,
+    "sum": 2809.0
+   },
+   "2024": {
+    "size": 19,
+    "sum": 23043.0
+   },
+   "2025": {
+    "size": 28,
+    "sum": 36539.0
+   },
+   "2026": {
+    "size": 16,
+    "sum": 18924.0
+   }
+  }
+ },
+ "NIFTY 1h IV = 1.2 x VIX": {
+  "sessions": 151,
+  "trades": 104,
+  "win_pct": 84.6,
+  "avg_pnl": 2946.5,
+  "total_pnl": 306439.0,
+  "return_pct": 102.15,
+  "avg_win": 3847.0,
+  "avg_loss": -2006.0,
+  "max_drawdown": 4747.0,
+  "charges": 27912.0,
+  "pnl_before_charges": 334351.0,
+  "days_green": "88/104",
+  "exits": {
+   "profit take 40% of credit": 69,
+   "square-off 15:15": 23,
+   "upper breakeven breached again / too late to adjust": 6,
+   "lower breakeven breached again / too late to adjust": 4,
+   "stop: loss 60% of max loss": 2
+  },
+  "expiry_days": 151,
+  "t_stat_per_trade": 12.51,
+  "by_year": {
+   "2023": {
+    "size": 2,
+    "sum": 6398.0
+   },
+   "2024": {
+    "size": 38,
+    "sum": 106416.0
+   },
+   "2025": {
+    "size": 41,
+    "sum": 121263.0
+   },
+   "2026": {
+    "size": 23,
+    "sum": 72363.0
+   }
+  }
+ },
+ "NIFTY 1h extra slippage 0.5 pt/leg": {
+  "sessions": 151,
+  "trades": 98,
+  "win_pct": 79.6,
+  "avg_pnl": 2113.2,
+  "total_pnl": 207093.0,
+  "return_pct": 69.03,
+  "avg_win": 3362.0,
+  "avg_loss": -2758.0,
+  "max_drawdown": 7765.0,
+  "charges": 65113.0,
+  "pnl_before_charges": 272206.0,
+  "days_green": "78/98",
+  "exits": {
+   "profit take 40% of credit": 63,
+   "square-off 15:15": 20,
+   "stop: loss 60% of max loss": 7,
+   "upper breakeven breached again / too late to adjust": 5,
+   "lower breakeven breached again / too late to adjust": 3
+  },
+  "expiry_days": 151,
+  "t_stat_per_trade": 7.18,
+  "by_year": {
+   "2023": {
+    "size": 2,
+    "sum": 4980.0
+   },
+   "2024": {
+    "size": 34,
+    "sum": 72575.0
+   },
+   "2025": {
+    "size": 41,
+    "sum": 81850.0
+   },
+   "2026": {
+    "size": 21,
+    "sum": 47689.0
+   }
+  }
+ },
+ "NIFTY 1h no regime filters": {
+  "sessions": 151,
+  "trades": 148,
+  "win_pct": 75.7,
+  "avg_pnl": 2267.2,
+  "total_pnl": 335544.0,
+  "return_pct": 111.85,
+  "avg_win": 3708.0,
+  "avg_loss": -2216.0,
+  "max_drawdown": 7562.0,
+  "charges": 43126.0,
+  "pnl_before_charges": 378670.0,
+  "days_green": "112/148",
+  "exits": {
+   "profit take 40% of credit": 88,
+   "square-off 15:15": 33,
+   "lower breakeven breached again / too late to adjust": 10,
+   "upper breakeven breached again / too late to adjust": 9,
+   "stop: loss 60% of max loss": 8
+  },
+  "expiry_days": 151,
+  "t_stat_per_trade": 9.15,
+  "by_year": {
+   "2023": {
+    "size": 3,
+    "sum": 9235.0
+   },
+   "2024": {
+    "size": 51,
+    "sum": 98094.0
+   },
+   "2025": {
+    "size": 52,
+    "sum": 127602.0
+   },
+   "2026": {
+    "size": 42,
+    "sum": 100612.0
+   }
+  }
+ },
+ "SENSEX 5m base": {
+  "sessions": 10,
+  "trades": 5,
+  "win_pct": 60.0,
+  "avg_pnl": 1194.9,
+  "total_pnl": 5974.0,
+  "return_pct": 1.99,
+  "avg_win": 2920.0,
+  "avg_loss": -1393.0,
+  "max_drawdown": 2515.0,
+  "charges": 1762.0,
+  "pnl_before_charges": 7736.0,
+  "days_green": "3/5",
+  "exits": {
+   "lower breakeven breached again / too late to adjust": 2,
+   "profit take 40% of credit": 2,
+   "square-off 15:15": 1
+  },
+  "expiry_days": 10,
+  "t_stat_per_trade": 0.92,
+  "by_year": {
+   "2026": {
+    "size": 5,
+    "sum": 5974.0
+   }
+  }
+ },
+ "SENSEX 5m IV = 0.6 x VIX": {
+  "sessions": 10,
+  "trades": 1,
+  "win_pct": 100.0,
+  "avg_pnl": 1751.5,
+  "total_pnl": 1751.0,
+  "return_pct": 0.58,
+  "avg_win": 1751.0,
+  "avg_loss": 0,
+  "max_drawdown": 0.0,
+  "charges": 473.0,
+  "pnl_before_charges": 2225.0,
+  "days_green": "1/1",
+  "exits": {
+   "profit take 40% of credit": 1
+  },
+  "expiry_days": 10,
+  "t_stat_per_trade": NaN,
+  "by_year": {
+   "2026": {
+    "size": 1,
+    "sum": 1751.0
+   }
+  }
+ },
+ "SENSEX 5m IV = 0.7 x VIX": {
+  "sessions": 10,
+  "trades": 2,
+  "win_pct": 100.0,
+  "avg_pnl": 2892.6,
+  "total_pnl": 5785.0,
+  "return_pct": 1.93,
+  "avg_win": 2893.0,
+  "avg_loss": 0,
+  "max_drawdown": 0.0,
+  "charges": 720.0,
+  "pnl_before_charges": 6505.0,
+  "days_green": "2/2",
+  "exits": {
+   "profit take 40% of credit": 2
+  },
+  "expiry_days": 10,
+  "t_stat_per_trade": NaN,
+  "by_year": {
+   "2026": {
+    "size": 2,
+    "sum": 5785.0
+   }
+  }
+ },
+ "SENSEX 5m IV = 0.8 x VIX": {
+  "sessions": 10,
+  "trades": 3,
+  "win_pct": 66.7,
+  "avg_pnl": 1615.4,
+  "total_pnl": 4846.0,
+  "return_pct": 1.62,
+  "avg_win": 3220.0,
+  "avg_loss": -1594.0,
+  "max_drawdown": 1594.0,
+  "charges": 1273.0,
+  "pnl_before_charges": 6119.0,
+  "days_green": "2/3",
+  "exits": {
+   "profit take 40% of credit": 2,
+   "lower breakeven breached again / too late to adjust": 1
+  },
+  "expiry_days": 10,
+  "t_stat_per_trade": 0.97,
+  "by_year": {
+   "2026": {
+    "size": 3,
+    "sum": 4846.0
+   }
+  }
+ },
+ "SENSEX 5m IV = 1.2 x VIX": {
+  "sessions": 10,
+  "trades": 5,
+  "win_pct": 40.0,
+  "avg_pnl": 913.1,
+  "total_pnl": 4566.0,
+  "return_pct": 1.52,
+  "avg_win": 3017.0,
+  "avg_loss": -490.0,
+  "max_drawdown": 1108.0,
+  "charges": 1440.0,
+  "pnl_before_charges": 6005.0,
+  "days_green": "2/5",
+  "exits": {
+   "lower breakeven breached again / too late to adjust": 2,
+   "profit take 40% of credit": 2,
+   "upper breakeven breached again / too late to adjust": 1
+  },
+  "expiry_days": 10,
+  "t_stat_per_trade": 1.06,
+  "by_year": {
+   "2026": {
+    "size": 5,
+    "sum": 4566.0
+   }
+  }
+ },
+ "SENSEX 5m extra slippage 0.5 pt/leg": {
+  "sessions": 10,
+  "trades": 5,
+  "win_pct": 60.0,
+  "avg_pnl": 1034.9,
+  "total_pnl": 5174.0,
+  "return_pct": 1.72,
+  "avg_win": 2787.0,
+  "avg_loss": -1593.0,
+  "max_drawdown": 2835.0,
+  "charges": 2562.0,
+  "pnl_before_charges": 7736.0,
+  "days_green": "3/5",
+  "exits": {
+   "lower breakeven breached again / too late to adjust": 2,
+   "profit take 40% of credit": 2,
+   "square-off 15:15": 1
+  },
+  "expiry_days": 10,
+  "t_stat_per_trade": 0.78,
+  "by_year": {
+   "2026": {
+    "size": 5,
+    "sum": 5174.0
+   }
+  }
+ },
+ "SENSEX 5m no regime filters": {
+  "sessions": 10,
+  "trades": 10,
+  "win_pct": 50.0,
+  "avg_pnl": 944.5,
+  "total_pnl": 9445.0,
+  "return_pct": 3.15,
+  "avg_win": 3219.0,
+  "avg_loss": -1330.0,
+  "max_drawdown": 6381.0,
+  "charges": 3805.0,
+  "pnl_before_charges": 13250.0,
+  "days_green": "5/10",
+  "exits": {
+   "profit take 40% of credit": 4,
+   "lower breakeven breached again / too late to adjust": 4,
+   "upper breakeven breached again / too late to adjust": 1,
+   "square-off 15:15": 1
+  },
+  "expiry_days": 10,
+  "t_stat_per_trade": 1.11,
+  "by_year": {
+   "2026": {
+    "size": 10,
+    "sum": 9445.0
+   }
+  }
+ },
+ "SENSEX 1h base": {
+  "sessions": 153,
+  "trades": 97,
+  "win_pct": 73.2,
+  "avg_pnl": 2190.7,
+  "total_pnl": 212502.0,
+  "return_pct": 70.83,
+  "avg_win": 3852.0,
+  "avg_loss": -2347.0,
+  "max_drawdown": 9594.0,
+  "charges": 28453.0,
+  "pnl_before_charges": 240955.0,
+  "days_green": "71/97",
+  "exits": {
+   "profit take 40% of credit": 57,
+   "square-off 15:15": 20,
+   "stop: loss 60% of max loss": 9,
+   "upper breakeven breached again / too late to adjust": 8,
+   "lower breakeven breached again / too late to adjust": 3
+  },
+  "expiry_days": 153,
+  "t_stat_per_trade": 6.73,
+  "by_year": {
+   "2023": {
+    "size": 4,
+    "sum": 12118.0
+   },
+   "2024": {
+    "size": 29,
+    "sum": 60193.0
+   },
+   "2025": {
+    "size": 38,
+    "sum": 100128.0
+   },
+   "2026": {
+    "size": 26,
+    "sum": 40062.0
+   }
+  }
+ },
+ "SENSEX 1h IV = 0.6 x VIX": {
+  "sessions": 153,
+  "trades": 28,
+  "win_pct": 50.0,
+  "avg_pnl": 7.3,
+  "total_pnl": 203.0,
+  "return_pct": 0.07,
+  "avg_win": 3737.0,
+  "avg_loss": -3722.0,
+  "max_drawdown": 28222.0,
+  "charges": 9690.0,
+  "pnl_before_charges": 9894.0,
+  "days_green": "14/28",
+  "exits": {
+   "stop: loss 60% of max loss": 8,
+   "square-off 15:15": 7,
+   "profit take 40% of credit": 7,
+   "lower breakeven breached again / too late to adjust": 3,
+   "upper breakeven breached again / too late to adjust": 3
+  },
+  "expiry_days": 153,
+  "t_stat_per_trade": 0.01,
+  "by_year": {
+   "2023": {
+    "size": 2,
+    "sum": -1153.0
+   },
+   "2024": {
+    "size": 8,
+    "sum": -13914.0
+   },
+   "2025": {
+    "size": 11,
+    "sum": 8060.0
+   },
+   "2026": {
+    "size": 7,
+    "sum": 7210.0
+   }
+  }
+ },
+ "SENSEX 1h IV = 0.7 x VIX": {
+  "sessions": 153,
+  "trades": 49,
+  "win_pct": 61.2,
+  "avg_pnl": 1330.0,
+  "total_pnl": 65170.0,
+  "return_pct": 21.72,
+  "avg_win": 3975.0,
+  "avg_loss": -2846.0,
+  "max_drawdown": 21140.0,
+  "charges": 15096.0,
+  "pnl_before_charges": 80266.0,
+  "days_green": "30/49",
+  "exits": {
+   "profit take 40% of credit": 21,
+   "square-off 15:15": 12,
+   "stop: loss 60% of max loss": 7,
+   "lower breakeven breached again / too late to adjust": 7,
+   "upper breakeven breached again / too late to adjust": 2
+  },
+  "expiry_days": 153,
+  "t_stat_per_trade": 2.54,
+  "by_year": {
+   "2023": {
+    "size": 2,
+    "sum": 405.0
+   },
+   "2024": {
+    "size": 15,
+    "sum": 4216.0
+   },
+   "2025": {
+    "size": 20,
+    "sum": 46430.0
+   },
+   "2026": {
+    "size": 12,
+    "sum": 14119.0
+   }
+  }
+ },
+ "SENSEX 1h IV = 0.8 x VIX": {
+  "sessions": 153,
+  "trades": 68,
+  "win_pct": 63.2,
+  "avg_pnl": 1221.4,
+  "total_pnl": 83052.0,
+  "return_pct": 27.68,
+  "avg_win": 3966.0,
+  "avg_loss": -3500.0,
+  "max_drawdown": 13737.0,
+  "charges": 21291.0,
+  "pnl_before_charges": 104344.0,
+  "days_green": "43/68",
+  "exits": {
+   "profit take 40% of credit": 32,
+   "stop: loss 60% of max loss": 16,
+   "square-off 15:15": 14,
+   "lower breakeven breached again / too late to adjust": 4,
+   "upper breakeven breached again / too late to adjust": 2
+  },
+  "expiry_days": 153,
+  "t_stat_per_trade": 2.56,
+  "by_year": {
+   "2023": {
+    "size": 2,
+    "sum": -586.0
+   },
+   "2024": {
+    "size": 18,
+    "sum": 13641.0
+   },
+   "2025": {
+    "size": 28,
+    "sum": 46793.0
+   },
+   "2026": {
+    "size": 20,
+    "sum": 23204.0
+   }
+  }
+ },
+ "SENSEX 1h IV = 1.2 x VIX": {
+  "sessions": 153,
+  "trades": 106,
+  "win_pct": 78.3,
+  "avg_pnl": 2689.6,
+  "total_pnl": 285099.0,
+  "return_pct": 95.03,
+  "avg_win": 3802.0,
+  "avg_loss": -1326.0,
+  "max_drawdown": 6109.0,
+  "charges": 29739.0,
+  "pnl_before_charges": 314838.0,
+  "days_green": "83/106",
+  "exits": {
+   "profit take 40% of credit": 67,
+   "square-off 15:15": 25,
+   "upper breakeven breached again / too late to adjust": 9,
+   "stop: loss 60% of max loss": 3,
+   "lower breakeven breached again / too late to adjust": 2
+  },
+  "expiry_days": 153,
+  "t_stat_per_trade": 11.33,
+  "by_year": {
+   "2023": {
+    "size": 4,
+    "sum": 19685.0
+   },
+   "2024": {
+    "size": 35,
+    "sum": 82610.0
+   },
+   "2025": {
+    "size": 39,
+    "sum": 116882.0
+   },
+   "2026": {
+    "size": 28,
+    "sum": 65922.0
+   }
+  }
+ },
+ "SENSEX 1h extra slippage 0.5 pt/leg": {
+  "sessions": 153,
+  "trades": 97,
+  "win_pct": 73.2,
+  "avg_pnl": 2054.7,
+  "total_pnl": 199302.0,
+  "return_pct": 66.43,
+  "avg_win": 3717.0,
+  "avg_loss": -2485.0,
+  "max_drawdown": 10091.0,
+  "charges": 41653.0,
+  "pnl_before_charges": 240955.0,
+  "days_green": "71/97",
+  "exits": {
+   "profit take 40% of credit": 57,
+   "square-off 15:15": 20,
+   "stop: loss 60% of max loss": 9,
+   "upper breakeven breached again / too late to adjust": 8,
+   "lower breakeven breached again / too late to adjust": 3
+  },
+  "expiry_days": 153,
+  "t_stat_per_trade": 6.31,
+  "by_year": {
+   "2023": {
+    "size": 4,
+    "sum": 11798.0
+   },
+   "2024": {
+    "size": 29,
+    "sum": 56193.0
+   },
+   "2025": {
+    "size": 38,
+    "sum": 95248.0
+   },
+   "2026": {
+    "size": 26,
+    "sum": 36062.0
+   }
+  }
+ },
+ "SENSEX 1h no regime filters": {
+  "sessions": 153,
+  "trades": 152,
+  "win_pct": 70.4,
+  "avg_pnl": 1801.1,
+  "total_pnl": 273763.0,
+  "return_pct": 91.25,
+  "avg_win": 3707.0,
+  "avg_loss": -2730.0,
+  "max_drawdown": 12193.0,
+  "charges": 47434.0,
+  "pnl_before_charges": 321197.0,
+  "days_green": "107/152",
+  "exits": {
+   "profit take 40% of credit": 80,
+   "square-off 15:15": 37,
+   "stop: loss 60% of max loss": 19,
+   "upper breakeven breached again / too late to adjust": 10,
+   "lower breakeven breached again / too late to adjust": 6
+  },
+  "expiry_days": 153,
+  "t_stat_per_trade": 6.49,
+  "by_year": {
+   "2023": {
+    "size": 4,
+    "sum": 12118.0
+   },
+   "2024": {
+    "size": 53,
+    "sum": 81794.0
+   },
+   "2025": {
+    "size": 52,
+    "sum": 124493.0
+   },
+   "2026": {
+    "size": 43,
+    "sum": 55358.0
+   }
+  }
+ }
+}

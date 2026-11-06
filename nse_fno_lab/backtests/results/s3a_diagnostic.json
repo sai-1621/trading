@@ -1,0 +1,127 @@
+{
+ "C  (no filter)": {
+  "sessions": 2429,
+  "trades": 482,
+  "win_pct": 31.7,
+  "avg_pnl": 160.7,
+  "total_pnl": 77458.0,
+  "return_pct": 25.82,
+  "avg_win": 3286.0,
+  "avg_loss": -1293.0,
+  "max_drawdown": 49282.0,
+  "profit_factor": 1.18,
+  "charges": 92119.0,
+  "pnl_before_charges": 169577.0,
+  "days_green": "134/395",
+  "exits": {
+   "close below EMA20": 239,
+   "stop hit": 213,
+   "gap below stop": 30
+  },
+  "t_stat_per_trade": 1.21,
+  "avg_R": 0.121,
+  "gross_avg_R": 0.271,
+  "cost_per_R": 0.15,
+  "avg_days": 15.9,
+  "max_days": 92,
+  "share_R_ge_3": 9.5,
+  "profit_from_R_ge_3": 337645.0,
+  "simple_return_pct_per_year": 2.63,
+  "avg_capital_used_pct": 33.5,
+  "liquidbees_interest": 115336.0,
+  "cash_plus_pct_per_year": 6.54,
+  "by_half": {
+   "2017-2021": {
+    "trades": 273,
+    "pnl": 40632,
+    "avg_R": 0.105
+   },
+   "2022-2026": {
+    "trades": 209,
+    "pnl": 36826,
+    "avg_R": 0.142
+   }
+  },
+  "by_year": {
+   "2017": -12852.0,
+   "2018": -4278.0,
+   "2019": -15693.0,
+   "2020": 55882.0,
+   "2021": 17573.0,
+   "2022": -28889.0,
+   "2023": 86400.0,
+   "2024": -8871.0,
+   "2025": -12873.0,
+   "2026": 1059.0
+  },
+  "placebo": {
+   "trades": 584.2,
+   "avg_R": -0.047,
+   "total_pnl": -35426.6,
+   "win_pct": 28.5
+  }
+ },
+ "C + close >= 0.85 x 52-week high": {
+  "sessions": 2429,
+  "trades": 373,
+  "win_pct": 33.0,
+  "avg_pnl": 243.8,
+  "total_pnl": 90943.0,
+  "return_pct": 30.31,
+  "avg_win": 3335.0,
+  "avg_loss": -1277.0,
+  "max_drawdown": 42037.0,
+  "profit_factor": 1.28,
+  "charges": 72498.0,
+  "pnl_before_charges": 163441.0,
+  "days_green": "108/305",
+  "exits": {
+   "close below EMA20": 191,
+   "stop hit": 159,
+   "gap below stop": 23
+  },
+  "t_stat_per_trade": 1.54,
+  "avg_R": 0.187,
+  "gross_avg_R": 0.34,
+  "cost_per_R": 0.152,
+  "avg_days": 16.1,
+  "max_days": 92,
+  "share_R_ge_3": 9.7,
+  "profit_from_R_ge_3": 279842.0,
+  "simple_return_pct_per_year": 3.09,
+  "avg_capital_used_pct": 26.9,
+  "liquidbees_interest": 126863.0,
+  "cash_plus_pct_per_year": 7.39,
+  "by_half": {
+   "2017-2021": {
+    "trades": 193,
+    "pnl": 46688,
+    "avg_R": 0.177
+   },
+   "2022-2026": {
+    "trades": 180,
+    "pnl": 44255,
+    "avg_R": 0.198
+   }
+  },
+  "by_year": {
+   "2017": -2171.0,
+   "2018": 4270.0,
+   "2019": -9749.0,
+   "2020": 18941.0,
+   "2021": 35397.0,
+   "2022": -20173.0,
+   "2023": 75595.0,
+   "2024": -8871.0,
+   "2025": -7001.0,
+   "2026": 4705.0
+  },
+  "placebo": {
+   "trades": 441.6,
+   "avg_R": -0.005,
+   "total_pnl": -2386.4,
+   "win_pct": 28.62
+  }
+ },
+ "verdict": "FREEZE strategy 3 (t < 2.0)"
+}

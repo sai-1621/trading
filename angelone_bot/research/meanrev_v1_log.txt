@@ -1,0 +1,66 @@
+pick period: 48 variants (15s)
+{
+ "run_at": "2026-11-02T17:42:17.572420",
+ "pick_period": [
+  "2024-12-03",
+  "2025-12-31"
+ ],
+ "holdout": [
+  "2026-01-01",
+  "2026-10-30"
+ ],
+ "variants": 48,
+ "eligible": 0,
+ "passed": false,
+ "note": "no variant met the pre-registered choice rule on the pick period; holdout not looked at"
+}
+all 48 on the pick period, best t first:
+  D1.0  S0.5 vwap none none    n=54 win=40.7% avgR=0.038 gross=0.19 t=0.24
+  D1.0  S0.5 vwap ma50 nifty20 n=14 win=42.9% avgR=0.049 gross=0.198 t=0.17
+  D1.0  S0.5 vwap ma50 none    n=39 win=41.0% avgR=0.028 gross=0.185 t=0.16
+  D1.0  S0.5 vwap none nifty20 n=24 win=41.7% avgR=0.023 gross=0.17 t=0.1
+  D1.0  S0.5 open none none    n=54 win=38.9% avgR=-0.018 gross=0.135 t=-0.1
+  D1.0  S1.0 vwap ma50 nifty20 n=14 win=35.7% avgR=-0.032 gross=0.069 t=-0.19
+  D1.0  S0.5 open ma50 none    n=39 win=38.5% avgR=-0.064 gross=0.093 t=-0.31
+  D1.0  S1.0 vwap none nifty20 n=24 win=37.5% avgR=-0.058 gross=0.043 t=-0.43
+  D1.0  S0.5 open none nifty20 n=24 win=41.7% avgR=-0.129 gross=0.017 t=-0.61
+  D1.0  S1.0 vwap ma50 none    n=39 win=38.5% avgR=-0.069 gross=0.038 t=-0.66
+  D1.0  S1.0 vwap none none    n=54 win=38.9% avgR=-0.064 gross=0.04 t=-0.71
+  D1.0  S0.5 open ma50 nifty20 n=14 win=42.9% avgR=-0.248 gross=-0.099 t=-1.09
+  D1.0  S1.0 open none none    n=54 win=35.2% avgR=-0.111 gross=-0.007 t=-1.12
+  D0.75 S0.5 vwap ma50 nifty20 n=70 win=41.4% avgR=-0.108 gross=0.055 t=-1.14
+  D1.0  S1.0 open ma50 none    n=39 win=33.3% avgR=-0.143 gross=-0.036 t=-1.22
+  D1.0  S1.0 open none nifty20 n=24 win=33.3% avgR=-0.168 gross=-0.067 t=-1.27
+  D0.75 S1.0 vwap ma50 nifty20 n=70 win=42.9% avgR=-0.069 gross=0.039 t=-1.34
+  D1.0  S1.0 open ma50 nifty20 n=14 win=28.6% avgR=-0.238 gross=-0.137 t=-1.55
+  D0.75 S0.5 open ma50 nifty20 n=70 win=40.0% avgR=-0.186 gross=-0.023 t=-2.11
+  D0.75 S1.0 open ma50 nifty20 n=70 win=38.6% avgR=-0.13 gross=-0.022 t=-2.59
+  D0.75 S1.0 vwap none nifty20 n=106 win=37.7% avgR=-0.116 gross=-0.007 t=-2.67
+  D0.75 S0.5 vwap ma50 none    n=147 win=40.1% avgR=-0.205 gross=-0.041 t=-2.84
+  D0.75 S0.5 vwap none nifty20 n=106 win=36.8% avgR=-0.229 gross=-0.067 t=-2.87
+  D0.75 S1.0 vwap ma50 none    n=147 win=44.2% avgR=-0.122 gross=-0.013 t=-2.89
+  D0.75 S0.5 open ma50 none    n=147 win=38.1% avgR=-0.249 gross=-0.085 t=-3.23
+  D0.75 S1.0 open ma50 none    n=147 win=40.8% avgR=-0.154 gross=-0.045 t=-3.44
+  D0.75 S1.0 vwap none none    n=234 win=40.6% avgR=-0.119 gross=-0.011 t=-3.65
+  D0.75 S1.0 open none nifty20 n=106 win=34.9% avgR=-0.154 gross=-0.045 t=-3.75
+  D0.75 S0.5 open none nifty20 n=106 win=35.8% avgR=-0.28 gross=-0.118 t=-3.79
+  D0.75 S0.5 vwap none none    n=234 win=37.6% avgR=-0.222 gross=-0.06 t=-3.87
+  D0.5  S0.5 open ma50 nifty20 n=495 win=44.0% avgR=-0.14 gross=0.025 t=-3.99
+  D0.75 S1.0 open none none    n=234 win=38.0% avgR=-0.138 gross=-0.031 t=-4.04
+  D0.75 S0.5 open none none    n=234 win=35.5% avgR=-0.251 gross=-0.089 t=-4.14
+  D0.5  S1.0 open ma50 nifty20 n=495 win=42.4% avgR=-0.094 gross=0.015 t=-5.08
+  D0.5  S0.5 vwap ma50 nifty20 n=495 win=44.8% avgR=-0.178 gross=-0.013 t=-5.82
+  D0.5  S0.5 open none nifty20 n=693 win=42.0% avgR=-0.184 gross=-0.018 t=-6.26
+  D0.5  S1.0 vwap ma50 nifty20 n=495 win=44.4% avgR=-0.106 gross=0.004 t=-6.42
+  D0.5  S1.0 open none nifty20 n=693 win=40.5% avgR=-0.115 gross=-0.006 t=-7.26
+  D0.5  S0.5 open ma50 none    n=765 win=39.9% avgR=-0.217 gross=-0.054 t=-7.37
+  D0.5  S0.5 vwap none nifty20 n=693 win=43.9% avgR=-0.203 gross=-0.037 t=-7.85
+  D0.5  S1.0 open ma50 none    n=765 win=38.8% avgR=-0.135 gross=-0.027 t=-8.19
+  D0.5  S1.0 vwap none nifty20 n=693 win=43.4% avgR=-0.119 gross=-0.01 t=-8.38
+  D0.5  S0.5 vwap ma50 none    n=765 win=41.6% avgR=-0.243 gross=-0.08 t=-9.45
+  D0.5  S1.0 vwap ma50 none    n=765 win=42.4% avgR=-0.144 gross=-0.035 t=-9.76
+  D0.5  S0.5 open none none    n=1263 win=39.0% avgR=-0.228 gross=-0.065 t=-10.05
+  D0.5  S1.0 open none none    n=1263 win=38.2% avgR=-0.137 gross=-0.029 t=-10.81
+  D0.5  S0.5 vwap none none    n=1263 win=42.0% avgR=-0.241 gross=-0.077 t=-12.08
+  D0.5  S1.0 vwap none none    n=1263 win=42.6% avgR=-0.143 gross=-0.035 t=-12.55
+done in 15s

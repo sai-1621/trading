@@ -1,0 +1,252 @@
+{
+ "prereg": "PREREG_5m_entry.md",
+ "coins": 100,
+ "split": "2026-07-01",
+ "rules": {
+  "R1 pump -> short": {
+   "5m": {
+    "pick": {
+     "trades": 1544,
+     "portfolio_trades": 1220,
+     "avg_pct": -0.175,
+     "t": -1.02,
+     "win_pct": 61.5,
+     "pnl_usdt": -360.8,
+     "avg_funding_pct": -0.04
+    },
+    "holdout": {
+     "trades": 965,
+     "portfolio_trades": 742,
+     "avg_pct": -1.379,
+     "t": -6.01,
+     "win_pct": 52.7,
+     "pnl_usdt": -896.0,
+     "avg_funding_pct": -0.021
+    },
+    "pick_no_delay": {
+     "trades": 1544,
+     "portfolio_trades": 1220,
+     "avg_pct": -0.025,
+     "t": -0.14,
+     "win_pct": 62.0,
+     "pnl_usdt": -177.8,
+     "avg_funding_pct": -0.04
+    }
+   },
+   "hourly": {
+    "pick": {
+     "trades": 805,
+     "portfolio_trades": 746,
+     "avg_pct": -0.256,
+     "t": -1.04,
+     "win_pct": 61.6,
+     "pnl_usdt": -275.1,
+     "avg_funding_pct": -0.06
+    },
+    "holdout": {
+     "trades": 590,
+     "portfolio_trades": 547,
+     "avg_pct": -1.167,
+     "t": -3.82,
+     "win_pct": 55.6,
+     "pnl_usdt": -605.4,
+     "avg_funding_pct": -0.016
+    },
+    "pick_no_delay": {
+     "trades": 805,
+     "portfolio_trades": 746,
+     "avg_pct": -0.106,
+     "t": -0.43,
+     "win_pct": 62.0,
+     "pnl_usdt": -163.2,
+     "avg_funding_pct": -0.06
+    }
+   }
+  },
+  "R2 pump -> long": {
+   "5m": {
+    "pick": {
+     "trades": 1544,
+     "portfolio_trades": 1179,
+     "avg_pct": -0.736,
+     "t": -4.31,
+     "win_pct": 42.2,
+     "pnl_usdt": -686.3,
+     "avg_funding_pct": 0.041
+    },
+    "holdout": {
+     "trades": 965,
+     "portfolio_trades": 729,
+     "avg_pct": 0.277,
+     "t": 1.23,
+     "win_pct": 50.6,
+     "pnl_usdt": 167.7,
+     "avg_funding_pct": 0.019
+    },
+    "pick_no_delay": {
+     "trades": 1544,
+     "portfolio_trades": 1179,
+     "avg_pct": -0.586,
+     "t": -3.43,
+     "win_pct": 42.6,
+     "pnl_usdt": -509.5,
+     "avg_funding_pct": 0.041
+    }
+   },
+   "hourly": {
+    "pick": {
+     "trades": 805,
+     "portfolio_trades": 738,
+     "avg_pct": -0.786,
+     "t": -3.18,
+     "win_pct": 42.6,
+     "pnl_usdt": -531.9,
+     "avg_funding_pct": 0.07
+    },
+    "holdout": {
+     "trades": 590,
+     "portfolio_trades": 549,
+     "avg_pct": 0.379,
+     "t": 1.26,
+     "win_pct": 52.7,
+     "pnl_usdt": 91.6,
+     "avg_funding_pct": 0.022
+    },
+    "pick_no_delay": {
+     "trades": 805,
+     "portfolio_trades": 738,
+     "avg_pct": -0.636,
+     "t": -2.58,
+     "win_pct": 43.0,
+     "pnl_usdt": -421.2,
+     "avg_funding_pct": 0.07
+    }
+   }
+  },
+  "R3 dump -> long": {
+   "5m": {
+    "pick": {
+     "trades": 1211,
+     "portfolio_trades": 522,
+     "avg_pct": -0.868,
+     "t": -5.03,
+     "win_pct": 45.2,
+     "pnl_usdt": -213.5,
+     "avg_funding_pct": 0.016
+    },
+    "holdout": {
+     "trades": 525,
+     "portfolio_trades": 332,
+     "avg_pct": 0.489,
+     "t": 1.85,
+     "win_pct": 57.5,
+     "pnl_usdt": -24.5,
+     "avg_funding_pct": 0.015
+    },
+    "pick_no_delay": {
+     "trades": 1211,
+     "portfolio_trades": 522,
+     "avg_pct": -0.718,
+     "t": -4.16,
+     "win_pct": 46.4,
+     "pnl_usdt": -135.2,
+     "avg_funding_pct": 0.016
+    }
+   },
+   "hourly": {
+    "pick": {
+     "trades": 602,
+     "portfolio_trades": 326,
+     "avg_pct": -0.688,
+     "t": -2.73,
+     "win_pct": 45.2,
+     "pnl_usdt": -253.6,
+     "avg_funding_pct": 0.026
+    },
+    "holdout": {
+     "trades": 331,
+     "portfolio_trades": 212,
+     "avg_pct": 0.417,
+     "t": 1.15,
+     "win_pct": 56.2,
+     "pnl_usdt": 79.1,
+     "avg_funding_pct": 0.033
+    },
+    "pick_no_delay": {
+     "trades": 602,
+     "portfolio_trades": 326,
+     "avg_pct": -0.538,
+     "t": -2.13,
+     "win_pct": 46.2,
+     "pnl_usdt": -204.7,
+     "avg_funding_pct": 0.026
+    }
+   }
+  },
+  "R4 dump -> short": {
+   "5m": {
+    "pick": {
+     "trades": 1211,
+     "portfolio_trades": 530,
+     "avg_pct": -0.166,
+     "t": -1.03,
+     "win_pct": 50.0,
+     "pnl_usdt": -373.1,
+     "avg_funding_pct": -0.015
+    },
+    "holdout": {
+     "trades": 525,
+     "portfolio_trades": 340,
+     "avg_pct": -1.204,
+     "t": -4.59,
+     "win_pct": 45.5,
+     "pnl_usdt": -185.3,
+     "avg_funding_pct": -0.012
+    },
+    "pick_no_delay": {
+     "trades": 1211,
+     "portfolio_trades": 530,
+     "avg_pct": -0.016,
+     "t": -0.1,
+     "win_pct": 51.6,
+     "pnl_usdt": -293.6,
+     "avg_funding_pct": -0.015
+    }
+   },
+   "hourly": {
+    "pick": {
+     "trades": 602,
+     "portfolio_trades": 325,
+     "avg_pct": -0.461,
+     "t": -1.89,
+     "win_pct": 52.2,
+     "pnl_usdt": -91.0,
+     "avg_funding_pct": -0.026
+    },
+    "holdout": {
+     "trades": 331,
+     "portfolio_trades": 218,
+     "avg_pct": -1.387,
+     "t": -3.89,
+     "win_pct": 46.5,
+     "pnl_usdt": -358.8,
+     "avg_funding_pct": -0.036
+    },
+    "pick_no_delay": {
+     "trades": 602,
+     "portfolio_trades": 325,
+     "avg_pct": -0.311,
+     "t": -1.28,
+     "win_pct": 53.5,
+     "pnl_usdt": -42.3,
+     "avg_funding_pct": -0.026
+    }
+   }
+  }
+ },
+ "decision": {
+  "eligible": [],
+  "PASS": false,
+  "why": "no 5-minute rule had t >= 2.0 and positive P&L"
+ }
+}

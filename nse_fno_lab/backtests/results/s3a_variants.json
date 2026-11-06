@@ -1,0 +1,298 @@
+{
+ "A  5-day cap, EMA20, no regime (old)": {
+  "sessions": 2429,
+  "trades": 756,
+  "win_pct": 45.1,
+  "avg_pnl": -81.0,
+  "total_pnl": -61249.0,
+  "return_pct": -20.42,
+  "avg_win": 1160.0,
+  "avg_loss": -1101.0,
+  "max_drawdown": 85567.0,
+  "profit_factor": 0.87,
+  "charges": 142386.0,
+  "pnl_before_charges": 81137.0,
+  "days_green": "263/593",
+  "exits": {
+   "5-day limit": 516,
+   "stop hit": 207,
+   "gap below stop": 28,
+   "close below EMA20": 5
+  },
+  "t_stat_per_trade": -1.59,
+  "avg_R": -0.067,
+  "gross_avg_R": 0.08,
+  "cost_per_R": 0.147,
+  "avg_days": 4.4,
+  "max_days": 5,
+  "share_R_ge_3": 1.1,
+  "profit_from_R_ge_3": 41249.0,
+  "simple_return_pct_per_year": -2.08,
+  "avg_capital_used_pct": 11.7,
+  "by_half": {
+   "2017-2021": {
+    "trades": 391,
+    "pnl": 16879,
+    "avg_R": 0.027
+   },
+   "2022-2026": {
+    "trades": 365,
+    "pnl": -78127,
+    "avg_R": -0.168
+   }
+  },
+  "by_year": {
+   "2017": -13832.0,
+   "2018": -4974.0,
+   "2019": 2967.0,
+   "2020": 9497.0,
+   "2021": 23220.0,
+   "2022": -25866.0,
+   "2023": -25308.0,
+   "2024": -5901.0,
+   "2025": -14479.0,
+   "2026": -6574.0
+  },
+  "placebo": {
+   "trades": 808.4,
+   "avg_R": -0.102,
+   "total_pnl": -105215.0,
+   "win_pct": 37.42
+  }
+ },
+ "B  5-day cap, EMA20, regime": {
+  "sessions": 2429,
+  "trades": 630,
+  "win_pct": 44.9,
+  "avg_pnl": -56.5,
+  "total_pnl": -35572.0,
+  "return_pct": -11.86,
+  "avg_win": 1221.0,
+  "avg_loss": -1098.0,
+  "max_drawdown": 64936.0,
+  "profit_factor": 0.91,
+  "charges": 120047.0,
+  "pnl_before_charges": 84476.0,
+  "days_green": "215/489",
+  "exits": {
+   "5-day limit": 427,
+   "stop hit": 180,
+   "gap below stop": 19,
+   "close below EMA20": 4
+  },
+  "t_stat_per_trade": -0.98,
+  "avg_R": -0.05,
+  "gross_avg_R": 0.099,
+  "cost_per_R": 0.149,
+  "avg_days": 4.4,
+  "max_days": 5,
+  "share_R_ge_3": 1.3,
+  "profit_from_R_ge_3": 41249.0,
+  "simple_return_pct_per_year": -1.21,
+  "avg_capital_used_pct": 9.9,
+  "by_half": {
+   "2017-2021": {
+    "trades": 347,
+    "pnl": 22921,
+    "avg_R": 0.045
+   },
+   "2022-2026": {
+    "trades": 283,
+    "pnl": -58492,
+    "avg_R": -0.166
+   }
+  },
+  "by_year": {
+   "2017": -13333.0,
+   "2018": -3523.0,
+   "2019": 2614.0,
+   "2020": 15947.0,
+   "2021": 21216.0,
+   "2022": -25417.0,
+   "2023": -16142.0,
+   "2024": -3995.0,
+   "2025": -15049.0,
+   "2026": 2110.0
+  },
+  "placebo": {}
+ },
+ "C  no cap, EMA20 exit, regime": {
+  "sessions": 2429,
+  "trades": 482,
+  "win_pct": 31.7,
+  "avg_pnl": 160.7,
+  "total_pnl": 77458.0,
+  "return_pct": 25.82,
+  "avg_win": 3286.0,
+  "avg_loss": -1293.0,
+  "max_drawdown": 49282.0,
+  "profit_factor": 1.18,
+  "charges": 92119.0,
+  "pnl_before_charges": 169577.0,
+  "days_green": "134/395",
+  "exits": {
+   "close below EMA20": 239,
+   "stop hit": 213,
+   "gap below stop": 30
+  },
+  "t_stat_per_trade": 1.21,
+  "avg_R": 0.121,
+  "gross_avg_R": 0.271,
+  "cost_per_R": 0.15,
+  "avg_days": 15.9,
+  "max_days": 92,
+  "share_R_ge_3": 9.5,
+  "profit_from_R_ge_3": 337645.0,
+  "simple_return_pct_per_year": 2.63,
+  "avg_capital_used_pct": 33.5,
+  "by_half": {
+   "2017-2021": {
+    "trades": 273,
+    "pnl": 40632,
+    "avg_R": 0.105
+   },
+   "2022-2026": {
+    "trades": 209,
+    "pnl": 36826,
+    "avg_R": 0.142
+   }
+  },
+  "by_year": {
+   "2017": -12852.0,
+   "2018": -4278.0,
+   "2019": -15693.0,
+   "2020": 55882.0,
+   "2021": 17573.0,
+   "2022": -28889.0,
+   "2023": 86400.0,
+   "2024": -8871.0,
+   "2025": -12873.0,
+   "2026": 1059.0
+  },
+  "placebo": {
+   "trades": 584.2,
+   "avg_R": -0.047,
+   "total_pnl": -35426.6,
+   "win_pct": 28.5
+  }
+ },
+ "D  no cap, 10-day-low exit, regime": {
+  "sessions": 2429,
+  "trades": 449,
+  "win_pct": 30.1,
+  "avg_pnl": 176.8,
+  "total_pnl": 79373.0,
+  "return_pct": 26.46,
+  "avg_win": 3725.0,
+  "avg_loss": -1349.0,
+  "max_drawdown": 46628.0,
+  "profit_factor": 1.19,
+  "charges": 85500.0,
+  "pnl_before_charges": 164872.0,
+  "days_green": "116/372",
+  "exits": {
+   "stop hit": 229,
+   "close below 10-day low": 191,
+   "gap below stop": 29
+  },
+  "t_stat_per_trade": 1.2,
+  "avg_R": 0.13,
+  "gross_avg_R": 0.279,
+  "cost_per_R": 0.149,
+  "avg_days": 19.1,
+  "max_days": 140,
+  "share_R_ge_3": 10.2,
+  "profit_from_R_ge_3": 362083.0,
+  "simple_return_pct_per_year": 2.69,
+  "avg_capital_used_pct": 37.7,
+  "by_half": {
+   "2017-2021": {
+    "trades": 248,
+    "pnl": 61514,
+    "avg_R": 0.179
+   },
+   "2022-2026": {
+    "trades": 201,
+    "pnl": 17859,
+    "avg_R": 0.07
+   }
+  },
+  "by_year": {
+   "2017": -3296.0,
+   "2018": -4186.0,
+   "2019": -13189.0,
+   "2020": 63286.0,
+   "2021": 18899.0,
+   "2022": -32747.0,
+   "2023": 76773.0,
+   "2024": -10868.0,
+   "2025": -10309.0,
+   "2026": -4990.0
+  },
+  "placebo": {
+   "trades": 465.6,
+   "avg_R": 0.07,
+   "total_pnl": 41443.4,
+   "win_pct": 29.34
+  }
+ },
+ "E  no cap, EMA20 exit, no regime": {
+  "sessions": 2429,
+  "trades": 582,
+  "win_pct": 32.1,
+  "avg_pnl": 141.6,
+  "total_pnl": 82394.0,
+  "return_pct": 27.46,
+  "avg_win": 3120.0,
+  "avg_loss": -1269.0,
+  "max_drawdown": 51793.0,
+  "profit_factor": 1.16,
+  "charges": 109527.0,
+  "pnl_before_charges": 191921.0,
+  "days_green": "163/482",
+  "exits": {
+   "close below EMA20": 302,
+   "stop hit": 246,
+   "gap below stop": 34
+  },
+  "t_stat_per_trade": 1.2,
+  "avg_R": 0.105,
+  "gross_avg_R": 0.252,
+  "cost_per_R": 0.147,
+  "avg_days": 16.0,
+  "max_days": 92,
+  "share_R_ge_3": 8.9,
+  "profit_from_R_ge_3": 383778.0,
+  "simple_return_pct_per_year": 2.8,
+  "avg_capital_used_pct": 39.9,
+  "by_half": {
+   "2017-2021": {
+    "trades": 303,
+    "pnl": 70113,
+    "avg_R": 0.165
+   },
+   "2022-2026": {
+    "trades": 279,
+    "pnl": 12281,
+    "avg_R": 0.041
+   }
+  },
+  "by_year": {
+   "2017": -13171.0,
+   "2018": -8129.0,
+   "2019": -8634.0,
+   "2020": 61300.0,
+   "2021": 38748.0,
+   "2022": -32338.0,
+   "2023": 52416.0,
+   "2024": -12019.0,
+   "2025": 11987.0,
+   "2026": -7765.0
+  },
+  "placebo": {}
+ },
+ "NIFTY": {
+  "total_pct": 181.8,
+  "cagr_pct": 11.12
+ }
+}

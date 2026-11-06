@@ -1,0 +1,24 @@
+//@version=5
+// Daily trend strategy from research.py ("ma_trend" with an SPY filter): hold a stock while its close is above its
+// N-day average AND SPY (the S&P 500) is above its 100-day average. A swing (delivery) strategy, not intraday.
+// Use on a daily US stock chart. Strategy Tester shows TradingView's own backtest.
+strategy("IBKR bot - MA trend + SPY filter", overlay = true, initial_capital = 5000,
+     default_qty_type = strategy.percent_of_equity, default_qty_value = 100,
+     commission_type = strategy.commission.cash_per_contract, commission_value = 0.005, slippage = 1)
+
+maLen    = input.int(50, "Stock average (days)", minval = 10)
+spyLen = input.int(100, "SPY average (days)", minval = 10)
+useSpy = input.bool(true, "Only when SPY is above its average")
+
+stockUp = close > ta.sma(close, maLen)
+spyUp = request.security("AMEX:SPY", "D", close > ta.sma(close, spyLen))
+inTrend = stockUp and (not useSpy or spyUp)
+
+// orders fill at the next bar's open, as in research.py
+if inTrend and strategy.position_size == 0
+    strategy.entry("Trend", strategy.long)
+if not inTrend and strategy.position_size > 0
+    strategy.close("Trend")
+
+plot(ta.sma(close, maLen), "Average", color.new(color.blue, 0))
+bgcolor(useSpy and not spyUp ? color.new(color.red, 92) : na, title = "SPY below its average")

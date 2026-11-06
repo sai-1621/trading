@@ -1,0 +1,214 @@
+{
+ "prereg": "PREREG_funding_filter.md",
+ "events": 49895,
+ "test_months": [
+  "2022-04-01",
+  "2026-10-01"
+ ],
+ "model_picks": 19399,
+ "shorts_in_picks": 10012,
+ "runs": {
+  "baseline (model, realistic costs)": {
+   "trades": 5691,
+   "win_pct": 56.6,
+   "avg_net_pct": -0.181,
+   "pnl_usdt": -1032.7,
+   "months_positive": "25/55",
+   "longs": 2228,
+   "shorts": 3463,
+   "by_year": {
+    "2022": {
+     "trades": 690,
+     "avg_net_pct": -0.064,
+     "pnl_usdt": -44.2
+    },
+    "2023": {
+     "trades": 988,
+     "avg_net_pct": -0.005,
+     "pnl_usdt": -5.1
+    },
+    "2024": {
+     "trades": 1232,
+     "avg_net_pct": -0.05,
+     "pnl_usdt": -61.4
+    },
+    "2025": {
+     "trades": 1550,
+     "avg_net_pct": -0.616,
+     "pnl_usdt": -955.5
+    },
+    "2026": {
+     "trades": 1231,
+     "avg_net_pct": 0.027,
+     "pnl_usdt": 33.5
+    }
+   }
+  },
+  "F1: skip shorts below -0.075%/h": {
+   "trades": 5628,
+   "win_pct": 56.3,
+   "avg_net_pct": -0.163,
+   "pnl_usdt": -917.4,
+   "months_positive": "24/55",
+   "longs": 2263,
+   "shorts": 3365,
+   "by_year": {
+    "2022": {
+     "trades": 683,
+     "avg_net_pct": -0.059,
+     "pnl_usdt": -40.6
+    },
+    "2023": {
+     "trades": 978,
+     "avg_net_pct": 0.009,
+     "pnl_usdt": 8.4
+    },
+    "2024": {
+     "trades": 1227,
+     "avg_net_pct": -0.134,
+     "pnl_usdt": -164.3
+    },
+    "2025": {
+     "trades": 1530,
+     "avg_net_pct": -0.437,
+     "pnl_usdt": -669.3
+    },
+    "2026": {
+     "trades": 1210,
+     "avg_net_pct": -0.043,
+     "pnl_usdt": -51.5
+    }
+   },
+   "blocked_picks": 435,
+   "blocked_avg_net_pct": -0.381,
+   "blocked_t": -1.07,
+   "blocked_win_pct": 63.9
+  },
+  "F2 (info): F1 + skip longs above +0.075%/h": {
+   "trades": 5628,
+   "win_pct": 56.2,
+   "avg_net_pct": -0.18,
+   "pnl_usdt": -1012.8,
+   "months_positive": "23/55",
+   "longs": 2258,
+   "shorts": 3370,
+   "by_year": {
+    "2022": {
+     "trades": 683,
+     "avg_net_pct": -0.176,
+     "pnl_usdt": -120.4
+    },
+    "2023": {
+     "trades": 978,
+     "avg_net_pct": 0.025,
+     "pnl_usdt": 24.1
+    },
+    "2024": {
+     "trades": 1227,
+     "avg_net_pct": -0.167,
+     "pnl_usdt": -204.8
+    },
+    "2025": {
+     "trades": 1530,
+     "avg_net_pct": -0.442,
+     "pnl_usdt": -675.7
+    },
+    "2026": {
+     "trades": 1210,
+     "avg_net_pct": -0.03,
+     "pnl_usdt": -36.1
+    }
+   },
+   "blocked_picks": 440,
+   "blocked_avg_net_pct": -0.365,
+   "blocked_t": -1.03,
+   "blocked_win_pct": 63.9
+  },
+  "info: skip shorts below -0.0375%/h": {
+   "trades": 5605,
+   "win_pct": 56.1,
+   "avg_net_pct": -0.192,
+   "pnl_usdt": -1076.9,
+   "months_positive": "25/55",
+   "longs": 2264,
+   "shorts": 3341,
+   "by_year": {
+    "2022": {
+     "trades": 680,
+     "avg_net_pct": -0.187,
+     "pnl_usdt": -126.9
+    },
+    "2023": {
+     "trades": 974,
+     "avg_net_pct": 0.04,
+     "pnl_usdt": 38.7
+    },
+    "2024": {
+     "trades": 1224,
+     "avg_net_pct": -0.106,
+     "pnl_usdt": -129.2
+    },
+    "2025": {
+     "trades": 1521,
+     "avg_net_pct": -0.508,
+     "pnl_usdt": -773.3
+    },
+    "2026": {
+     "trades": 1206,
+     "avg_net_pct": -0.071,
+     "pnl_usdt": -86.1
+    }
+   },
+   "blocked_picks": 621,
+   "blocked_avg_net_pct": -0.542,
+   "blocked_t": -1.83,
+   "blocked_win_pct": 62.3
+  },
+  "info: skip shorts below -0.1500%/h": {
+   "trades": 5660,
+   "win_pct": 56.3,
+   "avg_net_pct": -0.195,
+   "pnl_usdt": -1105.6,
+   "months_positive": "24/55",
+   "longs": 2228,
+   "shorts": 3432,
+   "by_year": {
+    "2022": {
+     "trades": 689,
+     "avg_net_pct": -0.034,
+     "pnl_usdt": -23.2
+    },
+    "2023": {
+     "trades": 983,
+     "avg_net_pct": -0.102,
+     "pnl_usdt": -100.5
+    },
+    "2024": {
+     "trades": 1230,
+     "avg_net_pct": -0.031,
+     "pnl_usdt": -38.5
+    },
+    "2025": {
+     "trades": 1537,
+     "avg_net_pct": -0.602,
+     "pnl_usdt": -925.7
+    },
+    "2026": {
+     "trades": 1221,
+     "avg_net_pct": -0.015,
+     "pnl_usdt": -17.8
+    }
+   },
+   "blocked_picks": 258,
+   "blocked_avg_net_pct": 0.319,
+   "blocked_t": 0.7,
+   "blocked_win_pct": 68.6
+  }
+ },
+ "decision": {
+  "1_blocked_lose_t_le_-2": false,
+  "2_pnl_higher": true,
+  "3_majority_years": "3/5 (True)",
+  "PASS": false
+ }
+}

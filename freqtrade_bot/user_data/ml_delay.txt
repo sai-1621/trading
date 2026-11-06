@@ -1,0 +1,148 @@
+rebuilding events and walk-forward predictions ...
+  0/515 coins, 66 events
+  100/515 coins, 7421 events
+  200/515 coins, 14002 events
+  300/515 coins, 20939 events
+  400/515 coins, 27687 events
+  500/515 coins, 34465 events
+11845 model picks (28s); downloading 1-minute candles ...
+  0/11845  missing 0  (28s)
+  100/11845  missing 0  (29s)
+  200/11845  missing 0  (29s)
+  300/11845  missing 0  (29s)
+  400/11845  missing 0  (30s)
+  500/11845  missing 0  (30s)
+  600/11845  missing 0  (30s)
+  700/11845  missing 0  (30s)
+  800/11845  missing 0  (30s)
+  900/11845  missing 0  (30s)
+  1000/11845  missing 0  (31s)
+  1100/11845  missing 0  (31s)
+  1200/11845  missing 0  (31s)
+  1300/11845  missing 0  (31s)
+  1400/11845  missing 0  (32s)
+  1500/11845  missing 0  (32s)
+  1600/11845  missing 0  (32s)
+  1700/11845  missing 0  (32s)
+  1800/11845  missing 0  (33s)
+  1900/11845  missing 0  (33s)
+  2000/11845  missing 0  (33s)
+  2100/11845  missing 0  (33s)
+  2200/11845  missing 0  (33s)
+  2300/11845  missing 0  (33s)
+  2400/11845  missing 0  (34s)
+  2500/11845  missing 0  (34s)
+  2600/11845  missing 0  (34s)
+  2700/11845  missing 0  (34s)
+  2800/11845  missing 0  (34s)
+  2900/11845  missing 0  (35s)
+  3000/11845  missing 0  (35s)
+  3100/11845  missing 0  (35s)
+  3200/11845  missing 0  (35s)
+  3300/11845  missing 0  (35s)
+  3400/11845  missing 0  (36s)
+  3500/11845  missing 0  (36s)
+  3600/11845  missing 0  (36s)
+  3700/11845  missing 0  (36s)
+  3800/11845  missing 0  (36s)
+  3900/11845  missing 0  (37s)
+  4000/11845  missing 0  (37s)
+  4100/11845  missing 0  (37s)
+  4200/11845  missing 0  (39s)
+  4300/11845  missing 0  (85s)
+  4400/11845  missing 0  (132s)
+  4500/11845  missing 0  (174s)
+  4600/11845  missing 0  (215s)
+  4700/11845  missing 0  (258s)
+  4800/11845  missing 0  (305s)
+  4900/11845  missing 0  (360s)
+  5000/11845  missing 0  (414s)
+  5100/11845  missing 0  (468s)
+  5200/11845  missing 0  (518s)
+  5300/11845  missing 0  (575s)
+  5400/11845  missing 0  (629s)
+  5500/11845  missing 0  (683s)
+  5600/11845  missing 0  (735s)
+  5700/11845  missing 0  (788s)
+  5800/11845  missing 0  (842s)
+  5900/11845  missing 0  (898s)
+  6000/11845  missing 0  (952s)
+  6100/11845  missing 0  (1000s)
+  6200/11845  missing 0  (1052s)
+  6300/11845  missing 0  (1107s)
+  6400/11845  missing 0  (1159s)
+  6500/11845  missing 0  (1211s)
+  6600/11845  missing 0  (1262s)
+  6700/11845  missing 0  (1311s)
+  6800/11845  missing 0  (1366s)
+  6900/11845  missing 0  (1421s)
+  7000/11845  missing 0  (1476s)
+  7100/11845  missing 0  (1530s)
+  7200/11845  missing 0  (1580s)
+  7300/11845  missing 0  (1632s)
+  7400/11845  missing 0  (1684s)
+  7500/11845  missing 0  (1732s)
+  7600/11845  missing 0  (1789s)
+  7700/11845  missing 0  (1841s)
+  7800/11845  missing 0  (1890s)
+  7900/11845  missing 0  (1942s)
+  8000/11845  missing 0  (1992s)
+  8100/11845  missing 0  (2042s)
+  8200/11845  missing 0  (2094s)
+  8300/11845  missing 0  (2143s)
+  8400/11845  missing 0  (2192s)
+  8500/11845  missing 0  (2242s)
+  8600/11845  missing 0  (2290s)
+  8700/11845  missing 0  (2341s)
+  8800/11845  missing 0  (2409s)
+  8900/11845  missing 0  (2478s)
+  9000/11845  missing 0  (2529s)
+  9100/11845  missing 0  (2579s)
+  9200/11845  missing 0  (2629s)
+  9300/11845  missing 0  (2679s)
+  9400/11845  missing 0  (2732s)
+  9500/11845  missing 0  (2781s)
+  9600/11845  missing 0  (2831s)
+  9700/11845  missing 0  (2882s)
+  9800/11845  missing 0  (2970s)
+  9900/11845  missing 0  (3041s)
+  10000/11845  missing 0  (3108s)
+  10100/11845  missing 0  (3186s)
+  10200/11845  missing 0  (3254s)
+  10300/11845  missing 0  (3324s)
+  10400/11845  missing 0  (3388s)
+  10500/11845  missing 0  (3447s)
+  10600/11845  missing 0  (3501s)
+  10700/11845  missing 0  (3560s)
+  10800/11845  missing 0  (3614s)
+  10900/11845  missing 0  (3680s)
+  11000/11845  missing 0  (3768s)
+  11100/11845  missing 0  (3832s)
+  11200/11845  missing 0  (3905s)
+  11300/11845  missing 0  (3982s)
+  11400/11845  missing 0  (4033s)
+  11500/11845  missing 0  (4082s)
+  11600/11845  missing 0  (4132s)
+  11700/11845  missing 0  (4183s)
+  11800/11845  missing 0  (4237s)
+11845 trades with 1-minute data, 0 without (delisted or missing)
+
+                                       trades   won%   avg %      P&L  months+   2025 / 2026 avg %
+hourly test (original)                   2569   58.8  +0.044   +112.3    10/19   +0.121 / -0.038
+0 min delay, no funding                  5452   58.1  -0.035   -188.8    10/19   -0.107 / +0.067
+0 min delay, with funding                5452   58.0  -0.108   -591.0     9/19   -0.139 / -0.066
+                                       slip vs hour open +0.000%, funding -0.042% per trade
+1 min delay, no funding                  5448   57.8  -0.068   -367.9    10/19   -0.106 / -0.014
+1 min delay, with funding                5448   57.7  -0.143   -777.2     7/19   -0.137 / -0.150
+                                       slip vs hour open +0.084%, funding -0.045% per trade
+2 min delay, no funding                  5454   57.7  -0.070   -380.8     7/19   -0.062 / -0.080
+2 min delay, with funding                5454   57.5  -0.144   -785.0     6/19   -0.092 / -0.217
+                                       slip vs hour open +0.146%, funding -0.044% per trade
+5 min delay, no funding                  5404   58.1  -0.019   -103.0     9/19   +0.046 / -0.110
+5 min delay, with funding                5404   57.9  -0.101   -544.0     9/19   +0.008 / -0.253
+                                       slip vs hour open +0.093%, funding -0.047% per trade
+10 min delay, no funding                 5365   58.4  +0.042   +224.9     8/19   +0.130 / -0.082
+10 min delay, with funding               5365   58.2  -0.035   -186.7     8/19   +0.101 / -0.226
+                                       slip vs hour open +0.123%, funding -0.045% per trade
+
+saved ml_delay_results.json  done in 4266s

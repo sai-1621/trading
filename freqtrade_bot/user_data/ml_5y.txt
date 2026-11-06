@@ -1,0 +1,73 @@
+building events ...
+  0/515 coins, 66 events
+  100/515 coins, 10812 events
+  200/515 coins, 20158 events
+  300/515 coins, 30020 events
+  400/515 coins, 39430 events
+  500/515 coins, 48579 events
+49895 events from 2021-11-03 01:00:00+00:00 to 2026-10-28 19:00:00+00:00 (28s)
+  2022-04: trained on 1119, 223 events
+  2022-05: trained on 1337, 374 events
+  2022-06: trained on 1712, 336 events
+  2022-07: trained on 2064, 257 events
+  2022-08: trained on 2318, 211 events
+  2022-09: trained on 2540, 248 events
+  2022-10: trained on 2786, 95 events
+  2022-11: trained on 2880, 349 events
+  2022-12: trained on 3228, 95 events
+  2023-01: trained on 3327, 396 events
+  2023-02: trained on 3706, 266 events
+  2023-03: trained on 3987, 457 events
+  2023-04: trained on 4440, 292 events
+  2023-05: trained on 4738, 133 events
+  2023-06: trained on 4870, 534 events
+  2023-07: trained on 5294, 140 events
+  2023-08: trained on 5544, 344 events
+  2023-09: trained on 5884, 154 events
+  2023-10: trained on 6037, 211 events
+  2023-11: trained on 6245, 468 events
+  2023-12: trained on 6717, 591 events
+  2024-01: trained on 7284, 531 events
+  2024-02: trained on 7839, 499 events
+  2024-03: trained on 8313, 870 events
+  2024-04: trained on 9206, 880 events
+  2024-05: trained on 10086, 359 events
+  2024-06: trained on 10446, 586 events
+  2024-07: trained on 11031, 435 events
+  2024-08: trained on 11468, 495 events
+  2024-09: trained on 11966, 229 events
+  2024-10: trained on 12190, 377 events
+  2024-11: trained on 12568, 818 events
+  2024-12: trained on 13368, 1210 events
+  2025-01: trained on 14589, 822 events
+  2025-02: trained on 15399, 1164 events
+  2025-03: trained on 16561, 983 events
+  2025-04: trained on 17556, 1425 events
+  2025-05: trained on 18966, 1195 events
+  2025-06: trained on 20166, 648 events
+  2025-07: trained on 20825, 990 events
+  2025-08: trained on 21819, 1254 events
+  2025-09: trained on 23065, 1247 events
+  2025-10: trained on 24291, 2662 events
+  2025-11: trained on 26930, 2476 events
+  2025-12: trained on 29422, 1898 events
+  2026-01: trained on 31300, 1847 events
+  2026-02: trained on 33064, 1523 events
+  2026-03: trained on 34589, 1317 events
+  2026-04: trained on 36002, 2368 events
+  2026-05: trained on 38371, 1692 events
+  2026-06: trained on 40056, 2191 events
+  2026-07: trained on 42218, 1516 events
+  2026-08: trained on 43771, 2353 events
+  2026-09: trained on 46114, 1970 events
+  2026-10: trained on 48084, 1752 events
+
+unseen months 2022-04 .. 2026-10
+                                             trades   won%   avg %      P&L  months+   per year P&L (USDT on 1,000)
+always long (no model), ideal                  6850   45.4  -0.639  -4374.3    13/55   2022:-430  2023:-41  2024:-1272  2025:-1397  2026:-1233
+always short (no model), ideal                 6850   60.5  -0.177  -1210.7    19/55   2022:-97  2023:-735  2024:+374  2025:-183  2026:-569
+model, ideal (like the original test)          5691   57.1  +0.010    +56.1    32/55   2022:+60  2023:+150  2024:+135  2025:-650  2026:+361
+model, + funding                               5691   56.9  -0.031   -179.0    30/55   2022:+59  2023:+143  2024:+123  2025:-723  2026:+218
+model, + funding + 2-min delay (realistic)     5691   56.6  -0.181  -1032.7    25/55   2022:-44  2023:-5  2024:-61  2025:-956  2026:+34
+
+saved ml_5y_results.json  done in 79s

@@ -1,0 +1,281 @@
+{
+ "run_at": "2026-11-03T09:02:32.995273",
+ "pick": [
+  "2022-01-01",
+  "2024-12-31"
+ ],
+ "holdout": [
+  "2025-01-01",
+  "2026-10-29"
+ ],
+ "btc_buy_hold_pick_pct": 98.1,
+ "variants": [
+  {
+   "v": {
+    "family": "T",
+    "signal": "don20",
+    "side": "long_short"
+   },
+   "pick": {
+    "days": 1096,
+    "total_return_pct": 47.7,
+    "cagr_pct": 13.9,
+    "sharpe": 0.51,
+    "t": 0.89,
+    "max_dd_pct": -55.8,
+    "worst_day_pct": -10.4,
+    "avg_leverage": 1.14,
+    "funding_pct": -10.9,
+    "costs_pct": -24.5,
+    "positive_months_pct": 47.0,
+    "trades": 574,
+    "win_pct": 40.1
+   }
+  },
+  {
+   "v": {
+    "family": "T",
+    "signal": "don20",
+    "side": "long_only"
+   },
+   "pick": {
+    "days": 1096,
+    "total_return_pct": 105.2,
+    "cagr_pct": 27.1,
+    "sharpe": 0.77,
+    "t": 1.33,
+    "max_dd_pct": -50.2,
+    "worst_day_pct": -11.4,
+    "avg_leverage": 0.66,
+    "funding_pct": -8.3,
+    "costs_pct": -12.4,
+    "positive_months_pct": 50.0,
+    "trades": 278,
+    "win_pct": 45.0
+   }
+  },
+  {
+   "v": {
+    "family": "T",
+    "signal": "don55",
+    "side": "long_short"
+   },
+   "pick": {
+    "days": 1096,
+    "total_return_pct": -27.9,
+    "cagr_pct": -10.3,
+    "sharpe": -0.01,
+    "t": -0.01,
+    "max_dd_pct": -71.5,
+    "worst_day_pct": -16.0,
+    "avg_leverage": 1.07,
+    "funding_pct": -12.4,
+    "costs_pct": -16.1,
+    "positive_months_pct": 44.0,
+    "trades": 263,
+    "win_pct": 41.1
+   }
+  },
+  {
+   "v": {
+    "family": "T",
+    "signal": "don55",
+    "side": "long_only"
+   },
+   "pick": {
+    "days": 1096,
+    "total_return_pct": 145.9,
+    "cagr_pct": 34.9,
+    "sharpe": 0.92,
+    "t": 1.59,
+    "max_dd_pct": -42.6,
+    "worst_day_pct": -11.3,
+    "avg_leverage": 0.6,
+    "funding_pct": -7.3,
+    "costs_pct": -7.4,
+    "positive_months_pct": 53.0,
+    "trades": 130,
+    "win_pct": 51.5
+   }
+  },
+  {
+   "v": {
+    "family": "T",
+    "signal": "ema10_50",
+    "side": "long_short"
+   },
+   "pick": {
+    "days": 1096,
+    "total_return_pct": -3.1,
+    "cagr_pct": -1.1,
+    "sharpe": 0.21,
+    "t": 0.36,
+    "max_dd_pct": -61.3,
+    "worst_day_pct": -11.3,
+    "avg_leverage": 1.26,
+    "funding_pct": -7.8,
+    "costs_pct": -22.9,
+    "positive_months_pct": 44.0,
+    "trades": 525,
+    "win_pct": 36.4
+   }
+  },
+  {
+   "v": {
+    "family": "T",
+    "signal": "ema10_50",
+    "side": "long_only"
+   },
+   "pick": {
+    "days": 1096,
+    "total_return_pct": 115.6,
+    "cagr_pct": 29.2,
+    "sharpe": 0.8,
+    "t": 1.39,
+    "max_dd_pct": -52.9,
+    "worst_day_pct": -11.3,
+    "avg_leverage": 0.67,
+    "funding_pct": -7.8,
+    "costs_pct": -12.2,
+    "positive_months_pct": 53.0,
+    "trades": 266,
+    "win_pct": 39.5
+   }
+  },
+  {
+   "v": {
+    "family": "T",
+    "signal": "ema20_100",
+    "side": "long_short"
+   },
+   "pick": {
+    "days": 1096,
+    "total_return_pct": 26.4,
+    "cagr_pct": 8.1,
+    "sharpe": 0.4,
+    "t": 0.69,
+    "max_dd_pct": -53.9,
+    "worst_day_pct": -10.3,
+    "avg_leverage": 1.29,
+    "funding_pct": -6.0,
+    "costs_pct": -13.2,
+    "positive_months_pct": 53.0,
+    "trades": 259,
+    "win_pct": 35.1
+   }
+  },
+  {
+   "v": {
+    "family": "T",
+    "signal": "ema20_100",
+    "side": "long_only"
+   },
+   "pick": {
+    "days": 1096,
+    "total_return_pct": 116.6,
+    "cagr_pct": 29.4,
+    "sharpe": 0.8,
+    "t": 1.39,
+    "max_dd_pct": -48.9,
+    "worst_day_pct": -11.3,
+    "avg_leverage": 0.68,
+    "funding_pct": -7.1,
+    "costs_pct": -7.9,
+    "positive_months_pct": 56.0,
+    "trades": 130,
+    "win_pct": 40.0
+   }
+  },
+  {
+   "v": {
+    "family": "X",
+    "look": 7,
+    "k": 3
+   },
+   "pick": {
+    "days": 1096,
+    "total_return_pct": -52.8,
+    "cagr_pct": -22.1,
+    "sharpe": -0.4,
+    "t": -0.69,
+    "max_dd_pct": -76.6,
+    "worst_day_pct": -12.3,
+    "avg_leverage": 1.65,
+    "funding_pct": -7.6,
+    "costs_pct": -43.8,
+    "positive_months_pct": 42.0,
+    "trades": 759,
+    "win_pct": 47.6
+   }
+  },
+  {
+   "v": {
+    "family": "X",
+    "look": 7,
+    "k": 5
+   },
+   "pick": {
+    "days": 1096,
+    "total_return_pct": -47.1,
+    "cagr_pct": -19.1,
+    "sharpe": -0.27,
+    "t": -0.47,
+    "max_dd_pct": -69.2,
+    "worst_day_pct": -15.0,
+    "avg_leverage": 2.12,
+    "funding_pct": -6.0,
+    "costs_pct": -51.1,
+    "positive_months_pct": 33.0,
+    "trades": 1138,
+    "win_pct": 46.0
+   }
+  },
+  {
+   "v": {
+    "family": "X",
+    "look": 28,
+    "k": 3
+   },
+   "pick": {
+    "days": 1096,
+    "total_return_pct": 76.8,
+    "cagr_pct": 20.9,
+    "sharpe": 0.65,
+    "t": 1.13,
+    "max_dd_pct": -51.4,
+    "worst_day_pct": -14.8,
+    "avg_leverage": 1.6,
+    "funding_pct": -4.1,
+    "costs_pct": -24.6,
+    "positive_months_pct": 42.0,
+    "trades": 395,
+    "win_pct": 49.4
+   }
+  },
+  {
+   "v": {
+    "family": "X",
+    "look": 28,
+    "k": 5
+   },
+   "pick": {
+    "days": 1096,
+    "total_return_pct": 1.0,
+    "cagr_pct": 0.3,
+    "sharpe": 0.23,
+    "t": 0.39,
+    "max_dd_pct": -61.0,
+    "worst_day_pct": -11.0,
+    "avg_leverage": 2.1,
+    "funding_pct": -2.0,
+    "costs_pct": -29.1,
+    "positive_months_pct": 42.0,
+    "trades": 569,
+    "win_pct": 49.6
+   }
+  }
+ ],
+ "eligible": 0,
+ "passed": false,
+ "note": "nothing met the choice rule; holdout not looked at"
+}

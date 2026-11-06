@@ -1,0 +1,43 @@
+  10 coins, 2026-03-21 to 2026-10-26: pick 146 days, check 74 days (from 2026-08-14)
+  buy and hold over the whole period: BTC +13.7%, ETH +8.3%, SOL +12.4%, XRP -9.4%, BNB +15.7%, DOGE -17.4%, ADA -22.3%, TRX +6.4%, LINK +25.2%, LTC +1.1%
+  delta surge: 128 setting combinations (long and short)
+    USDT (0.20%)          best on pick: long  {"vol_x": 3, "imb": 0.4, "stop": "atr", "target": 2.0, "hold": 999, "trend": true}
+                          pick   230 trades   -39.04%  (-8.13%/month)  win 18.7%  gross -0.063R  net -2.018R
+                          check  132 trades   -22.73%  (-9.34%/month)  win 22.0%  gross -0.068R  net -1.816R  max drawdown 22.73%  | 0 of 128 settings made money on check
+    INR (0.59%)           best on pick: long  {"vol_x": 3, "imb": 0.4, "stop": "atr", "target": 2.0, "hold": 999, "trend": true}
+                          pick   230 trades  -110.80%  (-23.07%/month)  win 0.0%  gross -0.063R  net -5.649R
+                          check  132 trades   -63.91%  (-26.25%/month)  win 0.8%  gross -0.068R  net -5.063R  max drawdown 63.91%  | 0 of 128 settings made money on check
+    no fees (edge check)  best on pick: short {"vol_x": 3, "imb": 0.2, "stop": "atr", "target": 2.0, "hold": 999, "trend": true}
+                          pick   326 trades    +2.33%  (+0.48%/month)  win 37.1%  gross 0.113R  net 0.025R
+                          check  102 trades    -1.12%  (-0.46%/month)  win 33.3%  gross -0.0R  net -0.094R  max drawdown 1.89%  | 0 of 128 settings made money on check
+  absorption: 128 setting combinations (long and short)
+    USDT (0.20%)          best on pick: short {"vol_x": 3, "imb": 0.4, "stop": "atr", "target": 2.0, "hold": 12, "trend": true}
+                          pick    90 trades   -15.14%  (-3.15%/month)  win 15.6%  gross 0.031R  net -1.789R
+                          check   31 trades    -5.51%  (-2.26%/month)  win 12.9%  gross -0.074R  net -1.856R  max drawdown 5.57%  | 0 of 128 settings made money on check
+    INR (0.59%)           best on pick: short {"vol_x": 3, "imb": 0.4, "stop": "atr", "target": 2.0, "hold": 12, "trend": true}
+                          pick    90 trades   -43.22%  (-9.00%/month)  win 0.0%  gross 0.031R  net -5.169R
+                          check   31 trades   -15.18%  (-6.24%/month)  win 0.0%  gross -0.074R  net -5.164R  max drawdown 15.18%  | 0 of 128 settings made money on check
+    no fees (edge check)  best on pick: short {"vol_x": 3, "imb": 0.4, "stop": "bar", "target": 1.0, "hold": 999, "trend": true}
+                          pick    97 trades    +0.30%  (+0.06%/month)  win 51.5%  gross 0.032R  net -0.047R
+                          check   33 trades    +0.33%  (+0.14%/month)  win 51.5%  gross 0.03R  net -0.046R  max drawdown 1.04%  | 46 of 128 settings made money on check
+  CVD divergence: 64 setting combinations (long and short)
+    USDT (0.20%)          best on pick: long  {"imb": 1.0, "stop": "bar", "target": 1.0, "hold": 999, "trend": true}
+                          pick    53 trades    -8.50%  (-1.77%/month)  win 7.5%  gross 0.019R  net -1.656R
+                          check   62 trades    -9.27%  (-3.81%/month)  win 17.7%  gross 0.097R  net -1.484R  max drawdown 9.27%  | 0 of 64 settings made money on check
+    INR (0.59%)           best on pick: long  {"imb": 1.0, "stop": "bar", "target": 1.0, "hold": 999, "trend": true}
+                          pick    53 trades   -25.03%  (-5.21%/month)  win 0.0%  gross 0.019R  net -4.768R
+                          check   62 trades   -28.62%  (-11.76%/month)  win 0.0%  gross 0.097R  net -4.419R  max drawdown 28.62%  | 0 of 64 settings made money on check
+    no fees (edge check)  best on pick: short {"imb": 0.0, "stop": "atr", "target": 2.0, "hold": 999, "trend": false}
+                          pick   384 trades    +1.05%  (+0.22%/month)  win 35.7%  gross 0.07R  net -0.019R
+                          check  190 trades    -2.40%  (-0.99%/month)  win 32.1%  gross -0.037R  net -0.113R  max drawdown 4.2%  | 15 of 64 settings made money on check
+  opening flow: 72 setting combinations (long and short)
+    USDT (0.20%)          best on pick: long  {"imb": 0.2, "stop": "bar", "target": 99.0, "hold": 999, "trend": true}
+                          pick    55 trades    -7.96%  (-1.66%/month)  win 16.4%  gross 0.098R  net -1.189R
+                          check   35 trades    -3.67%  (-1.51%/month)  win 11.4%  gross -0.11R  net -1.336R  max drawdown 9.61%  | 0 of 72 settings made money on check
+    INR (0.59%)           best on pick: long  {"imb": 0.2, "stop": "bar", "target": 99.0, "hold": 999, "trend": true}
+                          pick    55 trades   -25.13%  (-5.23%/month)  win 9.1%  gross 0.098R  net -3.579R
+                          check   35 trades   -14.60%  (-6.00%/month)  win 8.6%  gross -0.11R  net -3.611R  max drawdown 19.89%  | 0 of 72 settings made money on check
+    no fees (edge check)  best on pick: short {"imb": 0.1, "stop": "atr", "target": 99.0, "hold": 999, "trend": false}
+                          pick   230 trades   +10.43%  (+2.17%/month)  win 18.3%  gross 0.205R  net 0.148R
+                          check  114 trades    -5.82%  (-2.39%/month)  win 11.4%  gross -0.15R  net -0.213R  max drawdown 7.21%  | 15 of 72 settings made money on check
+  saved results/orderflow.json (261s)

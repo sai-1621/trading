@@ -1,0 +1,236 @@
+{
+ "picks": 11845,
+ "with_1m": 11845,
+ "missing": 0,
+ "runs": {
+  "hourly test (same trades, original)": {
+   "trades": 2569,
+   "win_pct": 58.8,
+   "avg_net_pct": 0.044,
+   "pnl_usdt": 112.3,
+   "months_positive": "10/19",
+   "by_year": {
+    "2025": {
+     "trades": 1324,
+     "avg_net_pct": 0.121,
+     "pnl_usdt": 160.2
+    },
+    "2026": {
+     "trades": 1245,
+     "avg_net_pct": -0.038,
+     "pnl_usdt": -47.8
+    }
+   }
+  },
+  "0 min delay": {
+   "no_funding": {
+    "trades": 5452,
+    "win_pct": 58.1,
+    "avg_net_pct": -0.035,
+    "pnl_usdt": -188.8,
+    "months_positive": "10/19",
+    "by_year": {
+     "2025": {
+      "trades": 3181,
+      "avg_net_pct": -0.107,
+      "pnl_usdt": -340.6
+     },
+     "2026": {
+      "trades": 2271,
+      "avg_net_pct": 0.067,
+      "pnl_usdt": 151.8
+     }
+    }
+   },
+   "with_funding": {
+    "trades": 5452,
+    "win_pct": 58.0,
+    "avg_net_pct": -0.108,
+    "pnl_usdt": -591.0,
+    "months_positive": "9/19",
+    "by_year": {
+     "2025": {
+      "trades": 3181,
+      "avg_net_pct": -0.139,
+      "pnl_usdt": -441.1
+     },
+     "2026": {
+      "trades": 2271,
+      "avg_net_pct": -0.066,
+      "pnl_usdt": -149.9
+     }
+    }
+   },
+   "avg_slip_pct_vs_hour_open": 0.0,
+   "avg_funding_pct": -0.042
+  },
+  "1 min delay": {
+   "no_funding": {
+    "trades": 5448,
+    "win_pct": 57.8,
+    "avg_net_pct": -0.068,
+    "pnl_usdt": -367.9,
+    "months_positive": "10/19",
+    "by_year": {
+     "2025": {
+      "trades": 3173,
+      "avg_net_pct": -0.106,
+      "pnl_usdt": -335.8
+     },
+     "2026": {
+      "trades": 2275,
+      "avg_net_pct": -0.014,
+      "pnl_usdt": -32.1
+     }
+    }
+   },
+   "with_funding": {
+    "trades": 5448,
+    "win_pct": 57.7,
+    "avg_net_pct": -0.143,
+    "pnl_usdt": -777.2,
+    "months_positive": "7/19",
+    "by_year": {
+     "2025": {
+      "trades": 3173,
+      "avg_net_pct": -0.137,
+      "pnl_usdt": -436.0
+     },
+     "2026": {
+      "trades": 2275,
+      "avg_net_pct": -0.15,
+      "pnl_usdt": -341.2
+     }
+    }
+   },
+   "avg_slip_pct_vs_hour_open": 0.084,
+   "avg_funding_pct": -0.045
+  },
+  "2 min delay": {
+   "no_funding": {
+    "trades": 5454,
+    "win_pct": 57.7,
+    "avg_net_pct": -0.07,
+    "pnl_usdt": -380.8,
+    "months_positive": "7/19",
+    "by_year": {
+     "2025": {
+      "trades": 3192,
+      "avg_net_pct": -0.062,
+      "pnl_usdt": -199.0
+     },
+     "2026": {
+      "trades": 2262,
+      "avg_net_pct": -0.08,
+      "pnl_usdt": -181.8
+     }
+    }
+   },
+   "with_funding": {
+    "trades": 5454,
+    "win_pct": 57.5,
+    "avg_net_pct": -0.144,
+    "pnl_usdt": -785.0,
+    "months_positive": "6/19",
+    "by_year": {
+     "2025": {
+      "trades": 3192,
+      "avg_net_pct": -0.092,
+      "pnl_usdt": -294.6
+     },
+     "2026": {
+      "trades": 2262,
+      "avg_net_pct": -0.217,
+      "pnl_usdt": -490.4
+     }
+    }
+   },
+   "avg_slip_pct_vs_hour_open": 0.146,
+   "avg_funding_pct": -0.044
+  },
+  "5 min delay": {
+   "no_funding": {
+    "trades": 5404,
+    "win_pct": 58.1,
+    "avg_net_pct": -0.019,
+    "pnl_usdt": -103.0,
+    "months_positive": "9/19",
+    "by_year": {
+     "2025": {
+      "trades": 3157,
+      "avg_net_pct": 0.046,
+      "pnl_usdt": 145.1
+     },
+     "2026": {
+      "trades": 2247,
+      "avg_net_pct": -0.11,
+      "pnl_usdt": -248.1
+     }
+    }
+   },
+   "with_funding": {
+    "trades": 5404,
+    "win_pct": 57.9,
+    "avg_net_pct": -0.101,
+    "pnl_usdt": -544.0,
+    "months_positive": "9/19",
+    "by_year": {
+     "2025": {
+      "trades": 3157,
+      "avg_net_pct": 0.008,
+      "pnl_usdt": 25.5
+     },
+     "2026": {
+      "trades": 2247,
+      "avg_net_pct": -0.253,
+      "pnl_usdt": -569.5
+     }
+    }
+   },
+   "avg_slip_pct_vs_hour_open": 0.093,
+   "avg_funding_pct": -0.047
+  },
+  "10 min delay": {
+   "no_funding": {
+    "trades": 5365,
+    "win_pct": 58.4,
+    "avg_net_pct": 0.042,
+    "pnl_usdt": 224.9,
+    "months_positive": "8/19",
+    "by_year": {
+     "2025": {
+      "trades": 3143,
+      "avg_net_pct": 0.13,
+      "pnl_usdt": 407.7
+     },
+     "2026": {
+      "trades": 2222,
+      "avg_net_pct": -0.082,
+      "pnl_usdt": -182.9
+     }
+    }
+   },
+   "with_funding": {
+    "trades": 5365,
+    "win_pct": 58.2,
+    "avg_net_pct": -0.035,
+    "pnl_usdt": -186.7,
+    "months_positive": "8/19",
+    "by_year": {
+     "2025": {
+      "trades": 3143,
+      "avg_net_pct": 0.101,
+      "pnl_usdt": 316.3
+     },
+     "2026": {
+      "trades": 2222,
+      "avg_net_pct": -0.226,
+      "pnl_usdt": -503.0
+     }
+    }
+   },
+   "avg_slip_pct_vs_hour_open": 0.123,
+   "avg_funding_pct": -0.045
+  }
+ }
+}

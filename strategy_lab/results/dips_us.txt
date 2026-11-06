@@ -1,0 +1,35 @@
+  loading 1/99 AAPL          loading 2/99 ABBV          loading 3/99 ABT           loading 4/99 ACN           loading 5/99 ADBE          loading 6/99 ADI           loading 7/99 AMAT          loading 8/99 AMD           loading 9/99 AMGN          loading 10/99 AMZN          loading 11/99 ANET          loading 12/99 APH           loading 13/99 APP           loading 14/99 AVGO          loading 15/99 AXP           loading 16/99 BA            loading 17/99 BAC           loading 18/99 BE            loading 19/99 BKNG          loading 20/99 BRK.B         loading 21/99 C             loading 22/99 CAT           loading 23/99 CEG           loading 24/99 CIEN          loading 25/99 COHR          loading 26/99 COIN          loading 27/99 COST          loading 28/99 CRM           loading 29/99 CRWD          loading 30/99 CSCO          loading 31/99 CVX           loading 32/99 DELL          loading 33/99 DHR           loading 34/99 ETN           loading 35/99 GE            loading 36/99 GLW           loading 37/99 GOOG          loading 38/99 GOOGL         loading 39/99 GS            loading 40/99 HD            loading 41/99 HOOD          loading 42/99 HPE           loading 43/99 IBM           loading 44/99 INTC          loading 45/99 INTU          loading 46/99 ISRG          loading 47/99 JNJ           loading 48/99 JPM           loading 49/99 KLAC          loading 50/99 KO            loading 51/99 LIN           loading 52/99 LITE          loading 53/99 LLY           loading 54/99 LRCX          loading 55/99 MA            loading 56/99 MCD           loading 57/99 MDT           loading 58/99 META          loading 59/99 MPWR          loading 60/99 MRK           loading 61/99 MRNA          loading 62/99 MRVL          loading 63/99 MS            loading 64/99 MSFT          loading 65/99 MU            loading 66/99 NEE           loading 67/99 NFLX          loading 68/99 NKE           loading 69/99 NOW           loading 70/99 NVDA          loading 71/99 ORCL          loading 72/99 PANW          loading 73/99 PEP           loading 74/99 PG            loading 75/99 PLTR          loading 76/99 QCOM          loading 77/99 RTX           loading 78/99 SMCI          loading 79/99 SNDK          loading 80/99 SNPS          loading 81/99 STX           loading 82/99 T             loading 83/99 TER           loading 84/99 TMO           loading 85/99 TMUS          loading 86/99 TSLA          loading 87/99 TWLO          loading 88/99 TXN           loading 89/99 UBER          loading 90/99 UNH           loading 91/99 V             loading 92/99 VLO           loading 93/99 VRT           loading 94/99 VST           loading 95/99 VZ            loading 96/99 WDC           loading 97/99 WFC           loading 98/99 WMT           loading 99/99 XOM           99 stocks, trading days 2017-08-17 .. 2026-10-29, pick before 2023-10-04, check from 2023-10-04
+
+setting                                      | PICK trades  won%   avg% | CHECK trades  won%   avg% days
+RSI<5  exit rsi70 stop none  any mkt         |        1950  65.8  +0.41 |         1132  69.5  +1.10  4.8  <- chosen
+RSI<20 exit rsi70 stop none  any mkt         |        6309  67.3  +0.34 |         3603  66.3  +0.75  4.8
+RSI<5  exit sma5  stop none  any mkt         |        1993  64.5  +0.32 |         1156  67.5  +1.14  3.7
+RSI<20 exit rsi70 stop none  index up        |        5476  66.8  +0.29 |         3453  66.1  +0.71  4.8
+RSI<10 exit rsi70 stop none  any mkt         |        3639  66.2  +0.29 |         2135  68.0  +0.96  4.9
+RSI<5  exit rsi70 stop none  index up        |        1682  65.1  +0.26 |         1068  69.6  +1.03  4.8
+RSI<10 exit rsi70 stop none  index up        |        3142  65.8  +0.26 |         2040  68.1  +0.93  4.9
+RSI<20 exit sma5  stop none  any mkt         |        6781  65.6  +0.25 |         3866  64.3  +0.66  3.8
+RSI<20 exit rsi70 stop -8%   any mkt         |        6736  66.3  +0.23 |         3999  63.1  +0.53  4.0
+RSI<20 exit sma5  stop none  index up        |        5884  65.3  +0.22 |         3702  64.1  +0.63  3.8
+RSI<5  exit sma5  stop none  index up        |        1726  63.8  +0.20 |         1092  67.5  +1.07  3.7
+RSI<5  exit rsi70 stop -8%   any mkt         |        2053  64.2  +0.20 |         1190  67.3  +0.91  4.2
+RSI<10 exit sma5  stop none  index up        |        3286  64.3  +0.19 |         2136  65.7  +0.93  3.8
+RSI<10 exit sma5  stop none  any mkt         |        3795  64.6  +0.19 |         2237  65.7  +0.97  3.8
+RSI<20 exit rsi70 stop -8%   index up        |        5799  66.0  +0.17 |         3813  63.1  +0.50  4.1
+RSI<10 exit rsi70 stop -8%   any mkt         |        3877  65.1  +0.16 |         2309  64.9  +0.70  4.2
+RSI<20 exit sma5  stop -8%   any mkt         |        7176  64.9  +0.14 |         4218  62.6  +0.48  3.3
+RSI<5  exit sma5  stop -8%   any mkt         |        2078  63.5  +0.10 |         1207  65.8  +0.95  3.3
+RSI<10 exit rsi70 stop -8%   index up        |        3329  64.7  +0.10 |         2198  65.2  +0.67  4.2
+RSI<20 exit sma5  stop -8%   index up        |        6183  64.7  +0.09 |         4020  62.5  +0.46  3.3
+RSI<10 exit sma5  stop -8%   any mkt         |        4009  64.2  +0.07 |         2378  63.7  +0.73  3.3
+RSI<10 exit sma5  stop -8%   index up        |        3449  63.8  +0.02 |         2262  63.8  +0.71  3.3
+RSI<5  exit rsi70 stop -8%   index up        |        1763  63.4  +0.00 |         1122  67.3  +0.85  4.2
+RSI<5  exit sma5  stop -8%   index up        |        1787  62.7  -0.07 |         1139  65.8  +0.90  3.3
+
+Chosen on pick years: RSI<5  exit rsi70 stop none  any mkt
+CHECK years (2023-10-04 .. 2026-10-29, unseen):
+  dip rule      : 1132 trades, 69.5% won, avg +1.10% per trade after charges (wins avg +3.67%, losses avg -4.75%), held 4.8 days
+  by year       : 2023: +1.50%  2024: +0.92%  2025: +0.32%  2026: +2.11%
+  any uptrend day, hold 5d (no dip needed): 52651 trades, 54.6% won, avg +0.66%
+  portfolio (2 positions x 2,250): 215 trades, 62.8% won, profit 2,371 = +52.7% of 4,500 over 3.1 years, worst drop 31.7%  {'2023': 5.6, '2024': 35.0, '2025': -3.7, '2026': 15.8}
+  holding the index: +81.1%   holding all 99 stocks: +261.8%

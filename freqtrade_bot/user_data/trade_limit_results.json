@@ -1,0 +1,191 @@
+{
+ "prereg": "PREREG_trade_limit.md",
+ "split": "2025-01-01",
+ "variants": {
+  "L3": {
+   "pick": {
+    "trades": 1996,
+    "win_pct": 57.1,
+    "avg_pct": 0.071,
+    "t": 0.46,
+    "pnl_usdt": 141.2,
+    "max_dd_usdt": -345.3,
+    "worst_hour_usdt": -27.3,
+    "by_year": {
+     "2022": -6.1,
+     "2023": 100.5,
+     "2024": 46.7
+    }
+   },
+   "holdout": {
+    "trades": 1765,
+    "win_pct": 56.0,
+    "avg_pct": -0.439,
+    "t": -2.57,
+    "pnl_usdt": -774.6,
+    "max_dd_usdt": -802.4,
+    "worst_hour_usdt": -21.3,
+    "by_year": {
+     "2025": -616.8,
+     "2026": -157.8
+    }
+   },
+   "total_pnl_usdt": -633.4
+  },
+  "L5 (current)": {
+   "pick": {
+    "trades": 2910,
+    "win_pct": 56.2,
+    "avg_pct": -0.038,
+    "t": -0.3,
+    "pnl_usdt": -110.8,
+    "max_dd_usdt": -561.3,
+    "worst_hour_usdt": -45.6,
+    "by_year": {
+     "2022": -44.2,
+     "2023": -5.1,
+     "2024": -61.4
+    }
+   },
+   "holdout": {
+    "trades": 2781,
+    "win_pct": 57.0,
+    "avg_pct": -0.332,
+    "t": -2.44,
+    "pnl_usdt": -921.9,
+    "max_dd_usdt": -1168.1,
+    "worst_hour_usdt": -24.5,
+    "by_year": {
+     "2025": -955.5,
+     "2026": 33.5
+    }
+   },
+   "total_pnl_usdt": -1032.7
+  },
+  "L8": {
+   "pick": {
+    "trades": 3855,
+    "win_pct": 55.3,
+    "avg_pct": -0.118,
+    "t": -1.06,
+    "pnl_usdt": -453.4,
+    "max_dd_usdt": -691.4,
+    "worst_hour_usdt": -47.9,
+    "by_year": {
+     "2022": -249.1,
+     "2023": -84.1,
+     "2024": -120.3
+    }
+   },
+   "holdout": {
+    "trades": 3997,
+    "win_pct": 57.0,
+    "avg_pct": -0.286,
+    "t": -2.53,
+    "pnl_usdt": -1143.9,
+    "max_dd_usdt": -1444.1,
+    "worst_hour_usdt": -46.5,
+    "by_year": {
+     "2025": -1011.7,
+     "2026": -132.3
+    }
+   },
+   "total_pnl_usdt": -1597.4
+  },
+  "L10": {
+   "pick": {
+    "trades": 4310,
+    "win_pct": 55.0,
+    "avg_pct": -0.161,
+    "t": -1.54,
+    "pnl_usdt": -695.0,
+    "max_dd_usdt": -926.7,
+    "worst_hour_usdt": -64.0,
+    "by_year": {
+     "2022": -306.0,
+     "2023": -117.5,
+     "2024": -271.6
+    }
+   },
+   "holdout": {
+    "trades": 4606,
+    "win_pct": 56.8,
+    "avg_pct": -0.336,
+    "t": -3.19,
+    "pnl_usdt": -1549.0,
+    "max_dd_usdt": -1766.6,
+    "worst_hour_usdt": -60.4,
+    "by_year": {
+     "2025": -1157.1,
+     "2026": -391.9
+    }
+   },
+   "total_pnl_usdt": -2244.0
+  },
+  "H2-5": {
+   "pick": {
+    "trades": 2878,
+    "win_pct": 56.8,
+    "avg_pct": 0.048,
+    "t": 0.37,
+    "pnl_usdt": 137.3,
+    "max_dd_usdt": -587.5,
+    "worst_hour_usdt": -21.3,
+    "by_year": {
+     "2022": 75.6,
+     "2023": -39.0,
+     "2024": 100.7
+    }
+   },
+   "holdout": {
+    "trades": 2779,
+    "win_pct": 56.9,
+    "avg_pct": -0.342,
+    "t": -2.52,
+    "pnl_usdt": -951.1,
+    "max_dd_usdt": -1196.6,
+    "worst_hour_usdt": -21.3,
+    "by_year": {
+     "2025": -979.8,
+     "2026": 28.8
+    }
+   },
+   "total_pnl_usdt": -813.8
+  },
+  "H2-10": {
+   "pick": {
+    "trades": 4064,
+    "win_pct": 56.1,
+    "avg_pct": -0.064,
+    "t": -0.59,
+    "pnl_usdt": -261.2,
+    "max_dd_usdt": -784.8,
+    "worst_hour_usdt": -21.3,
+    "by_year": {
+     "2022": -80.5,
+     "2023": -42.2,
+     "2024": -138.5
+    }
+   },
+   "holdout": {
+    "trades": 4546,
+    "win_pct": 56.6,
+    "avg_pct": -0.385,
+    "t": -3.61,
+    "pnl_usdt": -1748.5,
+    "max_dd_usdt": -1893.8,
+    "worst_hour_usdt": -23.0,
+    "by_year": {
+     "2025": -1274.1,
+     "2026": -474.4
+    }
+   },
+   "total_pnl_usdt": -2009.7
+  }
+ },
+ "decision": {
+  "eligible": [],
+  "PASS": false,
+  "why": "no variant had positive pick P&L with t >= 2.0 that beat the current limit; keep 5"
+ }
+}

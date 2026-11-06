@@ -1,0 +1,1056 @@
+{
+ "market": "us",
+ "run_at": "2026-10-29T10:12:41",
+ "stocks": 100,
+ "index": "^GSPC",
+ "proposed": [
+  "index > both",
+  "beats index 3m"
+ ],
+ "test_a": {
+  "rule_live": "or-mid 2.0R trend on",
+  "filter_grid_all_days": {
+   "any market | any stock": {
+    "trades": 1661,
+    "win_pct": 39.7,
+    "avg_r": -0.038,
+    "avg_r_net": -0.126,
+    "total_r_net": -208.9
+   },
+   "any market | beats index 1m": {
+    "trades": 1282,
+    "win_pct": 40.2,
+    "avg_r": -0.04,
+    "avg_r_net": -0.127,
+    "total_r_net": -162.7
+   },
+   "any market | beats index 3m": {
+    "trades": 990,
+    "win_pct": 40.7,
+    "avg_r": -0.045,
+    "avg_r_net": -0.133,
+    "total_r_net": -131.9
+   },
+   "any market | beats index 1m+3m": {
+    "trades": 823,
+    "win_pct": 41.2,
+    "avg_r": -0.052,
+    "avg_r_net": -0.139,
+    "total_r_net": -114.3
+   },
+   "any market | top 30% vs index 3m": {
+    "trades": 670,
+    "win_pct": 41.5,
+    "avg_r": -0.039,
+    "avg_r_net": -0.119,
+    "total_r_net": -80.0
+   },
+   "index > 50d | any stock": {
+    "trades": 1486,
+    "win_pct": 40.6,
+    "avg_r": -0.011,
+    "avg_r_net": -0.098,
+    "total_r_net": -145.7
+   },
+   "index > 50d | beats index 1m": {
+    "trades": 1136,
+    "win_pct": 41.2,
+    "avg_r": -0.016,
+    "avg_r_net": -0.101,
+    "total_r_net": -114.5
+   },
+   "index > 50d | beats index 3m": {
+    "trades": 876,
+    "win_pct": 41.2,
+    "avg_r": -0.025,
+    "avg_r_net": -0.113,
+    "total_r_net": -98.9
+   },
+   "index > 50d | beats index 1m+3m": {
+    "trades": 719,
+    "win_pct": 41.9,
+    "avg_r": -0.031,
+    "avg_r_net": -0.117,
+    "total_r_net": -84.2
+   },
+   "index > 50d | top 30% vs index 3m": {
+    "trades": 582,
+    "win_pct": 41.4,
+    "avg_r": -0.028,
+    "avg_r_net": -0.108,
+    "total_r_net": -62.9
+   },
+   "index > 200d | any stock": {
+    "trades": 1661,
+    "win_pct": 39.7,
+    "avg_r": -0.038,
+    "avg_r_net": -0.126,
+    "total_r_net": -208.9
+   },
+   "index > 200d | beats index 1m": {
+    "trades": 1282,
+    "win_pct": 40.2,
+    "avg_r": -0.04,
+    "avg_r_net": -0.127,
+    "total_r_net": -162.7
+   },
+   "index > 200d | beats index 3m": {
+    "trades": 990,
+    "win_pct": 40.7,
+    "avg_r": -0.045,
+    "avg_r_net": -0.133,
+    "total_r_net": -131.9
+   },
+   "index > 200d | beats index 1m+3m": {
+    "trades": 823,
+    "win_pct": 41.2,
+    "avg_r": -0.052,
+    "avg_r_net": -0.139,
+    "total_r_net": -114.3
+   },
+   "index > 200d | top 30% vs index 3m": {
+    "trades": 670,
+    "win_pct": 41.5,
+    "avg_r": -0.039,
+    "avg_r_net": -0.119,
+    "total_r_net": -80.0
+   },
+   "index > both | any stock": {
+    "trades": 1486,
+    "win_pct": 40.6,
+    "avg_r": -0.011,
+    "avg_r_net": -0.098,
+    "total_r_net": -145.7
+   },
+   "index > both | beats index 1m": {
+    "trades": 1136,
+    "win_pct": 41.2,
+    "avg_r": -0.016,
+    "avg_r_net": -0.101,
+    "total_r_net": -114.5
+   },
+   "index > both | beats index 3m": {
+    "trades": 876,
+    "win_pct": 41.2,
+    "avg_r": -0.025,
+    "avg_r_net": -0.113,
+    "total_r_net": -98.9
+   },
+   "index > both | beats index 1m+3m": {
+    "trades": 719,
+    "win_pct": 41.9,
+    "avg_r": -0.031,
+    "avg_r_net": -0.117,
+    "total_r_net": -84.2
+   },
+   "index > both | top 30% vs index 3m": {
+    "trades": 582,
+    "win_pct": 41.4,
+    "avg_r": -0.028,
+    "avg_r_net": -0.108,
+    "total_r_net": -62.9
+   }
+  },
+  "baseline": {
+   "rule": "or-mid 2.0R trend on",
+   "market": "any market",
+   "strength": "any stock",
+   "pick": {
+    "trades": 1104,
+    "win_pct": 39.5,
+    "avg_r": -0.061,
+    "avg_r_net": -0.145,
+    "total_r_net": -160.0
+   },
+   "check": {
+    "trades": 557,
+    "win_pct": 40.2,
+    "avg_r": 0.009,
+    "avg_r_net": -0.088,
+    "total_r_net": -48.8
+   },
+   "all": {
+    "trades": 1661,
+    "win_pct": 39.7,
+    "avg_r": -0.038,
+    "avg_r_net": -0.126,
+    "total_r_net": -208.9
+   }
+  },
+  "proposed": {
+   "rule": "or-mid 2.0R trend on",
+   "market": "index > both",
+   "strength": "beats index 3m",
+   "pick": {
+    "trades": 614,
+    "win_pct": 41.0,
+    "avg_r": -0.051,
+    "avg_r_net": -0.137,
+    "total_r_net": -84.1
+   },
+   "check": {
+    "trades": 262,
+    "win_pct": 41.6,
+    "avg_r": 0.034,
+    "avg_r_net": -0.057,
+    "total_r_net": -14.8
+   },
+   "all": {
+    "trades": 876,
+    "win_pct": 41.2,
+    "avg_r": -0.025,
+    "avg_r_net": -0.113,
+    "total_r_net": -98.9
+   }
+  },
+  "best_on_pick": {
+   "rule": "or-low 2.0R trend on",
+   "market": "index > 50d",
+   "strength": "top 30% vs index 3m",
+   "pick": {
+    "trades": 407,
+    "win_pct": 46.2,
+    "avg_r": -0.014,
+    "avg_r_net": -0.069,
+    "total_r_net": -28.0
+   },
+   "check": {
+    "trades": 175,
+    "win_pct": 47.4,
+    "avg_r": 0.036,
+    "avg_r_net": -0.021,
+    "total_r_net": -3.6
+   },
+   "all": {
+    "trades": 582,
+    "win_pct": 46.6,
+    "avg_r": 0.001,
+    "avg_r_net": -0.054,
+    "total_r_net": -31.6
+   }
+  },
+  "top": [
+   {
+    "rule": "or-low 2.0R trend on",
+    "market": "index > 50d",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 407,
+     "win_pct": 46.2,
+     "avg_r": -0.014,
+     "avg_r_net": -0.069,
+     "total_r_net": -28.0
+    },
+    "check": {
+     "trades": 175,
+     "win_pct": 47.4,
+     "avg_r": 0.036,
+     "avg_r_net": -0.021,
+     "total_r_net": -3.6
+    },
+    "all": {
+     "trades": 582,
+     "win_pct": 46.6,
+     "avg_r": 0.001,
+     "avg_r_net": -0.054,
+     "total_r_net": -31.6
+    }
+   },
+   {
+    "rule": "or-low 2.0R trend on",
+    "market": "index > both",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 407,
+     "win_pct": 46.2,
+     "avg_r": -0.014,
+     "avg_r_net": -0.069,
+     "total_r_net": -28.0
+    },
+    "check": {
+     "trades": 175,
+     "win_pct": 47.4,
+     "avg_r": 0.036,
+     "avg_r_net": -0.021,
+     "total_r_net": -3.6
+    },
+    "all": {
+     "trades": 582,
+     "win_pct": 46.6,
+     "avg_r": 0.001,
+     "avg_r_net": -0.054,
+     "total_r_net": -31.6
+    }
+   },
+   {
+    "rule": "or-low 1.5R trend on",
+    "market": "index > 50d",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 407,
+     "win_pct": 46.4,
+     "avg_r": -0.014,
+     "avg_r_net": -0.069,
+     "total_r_net": -27.9
+    },
+    "check": {
+     "trades": 175,
+     "win_pct": 47.4,
+     "avg_r": 0.04,
+     "avg_r_net": -0.016,
+     "total_r_net": -2.9
+    },
+    "all": {
+     "trades": 582,
+     "win_pct": 46.7,
+     "avg_r": 0.003,
+     "avg_r_net": -0.053,
+     "total_r_net": -30.8
+    }
+   },
+   {
+    "rule": "or-low 1.5R trend on",
+    "market": "index > both",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 407,
+     "win_pct": 46.4,
+     "avg_r": -0.014,
+     "avg_r_net": -0.069,
+     "total_r_net": -27.9
+    },
+    "check": {
+     "trades": 175,
+     "win_pct": 47.4,
+     "avg_r": 0.04,
+     "avg_r_net": -0.016,
+     "total_r_net": -2.9
+    },
+    "all": {
+     "trades": 582,
+     "win_pct": 46.7,
+     "avg_r": 0.003,
+     "avg_r_net": -0.053,
+     "total_r_net": -30.8
+    }
+   },
+   {
+    "rule": "or-low 1.0R trend on",
+    "market": "index > 50d",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 407,
+     "win_pct": 47.4,
+     "avg_r": -0.016,
+     "avg_r_net": -0.07,
+     "total_r_net": -28.7
+    },
+    "check": {
+     "trades": 175,
+     "win_pct": 48.0,
+     "avg_r": 0.01,
+     "avg_r_net": -0.047,
+     "total_r_net": -8.2
+    },
+    "all": {
+     "trades": 582,
+     "win_pct": 47.6,
+     "avg_r": -0.008,
+     "avg_r_net": -0.063,
+     "total_r_net": -36.9
+    }
+   },
+   {
+    "rule": "or-low 1.0R trend on",
+    "market": "index > both",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 407,
+     "win_pct": 47.4,
+     "avg_r": -0.016,
+     "avg_r_net": -0.07,
+     "total_r_net": -28.7
+    },
+    "check": {
+     "trades": 175,
+     "win_pct": 48.0,
+     "avg_r": 0.01,
+     "avg_r_net": -0.047,
+     "total_r_net": -8.2
+    },
+    "all": {
+     "trades": 582,
+     "win_pct": 47.6,
+     "avg_r": -0.008,
+     "avg_r_net": -0.063,
+     "total_r_net": -36.9
+    }
+   },
+   {
+    "rule": "or-low 1.5R trend on",
+    "market": "any market",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 442,
+     "win_pct": 45.7,
+     "avg_r": -0.025,
+     "avg_r_net": -0.08,
+     "total_r_net": -35.5
+    },
+    "check": {
+     "trades": 228,
+     "win_pct": 47.8,
+     "avg_r": 0.033,
+     "avg_r_net": -0.024,
+     "total_r_net": -5.4
+    },
+    "all": {
+     "trades": 670,
+     "win_pct": 46.4,
+     "avg_r": -0.006,
+     "avg_r_net": -0.061,
+     "total_r_net": -40.9
+    }
+   },
+   {
+    "rule": "or-low 1.5R trend on",
+    "market": "index > 200d",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 442,
+     "win_pct": 45.7,
+     "avg_r": -0.025,
+     "avg_r_net": -0.08,
+     "total_r_net": -35.5
+    },
+    "check": {
+     "trades": 228,
+     "win_pct": 47.8,
+     "avg_r": 0.033,
+     "avg_r_net": -0.024,
+     "total_r_net": -5.4
+    },
+    "all": {
+     "trades": 670,
+     "win_pct": 46.4,
+     "avg_r": -0.006,
+     "avg_r_net": -0.061,
+     "total_r_net": -40.9
+    }
+   },
+   {
+    "rule": "or-low 2.0R trend on",
+    "market": "any market",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 442,
+     "win_pct": 45.5,
+     "avg_r": -0.027,
+     "avg_r_net": -0.082,
+     "total_r_net": -36.2
+    },
+    "check": {
+     "trades": 228,
+     "win_pct": 47.8,
+     "avg_r": 0.029,
+     "avg_r_net": -0.027,
+     "total_r_net": -6.2
+    },
+    "all": {
+     "trades": 670,
+     "win_pct": 46.3,
+     "avg_r": -0.008,
+     "avg_r_net": -0.063,
+     "total_r_net": -42.4
+    }
+   },
+   {
+    "rule": "or-low 2.0R trend on",
+    "market": "index > 200d",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 442,
+     "win_pct": 45.5,
+     "avg_r": -0.027,
+     "avg_r_net": -0.082,
+     "total_r_net": -36.2
+    },
+    "check": {
+     "trades": 228,
+     "win_pct": 47.8,
+     "avg_r": 0.029,
+     "avg_r_net": -0.027,
+     "total_r_net": -6.2
+    },
+    "all": {
+     "trades": 670,
+     "win_pct": 46.3,
+     "avg_r": -0.008,
+     "avg_r_net": -0.063,
+     "total_r_net": -42.4
+    }
+   }
+  ],
+  "combinations": 240,
+  "judged": 240,
+  "positive_both": 0,
+  "positive_rows": [],
+  "verdict": "NO RELIABLE EDGE",
+  "days": [
+   "2026-08-05",
+   "2026-10-28"
+  ],
+  "n_days": 60,
+  "cut": "2026-10-01",
+  "index_up_days": {
+   "up50": 52,
+   "up200": 60
+  }
+ },
+ "test_b": {
+  "rule_live": "or-mid 2.0R trend on",
+  "filter_grid_all_days": {
+   "any market | any stock": {
+    "trades": 12264,
+    "win_pct": 41.9,
+    "avg_r": -0.033,
+    "avg_r_net": -0.109,
+    "total_r_net": -1337.1
+   },
+   "any market | beats index 1m": {
+    "trades": 9391,
+    "win_pct": 41.6,
+    "avg_r": -0.041,
+    "avg_r_net": -0.116,
+    "total_r_net": -1085.8
+   },
+   "any market | beats index 3m": {
+    "trades": 7894,
+    "win_pct": 42.3,
+    "avg_r": -0.026,
+    "avg_r_net": -0.101,
+    "total_r_net": -799.6
+   },
+   "any market | beats index 1m+3m": {
+    "trades": 6786,
+    "win_pct": 42.3,
+    "avg_r": -0.029,
+    "avg_r_net": -0.103,
+    "total_r_net": -697.0
+   },
+   "any market | top 30% vs index 3m": {
+    "trades": 4908,
+    "win_pct": 43.4,
+    "avg_r": -0.009,
+    "avg_r_net": -0.077,
+    "total_r_net": -380.0
+   },
+   "index > 50d | any stock": {
+    "trades": 10471,
+    "win_pct": 42.0,
+    "avg_r": -0.031,
+    "avg_r_net": -0.108,
+    "total_r_net": -1130.0
+   },
+   "index > 50d | beats index 1m": {
+    "trades": 7911,
+    "win_pct": 41.8,
+    "avg_r": -0.039,
+    "avg_r_net": -0.114,
+    "total_r_net": -903.5
+   },
+   "index > 50d | beats index 3m": {
+    "trades": 6726,
+    "win_pct": 42.7,
+    "avg_r": -0.023,
+    "avg_r_net": -0.099,
+    "total_r_net": -663.0
+   },
+   "index > 50d | beats index 1m+3m": {
+    "trades": 5716,
+    "win_pct": 42.7,
+    "avg_r": -0.026,
+    "avg_r_net": -0.101,
+    "total_r_net": -575.2
+   },
+   "index > 50d | top 30% vs index 3m": {
+    "trades": 4114,
+    "win_pct": 43.7,
+    "avg_r": -0.006,
+    "avg_r_net": -0.075,
+    "total_r_net": -309.7
+   },
+   "index > 200d | any stock": {
+    "trades": 11441,
+    "win_pct": 42.1,
+    "avg_r": -0.028,
+    "avg_r_net": -0.105,
+    "total_r_net": -1201.1
+   },
+   "index > 200d | beats index 1m": {
+    "trades": 8829,
+    "win_pct": 41.7,
+    "avg_r": -0.038,
+    "avg_r_net": -0.113,
+    "total_r_net": -994.4
+   },
+   "index > 200d | beats index 3m": {
+    "trades": 7448,
+    "win_pct": 42.4,
+    "avg_r": -0.025,
+    "avg_r_net": -0.1,
+    "total_r_net": -743.5
+   },
+   "index > 200d | beats index 1m+3m": {
+    "trades": 6436,
+    "win_pct": 42.2,
+    "avg_r": -0.029,
+    "avg_r_net": -0.103,
+    "total_r_net": -663.4
+   },
+   "index > 200d | top 30% vs index 3m": {
+    "trades": 4583,
+    "win_pct": 43.5,
+    "avg_r": -0.005,
+    "avg_r_net": -0.074,
+    "total_r_net": -338.0
+   },
+   "index > both | any stock": {
+    "trades": 10210,
+    "win_pct": 42.6,
+    "avg_r": -0.022,
+    "avg_r_net": -0.099,
+    "total_r_net": -1008.3
+   },
+   "index > both | beats index 1m": {
+    "trades": 7742,
+    "win_pct": 42.2,
+    "avg_r": -0.031,
+    "avg_r_net": -0.106,
+    "total_r_net": -822.3
+   },
+   "index > both | beats index 3m": {
+    "trades": 6617,
+    "win_pct": 43.0,
+    "avg_r": -0.018,
+    "avg_r_net": -0.093,
+    "total_r_net": -617.7
+   },
+   "index > both | beats index 1m+3m": {
+    "trades": 5650,
+    "win_pct": 42.8,
+    "avg_r": -0.022,
+    "avg_r_net": -0.097,
+    "total_r_net": -546.4
+   },
+   "index > both | top 30% vs index 3m": {
+    "trades": 4033,
+    "win_pct": 44.1,
+    "avg_r": 0.0,
+    "avg_r_net": -0.069,
+    "total_r_net": -276.8
+   }
+  },
+  "baseline": {
+   "rule": "or-mid 2.0R trend on",
+   "market": "any market",
+   "strength": "any stock",
+   "pick": {
+    "trades": 8699,
+    "win_pct": 41.7,
+    "avg_r": -0.035,
+    "avg_r_net": -0.116,
+    "total_r_net": -1007.8
+   },
+   "check": {
+    "trades": 3565,
+    "win_pct": 42.5,
+    "avg_r": -0.027,
+    "avg_r_net": -0.092,
+    "total_r_net": -329.4
+   },
+   "all": {
+    "trades": 12264,
+    "win_pct": 41.9,
+    "avg_r": -0.033,
+    "avg_r_net": -0.109,
+    "total_r_net": -1337.1
+   }
+  },
+  "proposed": {
+   "rule": "or-mid 2.0R trend on",
+   "market": "index > both",
+   "strength": "beats index 3m",
+   "pick": {
+    "trades": 4789,
+    "win_pct": 42.7,
+    "avg_r": -0.021,
+    "avg_r_net": -0.101,
+    "total_r_net": -481.8
+   },
+   "check": {
+    "trades": 1828,
+    "win_pct": 43.9,
+    "avg_r": -0.01,
+    "avg_r_net": -0.074,
+    "total_r_net": -135.9
+   },
+   "all": {
+    "trades": 6617,
+    "win_pct": 43.0,
+    "avg_r": -0.018,
+    "avg_r_net": -0.093,
+    "total_r_net": -617.7
+   }
+  },
+  "best_on_pick": {
+   "rule": "or-low 2.0R trend off",
+   "market": "index > both",
+   "strength": "top 30% vs index 3m",
+   "pick": {
+    "trades": 3341,
+    "win_pct": 43.2,
+    "avg_r": 0.0,
+    "avg_r_net": -0.052,
+    "total_r_net": -175.4
+   },
+   "check": {
+    "trades": 1496,
+    "win_pct": 41.8,
+    "avg_r": -0.011,
+    "avg_r_net": -0.062,
+    "total_r_net": -92.7
+   },
+   "all": {
+    "trades": 4837,
+    "win_pct": 42.8,
+    "avg_r": -0.004,
+    "avg_r_net": -0.055,
+    "total_r_net": -268.0
+   }
+  },
+  "top": [
+   {
+    "rule": "or-low 2.0R trend off",
+    "market": "index > both",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 3341,
+     "win_pct": 43.2,
+     "avg_r": 0.0,
+     "avg_r_net": -0.052,
+     "total_r_net": -175.4
+    },
+    "check": {
+     "trades": 1496,
+     "win_pct": 41.8,
+     "avg_r": -0.011,
+     "avg_r_net": -0.062,
+     "total_r_net": -92.7
+    },
+    "all": {
+     "trades": 4837,
+     "win_pct": 42.8,
+     "avg_r": -0.004,
+     "avg_r_net": -0.055,
+     "total_r_net": -268.0
+    }
+   },
+   {
+    "rule": "or-low 1.5R trend off",
+    "market": "index > both",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 3341,
+     "win_pct": 43.2,
+     "avg_r": 0.001,
+     "avg_r_net": -0.052,
+     "total_r_net": -173.7
+    },
+    "check": {
+     "trades": 1496,
+     "win_pct": 41.8,
+     "avg_r": -0.012,
+     "avg_r_net": -0.063,
+     "total_r_net": -93.8
+    },
+    "all": {
+     "trades": 4837,
+     "win_pct": 42.8,
+     "avg_r": -0.003,
+     "avg_r_net": -0.055,
+     "total_r_net": -267.5
+    }
+   },
+   {
+    "rule": "or-low 1.5R trend on",
+    "market": "index > both",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 2850,
+     "win_pct": 43.5,
+     "avg_r": 0.0,
+     "avg_r_net": -0.053,
+     "total_r_net": -150.1
+    },
+    "check": {
+     "trades": 1183,
+     "win_pct": 43.3,
+     "avg_r": 0.003,
+     "avg_r_net": -0.047,
+     "total_r_net": -56.0
+    },
+    "all": {
+     "trades": 4033,
+     "win_pct": 43.5,
+     "avg_r": 0.001,
+     "avg_r_net": -0.051,
+     "total_r_net": -206.1
+    }
+   },
+   {
+    "rule": "or-low 2.0R trend on",
+    "market": "index > both",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 2850,
+     "win_pct": 43.5,
+     "avg_r": -0.001,
+     "avg_r_net": -0.054,
+     "total_r_net": -153.2
+    },
+    "check": {
+     "trades": 1183,
+     "win_pct": 43.3,
+     "avg_r": 0.004,
+     "avg_r_net": -0.046,
+     "total_r_net": -54.9
+    },
+    "all": {
+     "trades": 4033,
+     "win_pct": 43.5,
+     "avg_r": 0.001,
+     "avg_r_net": -0.052,
+     "total_r_net": -208.2
+    }
+   },
+   {
+    "rule": "or-low 1.0R trend off",
+    "market": "index > both",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 3341,
+     "win_pct": 43.3,
+     "avg_r": -0.001,
+     "avg_r_net": -0.054,
+     "total_r_net": -179.0
+    },
+    "check": {
+     "trades": 1496,
+     "win_pct": 41.8,
+     "avg_r": -0.012,
+     "avg_r_net": -0.062,
+     "total_r_net": -92.9
+    },
+    "all": {
+     "trades": 4837,
+     "win_pct": 42.9,
+     "avg_r": -0.004,
+     "avg_r_net": -0.056,
+     "total_r_net": -272.0
+    }
+   },
+   {
+    "rule": "or-low 1.5R trend on",
+    "market": "index > 200d",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 3140,
+     "win_pct": 43.4,
+     "avg_r": -0.002,
+     "avg_r_net": -0.055,
+     "total_r_net": -173.3
+    },
+    "check": {
+     "trades": 1443,
+     "win_pct": 41.9,
+     "avg_r": -0.004,
+     "avg_r_net": -0.055,
+     "total_r_net": -78.9
+    },
+    "all": {
+     "trades": 4583,
+     "win_pct": 42.9,
+     "avg_r": -0.003,
+     "avg_r_net": -0.055,
+     "total_r_net": -252.2
+    }
+   },
+   {
+    "rule": "or-low 1.0R trend on",
+    "market": "index > both",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 2850,
+     "win_pct": 43.6,
+     "avg_r": -0.002,
+     "avg_r_net": -0.055,
+     "total_r_net": -156.1
+    },
+    "check": {
+     "trades": 1183,
+     "win_pct": 43.4,
+     "avg_r": 0.004,
+     "avg_r_net": -0.046,
+     "total_r_net": -54.7
+    },
+    "all": {
+     "trades": 4033,
+     "win_pct": 43.6,
+     "avg_r": -0.0,
+     "avg_r_net": -0.052,
+     "total_r_net": -210.8
+    }
+   },
+   {
+    "rule": "or-low 2.0R trend on",
+    "market": "index > 200d",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 3140,
+     "win_pct": 43.4,
+     "avg_r": -0.004,
+     "avg_r_net": -0.056,
+     "total_r_net": -177.0
+    },
+    "check": {
+     "trades": 1443,
+     "win_pct": 41.9,
+     "avg_r": -0.003,
+     "avg_r_net": -0.054,
+     "total_r_net": -77.8
+    },
+    "all": {
+     "trades": 4583,
+     "win_pct": 42.9,
+     "avg_r": -0.004,
+     "avg_r_net": -0.056,
+     "total_r_net": -254.7
+    }
+   },
+   {
+    "rule": "or-low 1.5R trend off",
+    "market": "index > 50d",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 3431,
+     "win_pct": 42.8,
+     "avg_r": -0.005,
+     "avg_r_net": -0.057,
+     "total_r_net": -197.2
+    },
+    "check": {
+     "trades": 1496,
+     "win_pct": 41.8,
+     "avg_r": -0.012,
+     "avg_r_net": -0.063,
+     "total_r_net": -93.8
+    },
+    "all": {
+     "trades": 4927,
+     "win_pct": 42.5,
+     "avg_r": -0.007,
+     "avg_r_net": -0.059,
+     "total_r_net": -291.0
+    }
+   },
+   {
+    "rule": "or-low 1.0R trend on",
+    "market": "index > 200d",
+    "strength": "top 30% vs index 3m",
+    "pick": {
+     "trades": 3140,
+     "win_pct": 43.5,
+     "avg_r": -0.005,
+     "avg_r_net": -0.057,
+     "total_r_net": -180.2
+    },
+    "check": {
+     "trades": 1443,
+     "win_pct": 42.0,
+     "avg_r": -0.001,
+     "avg_r_net": -0.051,
+     "total_r_net": -73.8
+    },
+    "all": {
+     "trades": 4583,
+     "win_pct": 43.0,
+     "avg_r": -0.003,
+     "avg_r_net": -0.055,
+     "total_r_net": -254.1
+    }
+   }
+  ],
+  "combinations": 240,
+  "judged": 240,
+  "positive_both": 0,
+  "positive_rows": [],
+  "verdict": "NO RELIABLE EDGE",
+  "days": [
+   "2024-03-05",
+   "2026-10-28"
+  ],
+  "n_days": 658,
+  "cut": "2025-12-09",
+  "index_up_days": {
+   "up50": 507,
+   "up200": 603
+  },
+  "proposed_by_year": {
+   "2024": {
+    "trades": 2362,
+    "win_pct": 42.5,
+    "avg_r": -0.011,
+    "avg_r_net": -0.095,
+    "total_r_net": -224.9
+   },
+   "2025": {
+    "trades": 2588,
+    "win_pct": 43.0,
+    "avg_r": -0.026,
+    "avg_r_net": -0.102,
+    "total_r_net": -264.2
+   },
+   "2026": {
+    "trades": 1667,
+    "win_pct": 43.7,
+    "avg_r": -0.015,
+    "avg_r_net": -0.077,
+    "total_r_net": -128.7
+   }
+  },
+  "baseline_by_year": {
+   "2024": {
+    "trades": 3960,
+    "win_pct": 42.2,
+    "avg_r": -0.016,
+    "avg_r_net": -0.101,
+    "total_r_net": -398.7
+   },
+   "2025": {
+    "trades": 4976,
+    "win_pct": 41.2,
+    "avg_r": -0.05,
+    "avg_r_net": -0.128,
+    "total_r_net": -635.5
+   },
+   "2026": {
+    "trades": 3328,
+    "win_pct": 42.6,
+    "avg_r": -0.027,
+    "avg_r_net": -0.091,
+    "total_r_net": -302.9
+   }
+  }
+ }
+}

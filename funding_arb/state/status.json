@@ -1,0 +1,26 @@
+{
+ "mode": "paper",
+ "updated": "2026-11-02T02:16:34+00:00",
+ "pairs": {},
+ "paper_balances": {
+  "spot_usdt": 10000.0,
+  "fut_usdt": 0.0
+ },
+ "equity": 10000.0,
+ "candidates": [],
+ "rules": {
+  "entry_rate": 0.0003,
+  "entry_mean24": 0.0003,
+  "exit_rate": 5e-05,
+  "slots": 10,
+  "margin_frac": 0.4,
+  "leverage": 3,
+  "mmr": 0.02,
+  "derisk_at": 0.15,
+  "hard_derisk_at": 0.08,
+  "delta_band": 0.01,
+  "min_spot_dvol": 1000000.0,
+  "top_n": 100,
+  "max_pair_usdt": 2000.0
+ }
+}

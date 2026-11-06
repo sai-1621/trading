@@ -1,0 +1,28 @@
+19 coins, 2021-11-01 to 2026-10-29
+{"family": "T", "signal": "don20", "side": "long_short"}     pick: ret    47.7% sharpe 0.51 dd -55.8% lev 1.14 win 40.1% trades 574
+{"family": "T", "signal": "don20", "side": "long_only"}      pick: ret   105.2% sharpe 0.77 dd -50.2% lev 0.66 win 45.0% trades 278
+{"family": "T", "signal": "don55", "side": "long_short"}     pick: ret   -27.9% sharpe -0.01 dd -71.5% lev 1.07 win 41.1% trades 263
+{"family": "T", "signal": "don55", "side": "long_only"}      pick: ret   145.9% sharpe 0.92 dd -42.6% lev 0.6 win 51.5% trades 130
+{"family": "T", "signal": "ema10_50", "side": "long_short"}  pick: ret    -3.1% sharpe 0.21 dd -61.3% lev 1.26 win 36.4% trades 525
+{"family": "T", "signal": "ema10_50", "side": "long_only"}   pick: ret   115.6% sharpe 0.8 dd -52.9% lev 0.67 win 39.5% trades 266
+{"family": "T", "signal": "ema20_100", "side": "long_short"} pick: ret    26.4% sharpe 0.4 dd -53.9% lev 1.29 win 35.1% trades 259
+{"family": "T", "signal": "ema20_100", "side": "long_only"}  pick: ret   116.6% sharpe 0.8 dd -48.9% lev 0.68 win 40.0% trades 130
+{"family": "X", "look": 7, "k": 3}                           pick: ret   -52.8% sharpe -0.4 dd -76.6% lev 1.65 win 47.6% trades 759
+{"family": "X", "look": 7, "k": 5}                           pick: ret   -47.1% sharpe -0.27 dd -69.2% lev 2.12 win 46.0% trades 1138
+{"family": "X", "look": 28, "k": 3}                          pick: ret    76.8% sharpe 0.65 dd -51.4% lev 1.6 win 49.4% trades 395
+{"family": "X", "look": 28, "k": 5}                          pick: ret     1.0% sharpe 0.23 dd -61.0% lev 2.1 win 49.6% trades 569
+{
+ "run_at": "2026-11-03T09:02:32.995273",
+ "pick": [
+  "2022-01-01",
+  "2024-12-31"
+ ],
+ "holdout": [
+  "2025-01-01",
+  "2026-10-29"
+ ],
+ "btc_buy_hold_pick_pct": 98.1,
+ "eligible": 0,
+ "passed": false,
+ "note": "nothing met the choice rule; holdout not looked at"
+}

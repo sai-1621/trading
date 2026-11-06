@@ -1,0 +1,90 @@
+{
+ "3A": {
+  "sessions": 2429,
+  "trades": 756,
+  "win_pct": 45.1,
+  "avg_pnl": -81.0,
+  "total_pnl": -61249.0,
+  "return_pct": -20.42,
+  "avg_win": 1160.0,
+  "avg_loss": -1101.0,
+  "max_drawdown": 85567.0,
+  "profit_factor": 0.87,
+  "charges": 142386.0,
+  "pnl_before_charges": 81137.0,
+  "days_green": "263/593",
+  "exits": {
+   "5-day limit": 516,
+   "stop hit": 207,
+   "gap below stop": 28,
+   "close below EMA20": 5
+  },
+  "t_stat_per_trade": -1.59,
+  "avg_R": -0.067,
+  "cost_per_R": 0.147,
+  "avg_days": 4.4,
+  "by_year": {
+   "2017": {
+    "size": 96,
+    "sum": -13832.0
+   },
+   "2018": {
+    "size": 59,
+    "sum": -4974.0
+   },
+   "2019": {
+    "size": 39,
+    "sum": 2967.0
+   },
+   "2020": {
+    "size": 89,
+    "sum": 9497.0
+   },
+   "2021": {
+    "size": 108,
+    "sum": 23220.0
+   },
+   "2022": {
+    "size": 76,
+    "sum": -25866.0
+   },
+   "2023": {
+    "size": 93,
+    "sum": -25308.0
+   },
+   "2024": {
+    "size": 78,
+    "sum": -5901.0
+   },
+   "2025": {
+    "size": 65,
+    "sum": -14479.0
+   },
+   "2026": {
+    "size": 53,
+    "sum": -6574.0
+   }
+  },
+  "by_half": {
+   "2017-2021": {
+    "size": 391,
+    "sum": 16878.8,
+    "mean": 43.2
+   },
+   "2022-2026": {
+    "size": 365,
+    "sum": -78127.4,
+    "mean": -214.0
+   }
+  }
+ },
+ "3A placebo": {
+  "trades": 808.4,
+  "win_pct": 37.42,
+  "avg_pnl": -130.14,
+  "total_pnl": -105215.0,
+  "avg_R": -0.102,
+  "cost_per_R": 0.151
+ },
+ "NIFTY buy and hold %": 181.8
+}

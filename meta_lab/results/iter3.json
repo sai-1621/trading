@@ -1,0 +1,238 @@
+{
+ "iteration": 3,
+ "config": {
+  "name": "donchian20_1d_top40_btcgate",
+  "tf": "1d",
+  "top_n": 40,
+  "regime": "btc_ema200",
+  "signal": "donchian",
+  "donch": 20,
+  "stop_atr": 2.0,
+  "target_atr": null,
+  "trail_atr": 3.0,
+  "max_bars": 60,
+  "exit": "chandelier",
+  "label": "net_positive",
+  "features": "v3",
+  "threshold": "top30",
+  "lgb": {
+   "min_child_samples": 40
+  }
+ },
+ "period": [
+  "2023-01-01",
+  "2026-01-01"
+ ],
+ "costs": {
+  "fee_per_side": 0.0005,
+  "slippage_per_side": 0.001,
+  "funding": "real Binance rates"
+ },
+ "primary_all_signals": {
+  "trades": 803,
+  "win_pct": 28.8,
+  "avg_net_pct": -3.532,
+  "avg_gross_pct": -2.82,
+  "avg_R": -0.205,
+  "avg_win_pct": 17.54,
+  "avg_loss_pct": -12.04,
+  "pf": 0.588,
+  "payoff_ratio": 0.588,
+  "t_trade": -5.31
+ },
+ "primary_portfolio": {
+  "trades": 247,
+  "win_pct": 26.3,
+  "avg_net_pct": -3.747,
+  "avg_gross_pct": -3.178,
+  "avg_R": -0.199,
+  "avg_win_pct": 21.91,
+  "avg_loss_pct": -12.91,
+  "pf": 0.606,
+  "payoff_ratio": 0.606,
+  "t_trade": -2.57,
+  "net_return_pct": -92.5,
+  "max_dd_pct": -96.6,
+  "t_weekly": -1.33
+ },
+ "meta_all_kept": {
+  "trades": 372,
+  "win_pct": 25.8,
+  "avg_net_pct": -5.337,
+  "avg_gross_pct": -4.558,
+  "avg_R": -0.288,
+  "avg_win_pct": 14.1,
+  "avg_loss_pct": -12.1,
+  "pf": 0.405,
+  "payoff_ratio": 0.405,
+  "t_trade": -6.85
+ },
+ "meta_portfolio": {
+  "trades": 194,
+  "win_pct": 25.8,
+  "avg_net_pct": -4.394,
+  "avg_gross_pct": -3.727,
+  "avg_R": -0.199,
+  "avg_win_pct": 18.2,
+  "avg_loss_pct": -12.24,
+  "pf": 0.516,
+  "payoff_ratio": 0.516,
+  "t_trade": -3.52,
+  "net_return_pct": -85.2,
+  "max_dd_pct": -85.7,
+  "t_weekly": -1.61
+ },
+ "benchmark": {
+  "btc_bh_return_pct": 427.4,
+  "btc_max_dd_pct": -32.0
+ },
+ "placebo_same_count": {
+  "pf_mean": 0.62,
+  "pf_95pct": 0.787,
+  "avg_net_mean": -3.414,
+  "avg_net_95pct": -1.761
+ },
+ "folds": [
+  {
+   "fold": "2024-01",
+   "n_train": 398,
+   "base_rate": 0.274,
+   "n_test": 181,
+   "th": 0.132,
+   "kept": 136,
+   "auc": 0.398,
+   "mean_net_all": -4.562,
+   "mean_net_kept": -6.776
+  },
+  {
+   "fold": "2024-04",
+   "n_train": 609,
+   "base_rate": 0.294,
+   "n_test": 53,
+   "th": 0.249,
+   "kept": 22,
+   "auc": 0.532,
+   "mean_net_all": -1.354,
+   "mean_net_kept": -4.969
+  },
+  {
+   "fold": "2024-07",
+   "n_train": 676,
+   "base_rate": 0.287,
+   "n_test": 128,
+   "th": 0.236,
+   "kept": 59,
+   "auc": 0.414,
+   "mean_net_all": -8.245,
+   "mean_net_kept": -8.356
+  },
+  {
+   "fold": "2024-10",
+   "n_train": 735,
+   "base_rate": 0.268,
+   "n_test": 154,
+   "th": 0.23,
+   "kept": 50,
+   "auc": 0.586,
+   "mean_net_all": 0.776,
+   "mean_net_kept": 3.373
+  },
+  {
+   "fold": "2025-01",
+   "n_train": 959,
+   "base_rate": 0.278,
+   "n_test": 26,
+   "th": 0.247,
+   "kept": 12,
+   "auc": 0.833,
+   "mean_net_all": -14.36,
+   "mean_net_kept": -12.571
+  },
+  {
+   "fold": "2025-04",
+   "n_train": 981,
+   "base_rate": 0.274,
+   "n_test": 109,
+   "th": 0.248,
+   "kept": 29,
+   "auc": 0.375,
+   "mean_net_all": -1.988,
+   "mean_net_kept": -7.461
+  },
+  {
+   "fold": "2025-07",
+   "n_train": 1092,
+   "base_rate": 0.277,
+   "n_test": 138,
+   "th": 0.236,
+   "kept": 57,
+   "auc": 0.514,
+   "mean_net_all": -2.734,
+   "mean_net_kept": -3.806
+  },
+  {
+   "fold": "2025-10",
+   "n_train": 1231,
+   "base_rate": 0.288,
+   "n_test": 14,
+   "th": 0.259,
+   "kept": 7,
+   "auc": 0.394,
+   "mean_net_all": -2.558,
+   "mean_net_kept": -6.599
+  }
+ ],
+ "importance_top12": {
+  "f_rs42": 319,
+  "f_dvol": 265,
+  "f_atrp": 234,
+  "f_r42": 233,
+  "f_fund9": 213,
+  "f_ema200": 210,
+  "f_r180": 209,
+  "f_atr_ratio": 204,
+  "f_vol_ratio6": 193,
+  "f_r1": 189,
+  "f_brk": 188,
+  "f_vol_ratio": 187
+ },
+ "by_year_meta_portfolio": {
+  "2024": {
+   "trades": 126,
+   "win_pct": 25.4,
+   "avg_net_pct": -3.012,
+   "avg_gross_pct": -2.201,
+   "avg_R": -0.098,
+   "avg_win_pct": 23.71,
+   "avg_loss_pct": -12.11,
+   "pf": 0.667,
+   "payoff_ratio": 0.667,
+   "t_trade": -1.69
+  },
+  "2025": {
+   "trades": 68,
+   "win_pct": 26.5,
+   "avg_net_pct": -6.955,
+   "avg_gross_pct": -6.554,
+   "avg_R": -0.387,
+   "avg_win_pct": 8.42,
+   "avg_loss_pct": -12.49,
+   "pf": 0.243,
+   "payoff_ratio": 0.243,
+   "t_trade": -5.33
+  }
+ },
+ "exit_mix_meta": {
+  "trail_stop": 115,
+  "stop": 77,
+  "stop_gap": 1,
+  "time": 1
+ },
+ "pass": {
+  "pf": "False",
+  "t_trade": "False",
+  "t_weekly": "False",
+  "payoff_ratio": "False"
+ },
+ "passed_all": false
+}

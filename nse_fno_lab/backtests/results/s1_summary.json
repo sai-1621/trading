@@ -1,0 +1,86 @@
+{
+ "base": {
+  "sessions": 40,
+  "trades": 4,
+  "win_pct": 50.0,
+  "avg_pnl": 304.3,
+  "total_pnl": 1217.0,
+  "return_pct": 0.41,
+  "avg_win": 2042.0,
+  "avg_loss": -1434.0,
+  "max_drawdown": 2867.0,
+  "charges": 390.0,
+  "pnl_before_charges": 1608.0,
+  "days_green": "2/4",
+  "exits": {
+   "stop hit": 2,
+   "target hit": 1,
+   "time stop: under 0.5R after 6 bars": 1
+  },
+  "t_stat_per_trade": 0.29
+ },
+ "extra slippage 0.5 pt per side": {
+  "sessions": 40,
+  "trades": 4,
+  "win_pct": 50.0,
+  "avg_pnl": 239.3,
+  "total_pnl": 957.0,
+  "return_pct": 0.32,
+  "avg_win": 1977.0,
+  "avg_loss": -1499.0,
+  "max_drawdown": 2997.0,
+  "charges": 650.0,
+  "pnl_before_charges": 1608.0,
+  "days_green": "2/4",
+  "exits": {
+   "stop hit": 2,
+   "target hit": 1,
+   "time stop: under 0.5R after 6 bars": 1
+  },
+  "t_stat_per_trade": 0.23
+ },
+ "IV = 1.2 x VIX (options dearer)": {
+  "trades": 0,
+  "sessions": 40
+ },
+ "no gamma/theta filter": {
+  "sessions": 40,
+  "trades": 31,
+  "win_pct": 38.7,
+  "avg_pnl": -110.0,
+  "total_pnl": -3409.0,
+  "return_pct": -1.14,
+  "avg_win": 1878.0,
+  "avg_loss": -1365.0,
+  "max_drawdown": 6891.0,
+  "charges": 3384.0,
+  "pnl_before_charges": -25.0,
+  "days_green": "11/22",
+  "exits": {
+   "stop hit": 20,
+   "target hit": 8,
+   "time stop: under 0.5R after 6 bars": 3
+  },
+  "t_stat_per_trade": -0.35
+ },
+ "gamma/theta >= 1.2 (old)": {
+  "sessions": 40,
+  "trades": 19,
+  "win_pct": 42.1,
+  "avg_pnl": 36.8,
+  "total_pnl": 700.0,
+  "return_pct": 0.23,
+  "avg_win": 1727.0,
+  "avg_loss": -1193.0,
+  "max_drawdown": 2867.0,
+  "charges": 1866.0,
+  "pnl_before_charges": 2566.0,
+  "days_green": "7/14",
+  "exits": {
+   "stop hit": 11,
+   "target hit": 5,
+   "time stop: under 0.5R after 6 bars": 3
+  },
+  "t_stat_per_trade": 0.1
+ }
+}

@@ -1,0 +1,884 @@
+{
+ "market": "crypto-inr",
+ "run_at": "2026-10-27T13:12:47",
+ "days": [
+  "2026-06-30",
+  "2026-10-26"
+ ],
+ "pick_days": 79,
+ "check_days": 40,
+ "symbols": 16,
+ "baseline_orb": {
+  "pick": {
+   "trades": 198,
+   "target": 39,
+   "stop": 151,
+   "neither": 8,
+   "win_pct": 19.7,
+   "avg_r": -0.355,
+   "avg_r_net": -1.519
+  },
+  "check": {
+   "trades": 121,
+   "target": 21,
+   "stop": 96,
+   "neither": 4,
+   "win_pct": 17.4,
+   "avg_r": -0.454,
+   "avg_r_net": -1.522
+  }
+ },
+ "strategies": {
+  "VWAP pullback": {
+   "combinations": 24,
+   "check_positive": 0,
+   "check_judged": 24,
+   "check_median_r": -1.3695,
+   "best": {
+    "strategy": "VWAP pullback",
+    "side": "long",
+    "params": {
+     "k": 6,
+     "stop": "bar-low",
+     "target": 2.0,
+     "trend": true
+    },
+    "label": "VWAP pullback long k=6 stop=bar-low target=2.0 trend=True",
+    "pick": {
+     "trades": 349,
+     "target": 49,
+     "stop": 196,
+     "neither": 104,
+     "win_pct": 15.5,
+     "avg_r": -0.294,
+     "avg_r_net": -1.204,
+     "total_r_net": -420.1
+    },
+    "check": {
+     "trades": 186,
+     "target": 21,
+     "stop": 105,
+     "neither": 60,
+     "win_pct": 13.4,
+     "avg_r": -0.363,
+     "avg_r_net": -1.23,
+     "total_r_net": -228.8
+    }
+   },
+   "best_with_time_machine": {
+    "trades": 0,
+    "win_pct": null,
+    "avg_r": null,
+    "avg_r_net": null,
+    "total_r_net": 0
+   },
+   "verdict": "NO RELIABLE EDGE: the best settings on the pick days made -1.23R per trade after charges on the check days (186 trades).",
+   "ranked": [
+    {
+     "strategy": "VWAP pullback",
+     "side": "long",
+     "params": {
+      "k": 6,
+      "stop": "bar-low",
+      "target": 2.0,
+      "trend": true
+     },
+     "label": "VWAP pullback long k=6 stop=bar-low target=2.0 trend=True",
+     "pick": {
+      "trades": 349,
+      "target": 49,
+      "stop": 196,
+      "neither": 104,
+      "win_pct": 15.5,
+      "avg_r": -0.294,
+      "avg_r_net": -1.204,
+      "total_r_net": -420.1
+     },
+     "check": {
+      "trades": 186,
+      "target": 21,
+      "stop": 105,
+      "neither": 60,
+      "win_pct": 13.4,
+      "avg_r": -0.363,
+      "avg_r_net": -1.23,
+      "total_r_net": -228.8
+     }
+    },
+    {
+     "strategy": "VWAP pullback",
+     "side": "long",
+     "params": {
+      "k": 6,
+      "stop": "bar-low",
+      "target": 1.5,
+      "trend": true
+     },
+     "label": "VWAP pullback long k=6 stop=bar-low target=1.5 trend=True",
+     "pick": {
+      "trades": 349,
+      "target": 65,
+      "stop": 190,
+      "neither": 94,
+      "win_pct": 18.6,
+      "avg_r": -0.303,
+      "avg_r_net": -1.213,
+      "total_r_net": -423.4
+     },
+     "check": {
+      "trades": 186,
+      "target": 28,
+      "stop": 103,
+      "neither": 55,
+      "win_pct": 15.6,
+      "avg_r": -0.362,
+      "avg_r_net": -1.229,
+      "total_r_net": -228.6
+     }
+    },
+    {
+     "strategy": "VWAP pullback",
+     "side": "long",
+     "params": {
+      "k": 6,
+      "stop": "bar-low",
+      "target": 1.0,
+      "trend": true
+     },
+     "label": "VWAP pullback long k=6 stop=bar-low target=1.0 trend=True",
+     "pick": {
+      "trades": 349,
+      "target": 84,
+      "stop": 185,
+      "neither": 80,
+      "win_pct": 18.1,
+      "avg_r": -0.341,
+      "avg_r_net": -1.25,
+      "total_r_net": -436.3
+     },
+     "check": {
+      "trades": 186,
+      "target": 41,
+      "stop": 99,
+      "neither": 46,
+      "win_pct": 14.5,
+      "avg_r": -0.365,
+      "avg_r_net": -1.233,
+      "total_r_net": -229.3
+     }
+    },
+    {
+     "strategy": "VWAP pullback",
+     "side": "long",
+     "params": {
+      "k": 3,
+      "stop": "bar-low",
+      "target": 2.0,
+      "trend": true
+     },
+     "label": "VWAP pullback long k=3 stop=bar-low target=2.0 trend=True",
+     "pick": {
+      "trades": 488,
+      "target": 61,
+      "stop": 297,
+      "neither": 130,
+      "win_pct": 14.3,
+      "avg_r": -0.365,
+      "avg_r_net": -1.277,
+      "total_r_net": -623.0
+     },
+     "check": {
+      "trades": 268,
+      "target": 28,
+      "stop": 178,
+      "neither": 62,
+      "win_pct": 11.6,
+      "avg_r": -0.477,
+      "avg_r_net": -1.383,
+      "total_r_net": -370.6
+     }
+    },
+    {
+     "strategy": "VWAP pullback",
+     "side": "long",
+     "params": {
+      "k": 3,
+      "stop": "bar-low",
+      "target": 1.5,
+      "trend": true
+     },
+     "label": "VWAP pullback long k=3 stop=bar-low target=1.5 trend=True",
+     "pick": {
+      "trades": 488,
+      "target": 83,
+      "stop": 291,
+      "neither": 114,
+      "win_pct": 17.2,
+      "avg_r": -0.367,
+      "avg_r_net": -1.279,
+      "total_r_net": -623.9
+     },
+     "check": {
+      "trades": 268,
+      "target": 38,
+      "stop": 174,
+      "neither": 56,
+      "win_pct": 14.2,
+      "avg_r": -0.458,
+      "avg_r_net": -1.364,
+      "total_r_net": -365.5
+     }
+    },
+    {
+     "strategy": "VWAP pullback",
+     "side": "long",
+     "params": {
+      "k": 3,
+      "stop": "bar-low",
+      "target": 1.0,
+      "trend": true
+     },
+     "label": "VWAP pullback long k=3 stop=bar-low target=1.0 trend=True",
+     "pick": {
+      "trades": 488,
+      "target": 114,
+      "stop": 279,
+      "neither": 95,
+      "win_pct": 17.6,
+      "avg_r": -0.381,
+      "avg_r_net": -1.292,
+      "total_r_net": -630.5
+     },
+     "check": {
+      "trades": 268,
+      "target": 62,
+      "stop": 162,
+      "neither": 44,
+      "win_pct": 16.4,
+      "avg_r": -0.406,
+      "avg_r_net": -1.311,
+      "total_r_net": -351.5
+     }
+    },
+    {
+     "strategy": "VWAP pullback",
+     "side": "long",
+     "params": {
+      "k": 6,
+      "stop": "bar-low",
+      "target": 2.0,
+      "trend": false
+     },
+     "label": "VWAP pullback long k=6 stop=bar-low target=2.0 trend=False",
+     "pick": {
+      "trades": 706,
+      "target": 73,
+      "stop": 403,
+      "neither": 230,
+      "win_pct": 12.5,
+      "avg_r": -0.384,
+      "avg_r_net": -1.32,
+      "total_r_net": -932.2
+     },
+     "check": {
+      "trades": 367,
+      "target": 41,
+      "stop": 223,
+      "neither": 103,
+      "win_pct": 12.3,
+      "avg_r": -0.427,
+      "avg_r_net": -1.346,
+      "total_r_net": -493.9
+     }
+    },
+    {
+     "strategy": "VWAP pullback",
+     "side": "long",
+     "params": {
+      "k": 6,
+      "stop": "bar-low",
+      "target": 1.5,
+      "trend": false
+     },
+     "label": "VWAP pullback long k=6 stop=bar-low target=1.5 trend=False",
+     "pick": {
+      "trades": 706,
+      "target": 102,
+      "stop": 396,
+      "neither": 208,
+      "win_pct": 14.9,
+      "avg_r": -0.391,
+      "avg_r_net": -1.327,
+      "total_r_net": -936.7
+     },
+     "check": {
+      "trades": 367,
+      "target": 51,
+      "stop": 219,
+      "neither": 97,
+      "win_pct": 14.2,
+      "avg_r": -0.436,
+      "avg_r_net": -1.354,
+      "total_r_net": -497.0
+     }
+    },
+    {
+     "strategy": "VWAP pullback",
+     "side": "long",
+     "params": {
+      "k": 6,
+      "stop": "atr:1.0",
+      "target": 2.0,
+      "trend": true
+     },
+     "label": "VWAP pullback long k=6 stop=atr:1.0 target=2.0 trend=True",
+     "pick": {
+      "trades": 286,
+      "target": 37,
+      "stop": 186,
+      "neither": 63,
+      "win_pct": 15.0,
+      "avg_r": -0.397,
+      "avg_r_net": -1.327,
+      "total_r_net": -379.4
+     },
+     "check": {
+      "trades": 167,
+      "target": 21,
+      "stop": 114,
+      "neither": 32,
+      "win_pct": 14.4,
+      "avg_r": -0.468,
+      "avg_r_net": -1.337,
+      "total_r_net": -223.2
+     }
+    },
+    {
+     "strategy": "VWAP pullback",
+     "side": "long",
+     "params": {
+      "k": 6,
+      "stop": "atr:1.0",
+      "target": 1.5,
+      "trend": true
+     },
+     "label": "VWAP pullback long k=6 stop=atr:1.0 target=1.5 trend=True",
+     "pick": {
+      "trades": 286,
+      "target": 49,
+      "stop": 182,
+      "neither": 55,
+      "win_pct": 17.8,
+      "avg_r": -0.401,
+      "avg_r_net": -1.33,
+      "total_r_net": -380.5
+     },
+     "check": {
+      "trades": 167,
+      "target": 24,
+      "stop": 113,
+      "neither": 30,
+      "win_pct": 15.6,
+      "avg_r": -0.503,
+      "avg_r_net": -1.372,
+      "total_r_net": -229.1
+     }
+    },
+    {
+     "strategy": "VWAP pullback",
+     "side": "long",
+     "params": {
+      "k": 3,
+      "stop": "bar-low",
+      "target": 2.0,
+      "trend": false
+     },
+     "label": "VWAP pullback long k=3 stop=bar-low target=2.0 trend=False",
+     "pick": {
+      "trades": 976,
+      "target": 105,
+      "stop": 587,
+      "neither": 284,
+      "win_pct": 12.8,
+      "avg_r": -0.403,
+      "avg_r_net": -1.338,
+      "total_r_net": -1306.3
+     },
+     "check": {
+      "trades": 502,
+      "target": 56,
+      "stop": 330,
+      "neither": 116,
+      "win_pct": 12.4,
+      "avg_r": -0.457,
+      "avg_r_net": -1.406,
+      "total_r_net": -706.0
+     }
+    },
+    {
+     "strategy": "VWAP pullback",
+     "side": "long",
+     "params": {
+      "k": 3,
+      "stop": "bar-low",
+      "target": 1.5,
+      "trend": false
+     },
+     "label": "VWAP pullback long k=3 stop=bar-low target=1.5 trend=False",
+     "pick": {
+      "trades": 976,
+      "target": 145,
+      "stop": 579,
+      "neither": 252,
+      "win_pct": 15.4,
+      "avg_r": -0.404,
+      "avg_r_net": -1.339,
+      "total_r_net": -1307.1
+     },
+     "check": {
+      "trades": 502,
+      "target": 74,
+      "stop": 321,
+      "neither": 107,
+      "win_pct": 14.1,
+      "avg_r": -0.446,
+      "avg_r_net": -1.395,
+      "total_r_net": -700.5
+     }
+    }
+   ]
+  },
+  "Order block": {
+   "combinations": 48,
+   "check_positive": 0,
+   "check_judged": 48,
+   "check_median_r": -0.983,
+   "best": {
+    "strategy": "Order block",
+    "side": "long",
+    "params": {
+     "zone": "wick",
+     "fvg": true,
+     "target": "leg",
+     "trend": true,
+     "wait": 24
+    },
+    "label": "Order block long zone=wick fvg=True target=leg trend=True wait=24",
+    "pick": {
+     "trades": 169,
+     "target": 108,
+     "stop": 54,
+     "neither": 7,
+     "win_pct": 13.0,
+     "avg_r": 0.119,
+     "avg_r_net": -1.024,
+     "total_r_net": -173.1
+    },
+    "check": {
+     "trades": 99,
+     "target": 65,
+     "stop": 31,
+     "neither": 3,
+     "win_pct": 23.2,
+     "avg_r": 0.237,
+     "avg_r_net": -0.768,
+     "total_r_net": -76.0
+    }
+   },
+   "best_with_time_machine": {
+    "trades": 0,
+    "win_pct": null,
+    "avg_r": null,
+    "avg_r_net": null,
+    "total_r_net": 0
+   },
+   "verdict": "NO RELIABLE EDGE: the best settings on the pick days made -0.768R per trade after charges on the check days (99 trades).",
+   "ranked": [
+    {
+     "strategy": "Order block",
+     "side": "long",
+     "params": {
+      "zone": "wick",
+      "fvg": true,
+      "target": "leg",
+      "trend": true,
+      "wait": 24
+     },
+     "label": "Order block long zone=wick fvg=True target=leg trend=True wait=24",
+     "pick": {
+      "trades": 169,
+      "target": 108,
+      "stop": 54,
+      "neither": 7,
+      "win_pct": 13.0,
+      "avg_r": 0.119,
+      "avg_r_net": -1.024,
+      "total_r_net": -173.1
+     },
+     "check": {
+      "trades": 99,
+      "target": 65,
+      "stop": 31,
+      "neither": 3,
+      "win_pct": 23.2,
+      "avg_r": 0.237,
+      "avg_r_net": -0.768,
+      "total_r_net": -76.0
+     }
+    },
+    {
+     "strategy": "Order block",
+     "side": "long",
+     "params": {
+      "zone": "wick",
+      "fvg": true,
+      "target": 2.0,
+      "trend": false,
+      "wait": 12
+     },
+     "label": "Order block long zone=wick fvg=True target=2.0 trend=False wait=12",
+     "pick": {
+      "trades": 370,
+      "target": 108,
+      "stop": 159,
+      "neither": 103,
+      "win_pct": 30.8,
+      "avg_r": 0.204,
+      "avg_r_net": -1.029,
+      "total_r_net": -380.9
+     },
+     "check": {
+      "trades": 178,
+      "target": 42,
+      "stop": 100,
+      "neither": 36,
+      "win_pct": 29.8,
+      "avg_r": 0.002,
+      "avg_r_net": -1.072,
+      "total_r_net": -190.8
+     }
+    },
+    {
+     "strategy": "Order block",
+     "side": "long",
+     "params": {
+      "zone": "wick",
+      "fvg": true,
+      "target": 2.0,
+      "trend": false,
+      "wait": 24
+     },
+     "label": "Order block long zone=wick fvg=True target=2.0 trend=False wait=24",
+     "pick": {
+      "trades": 379,
+      "target": 109,
+      "stop": 163,
+      "neither": 107,
+      "win_pct": 30.3,
+      "avg_r": 0.196,
+      "avg_r_net": -1.04,
+      "total_r_net": -394.1
+     },
+     "check": {
+      "trades": 192,
+      "target": 46,
+      "stop": 110,
+      "neither": 36,
+      "win_pct": 28.6,
+      "avg_r": -0.013,
+      "avg_r_net": -1.106,
+      "total_r_net": -212.4
+     }
+    },
+    {
+     "strategy": "Order block",
+     "side": "long",
+     "params": {
+      "zone": "wick",
+      "fvg": true,
+      "target": 2.0,
+      "trend": true,
+      "wait": 24
+     },
+     "label": "Order block long zone=wick fvg=True target=2.0 trend=True wait=24",
+     "pick": {
+      "trades": 169,
+      "target": 48,
+      "stop": 81,
+      "neither": 40,
+      "win_pct": 30.2,
+      "avg_r": 0.103,
+      "avg_r_net": -1.04,
+      "total_r_net": -175.7
+     },
+     "check": {
+      "trades": 100,
+      "target": 32,
+      "stop": 56,
+      "neither": 12,
+      "win_pct": 35.0,
+      "avg_r": 0.115,
+      "avg_r_net": -0.883,
+      "total_r_net": -88.3
+     }
+    },
+    {
+     "strategy": "Order block",
+     "side": "long",
+     "params": {
+      "zone": "wick",
+      "fvg": true,
+      "target": "leg",
+      "trend": true,
+      "wait": 12
+     },
+     "label": "Order block long zone=wick fvg=True target=leg trend=True wait=12",
+     "pick": {
+      "trades": 163,
+      "target": 104,
+      "stop": 53,
+      "neither": 6,
+      "win_pct": 12.9,
+      "avg_r": 0.111,
+      "avg_r_net": -1.04,
+      "total_r_net": -169.6
+     },
+     "check": {
+      "trades": 90,
+      "target": 62,
+      "stop": 25,
+      "neither": 3,
+      "win_pct": 24.4,
+      "avg_r": 0.271,
+      "avg_r_net": -0.719,
+      "total_r_net": -64.7
+     }
+    },
+    {
+     "strategy": "Order block",
+     "side": "long",
+     "params": {
+      "zone": "wick",
+      "fvg": true,
+      "target": "leg",
+      "trend": false,
+      "wait": 24
+     },
+     "label": "Order block long zone=wick fvg=True target=leg trend=False wait=24",
+     "pick": {
+      "trades": 379,
+      "target": 260,
+      "stop": 102,
+      "neither": 17,
+      "win_pct": 11.1,
+      "avg_r": 0.19,
+      "avg_r_net": -1.046,
+      "total_r_net": -396.5
+     },
+     "check": {
+      "trades": 190,
+      "target": 114,
+      "stop": 68,
+      "neither": 8,
+      "win_pct": 16.3,
+      "avg_r": 0.134,
+      "avg_r_net": -0.966,
+      "total_r_net": -183.6
+     }
+    },
+    {
+     "strategy": "Order block",
+     "side": "long",
+     "params": {
+      "zone": "wick",
+      "fvg": true,
+      "target": 2.0,
+      "trend": true,
+      "wait": 12
+     },
+     "label": "Order block long zone=wick fvg=True target=2.0 trend=True wait=12",
+     "pick": {
+      "trades": 163,
+      "target": 47,
+      "stop": 79,
+      "neither": 37,
+      "win_pct": 30.7,
+      "avg_r": 0.104,
+      "avg_r_net": -1.047,
+      "total_r_net": -170.7
+     },
+     "check": {
+      "trades": 91,
+      "target": 29,
+      "stop": 50,
+      "neither": 12,
+      "win_pct": 36.3,
+      "avg_r": 0.129,
+      "avg_r_net": -0.853,
+      "total_r_net": -77.7
+     }
+    },
+    {
+     "strategy": "Order block",
+     "side": "long",
+     "params": {
+      "zone": "wick",
+      "fvg": true,
+      "target": "leg",
+      "trend": false,
+      "wait": 12
+     },
+     "label": "Order block long zone=wick fvg=True target=leg trend=False wait=12",
+     "pick": {
+      "trades": 370,
+      "target": 254,
+      "stop": 100,
+      "neither": 16,
+      "win_pct": 11.1,
+      "avg_r": 0.185,
+      "avg_r_net": -1.048,
+      "total_r_net": -387.6
+     },
+     "check": {
+      "trades": 176,
+      "target": 111,
+      "stop": 57,
+      "neither": 8,
+      "win_pct": 17.0,
+      "avg_r": 0.181,
+      "avg_r_net": -0.9,
+      "total_r_net": -158.4
+     }
+    },
+    {
+     "strategy": "Order block",
+     "side": "long",
+     "params": {
+      "zone": "body",
+      "fvg": true,
+      "target": 2.0,
+      "trend": false,
+      "wait": 12
+     },
+     "label": "Order block long zone=body fvg=True target=2.0 trend=False wait=12",
+     "pick": {
+      "trades": 330,
+      "target": 100,
+      "stop": 144,
+      "neither": 86,
+      "win_pct": 30.3,
+      "avg_r": 0.238,
+      "avg_r_net": -1.084,
+      "total_r_net": -357.7
+     },
+     "check": {
+      "trades": 157,
+      "target": 41,
+      "stop": 86,
+      "neither": 30,
+      "win_pct": 32.5,
+      "avg_r": 0.058,
+      "avg_r_net": -1.075,
+      "total_r_net": -168.8
+     }
+    },
+    {
+     "strategy": "Order block",
+     "side": "long",
+     "params": {
+      "zone": "wick",
+      "fvg": true,
+      "target": 1.0,
+      "trend": true,
+      "wait": 24
+     },
+     "label": "Order block long zone=wick fvg=True target=1.0 trend=True wait=24",
+     "pick": {
+      "trades": 169,
+      "target": 80,
+      "stop": 67,
+      "neither": 22,
+      "win_pct": 24.9,
+      "avg_r": 0.056,
+      "avg_r_net": -1.086,
+      "total_r_net": -183.6
+     },
+     "check": {
+      "trades": 100,
+      "target": 54,
+      "stop": 38,
+      "neither": 8,
+      "win_pct": 30.0,
+      "avg_r": 0.16,
+      "avg_r_net": -0.838,
+      "total_r_net": -83.8
+     }
+    },
+    {
+     "strategy": "Order block",
+     "side": "long",
+     "params": {
+      "zone": "body",
+      "fvg": true,
+      "target": "leg",
+      "trend": false,
+      "wait": 12
+     },
+     "label": "Order block long zone=body fvg=True target=leg trend=False wait=12",
+     "pick": {
+      "trades": 330,
+      "target": 222,
+      "stop": 97,
+      "neither": 11,
+      "win_pct": 11.2,
+      "avg_r": 0.233,
+      "avg_r_net": -1.088,
+      "total_r_net": -359.2
+     },
+     "check": {
+      "trades": 155,
+      "target": 97,
+      "stop": 51,
+      "neither": 7,
+      "win_pct": 20.0,
+      "avg_r": 0.233,
+      "avg_r_net": -0.91,
+      "total_r_net": -141.0
+     }
+    },
+    {
+     "strategy": "Order block",
+     "side": "long",
+     "params": {
+      "zone": "wick",
+      "fvg": false,
+      "target": "leg",
+      "trend": false,
+      "wait": 24
+     },
+     "label": "Order block long zone=wick fvg=False target=leg trend=False wait=24",
+     "pick": {
+      "trades": 1004,
+      "target": 753,
+      "stop": 217,
+      "neither": 34,
+      "win_pct": 4.2,
+      "avg_r": 0.125,
+      "avg_r_net": -1.093,
+      "total_r_net": -1097.8
+     },
+     "check": {
+      "trades": 532,
+      "target": 398,
+      "stop": 120,
+      "neither": 14,
+      "win_pct": 6.4,
+      "avg_r": 0.125,
+      "avg_r_net": -0.983,
+      "total_r_net": -523.2
+     }
+    }
+   ]
+  }
+ }
+}

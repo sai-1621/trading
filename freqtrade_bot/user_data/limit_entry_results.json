@@ -1,0 +1,347 @@
+{
+ "prereg": "PREREG_limit_entry.md",
+ "split": "2025-01-01",
+ "chosen": 19399,
+ "missing_1m": 0,
+ "variants": {
+  "MKT2 (current)": {
+   "pick": {
+    "trades": 4354,
+    "win_pct": 55.8,
+    "avg_pct": -0.025,
+    "t": -0.24,
+    "pnl_usdt": -107.5,
+    "max_dd_usdt": -624.6,
+    "worst_hour_usdt": -43.5,
+    "by_year": {
+     "2022": -17.8,
+     "2023": 17.9,
+     "2024": -107.6
+    },
+    "sides": {
+     "long": {
+      "trades": 2018,
+      "avg_pct": -0.121,
+      "pnl_usdt": -243.4
+     },
+     "short": {
+      "trades": 2336,
+      "avg_pct": 0.058,
+      "pnl_usdt": 135.9
+     }
+    }
+   },
+   "holdout": {
+    "trades": 5016,
+    "win_pct": 57.9,
+    "avg_pct": -0.076,
+    "t": -0.75,
+    "pnl_usdt": -380.5,
+    "max_dd_usdt": -1041.1,
+    "worst_hour_usdt": -41.2,
+    "by_year": {
+     "2025": -492.8,
+     "2026": 112.3
+    },
+    "sides": {
+     "long": {
+      "trades": 1679,
+      "avg_pct": 0.067,
+      "pnl_usdt": 112.8
+     },
+     "short": {
+      "trades": 3337,
+      "avg_pct": -0.148,
+      "pnl_usdt": -493.3
+     }
+    }
+   },
+   "total_pnl_usdt": -488.0
+  },
+  "L0 skip": {
+   "pick": {
+    "trades": 3698,
+    "win_pct": 51.9,
+    "avg_pct": -0.451,
+    "t": -3.89,
+    "pnl_usdt": -1666.3,
+    "max_dd_usdt": -1723.4,
+    "worst_hour_usdt": -44.3,
+    "by_year": {
+     "2022": -427.3,
+     "2023": -505.5,
+     "2024": -733.5
+    },
+    "sides": {
+     "long": {
+      "trades": 1797,
+      "avg_pct": -0.442,
+      "pnl_usdt": -794.0
+     },
+     "short": {
+      "trades": 1901,
+      "avg_pct": -0.459,
+      "pnl_usdt": -872.3
+     }
+    }
+   },
+   "holdout": {
+    "trades": 4338,
+    "win_pct": 53.8,
+    "avg_pct": -0.59,
+    "t": -5.34,
+    "pnl_usdt": -2559.9,
+    "max_dd_usdt": -2639.8,
+    "worst_hour_usdt": -44.3,
+    "by_year": {
+     "2025": -1454.8,
+     "2026": -1105.1
+    },
+    "sides": {
+     "long": {
+      "trades": 1469,
+      "avg_pct": -0.467,
+      "pnl_usdt": -685.6
+     },
+     "short": {
+      "trades": 2869,
+      "avg_pct": -0.653,
+      "pnl_usdt": -1874.3
+     }
+    }
+   },
+   "total_pnl_usdt": -4226.2,
+   "fill_pct_all": 77.3,
+   "missed_trades_avg_mkt_pct": 1.651
+  },
+  "L0 chase": {
+   "pick": {
+    "trades": 4363,
+    "win_pct": 52.9,
+    "avg_pct": -0.336,
+    "t": -3.18,
+    "pnl_usdt": -1466.6,
+    "max_dd_usdt": -1528.8,
+    "worst_hour_usdt": -44.3,
+    "by_year": {
+     "2022": -380.9,
+     "2023": -434.6,
+     "2024": -651.1
+    },
+    "sides": {
+     "long": {
+      "trades": 2041,
+      "avg_pct": -0.36,
+      "pnl_usdt": -734.8
+     },
+     "short": {
+      "trades": 2322,
+      "avg_pct": -0.315,
+      "pnl_usdt": -731.7
+     }
+    }
+   },
+   "holdout": {
+    "trades": 4922,
+    "win_pct": 54.8,
+    "avg_pct": -0.468,
+    "t": -4.54,
+    "pnl_usdt": -2302.0,
+    "max_dd_usdt": -2471.0,
+    "worst_hour_usdt": -51.5,
+    "by_year": {
+     "2025": -1820.9,
+     "2026": -481.1
+    },
+    "sides": {
+     "long": {
+      "trades": 1601,
+      "avg_pct": -0.422,
+      "pnl_usdt": -675.9
+     },
+     "short": {
+      "trades": 3321,
+      "avg_pct": -0.49,
+      "pnl_usdt": -1626.1
+     }
+    }
+   },
+   "total_pnl_usdt": -3768.6,
+   "fill_pct_all": 77.3,
+   "missed_trades_avg_mkt_pct": 1.651
+  },
+  "L0.2 skip": {
+   "pick": {
+    "trades": 3544,
+    "win_pct": 52.8,
+    "avg_pct": -0.318,
+    "t": -2.68,
+    "pnl_usdt": -1128.0,
+    "max_dd_usdt": -1273.3,
+    "worst_hour_usdt": -43.9,
+    "by_year": {
+     "2022": -297.2,
+     "2023": -344.3,
+     "2024": -486.6
+    },
+    "sides": {
+     "long": {
+      "trades": 1715,
+      "avg_pct": -0.221,
+      "pnl_usdt": -379.4
+     },
+     "short": {
+      "trades": 1829,
+      "avg_pct": -0.409,
+      "pnl_usdt": -748.6
+     }
+    }
+   },
+   "holdout": {
+    "trades": 4213,
+    "win_pct": 53.8,
+    "avg_pct": -0.527,
+    "t": -4.7,
+    "pnl_usdt": -2221.3,
+    "max_dd_usdt": -2303.0,
+    "worst_hour_usdt": -50.7,
+    "by_year": {
+     "2025": -1248.6,
+     "2026": -972.6
+    },
+    "sides": {
+     "long": {
+      "trades": 1432,
+      "avg_pct": -0.459,
+      "pnl_usdt": -656.6
+     },
+     "short": {
+      "trades": 2781,
+      "avg_pct": -0.563,
+      "pnl_usdt": -1564.6
+     }
+    }
+   },
+   "total_pnl_usdt": -3349.3,
+   "fill_pct_all": 71.8,
+   "missed_trades_avg_mkt_pct": 1.499
+  },
+  "L0.2 chase": {
+   "pick": {
+    "trades": 4372,
+    "win_pct": 53.4,
+    "avg_pct": -0.244,
+    "t": -2.31,
+    "pnl_usdt": -1067.0,
+    "max_dd_usdt": -1209.9,
+    "worst_hour_usdt": -43.9,
+    "by_year": {
+     "2022": -261.1,
+     "2023": -380.0,
+     "2024": -425.9
+    },
+    "sides": {
+     "long": {
+      "trades": 2036,
+      "avg_pct": -0.223,
+      "pnl_usdt": -454.6
+     },
+     "short": {
+      "trades": 2336,
+      "avg_pct": -0.262,
+      "pnl_usdt": -612.3
+     }
+    }
+   },
+   "holdout": {
+    "trades": 4964,
+    "win_pct": 55.0,
+    "avg_pct": -0.419,
+    "t": -4.09,
+    "pnl_usdt": -2082.3,
+    "max_dd_usdt": -2177.7,
+    "worst_hour_usdt": -51.5,
+    "by_year": {
+     "2025": -1567.9,
+     "2026": -514.3
+    },
+    "sides": {
+     "long": {
+      "trades": 1631,
+      "avg_pct": -0.412,
+      "pnl_usdt": -672.1
+     },
+     "short": {
+      "trades": 3333,
+      "avg_pct": -0.423,
+      "pnl_usdt": -1410.2
+     }
+    }
+   },
+   "total_pnl_usdt": -3149.2,
+   "fill_pct_all": 71.8,
+   "missed_trades_avg_mkt_pct": 1.499
+  },
+  "L0.5 skip": {
+   "pick": {
+    "trades": 3267,
+    "win_pct": 54.7,
+    "avg_pct": -0.069,
+    "t": -0.56,
+    "pnl_usdt": -226.0,
+    "max_dd_usdt": -730.5,
+    "worst_hour_usdt": -40.8,
+    "by_year": {
+     "2022": 78.7,
+     "2023": -150.7,
+     "2024": -154.0
+    },
+    "sides": {
+     "long": {
+      "trades": 1596,
+      "avg_pct": 0.052,
+      "pnl_usdt": 82.4
+     },
+     "short": {
+      "trades": 1671,
+      "avg_pct": -0.185,
+      "pnl_usdt": -308.5
+     }
+    }
+   },
+   "holdout": {
+    "trades": 3877,
+    "win_pct": 54.0,
+    "avg_pct": -0.496,
+    "t": -4.22,
+    "pnl_usdt": -1923.6,
+    "max_dd_usdt": -1967.7,
+    "worst_hour_usdt": -47.1,
+    "by_year": {
+     "2025": -1103.4,
+     "2026": -820.2
+    },
+    "sides": {
+     "long": {
+      "trades": 1341,
+      "avg_pct": -0.459,
+      "pnl_usdt": -615.3
+     },
+     "short": {
+      "trades": 2536,
+      "avg_pct": -0.516,
+      "pnl_usdt": -1308.2
+     }
+    }
+   },
+   "total_pnl_usdt": -2149.6,
+   "fill_pct_all": 62.7,
+   "missed_trades_avg_mkt_pct": 1.272
+  }
+ },
+ "decision": {
+  "eligible": [],
+  "PASS": false,
+  "why": "no variant had positive pick P&L with t >= 2.0 that beat market entries"
+ }
+}

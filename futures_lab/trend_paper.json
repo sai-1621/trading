@@ -1,0 +1,68 @@
+{
+ "start": "2026-11-03",
+ "equity": 1002.8018367198398,
+ "weights": {
+  "BCH": 0.580639
+ },
+ "prices": {
+  "BTC": 76300.0,
+  "ETH": 2246.17,
+  "SOL": 90.33,
+  "BNB": 695.19,
+  "XRP": 1.2192,
+  "DOGE": 0.07224,
+  "ADA": 0.1846,
+  "AVAX": 8.314,
+  "LINK": 10.864,
+  "DOT": 0.9266,
+  "LTC": 52.38,
+  "BCH": 278.82,
+  "TRX": 0.31879,
+  "ATOM": 1.398,
+  "ETC": 6.974,
+  "NEAR": 3.77,
+  "FIL": 0.8038,
+  "UNI": 6.992,
+  "AAVE": 131.5
+ },
+ "last_exec_day": "2026-11-06",
+ "history": [
+  [
+   "2026-11-03",
+   999.4063,
+   77104.4,
+   0.594
+  ],
+  [
+   "2026-11-04",
+   990.7675,
+   77225.8,
+   0.594
+  ],
+  [
+   "2026-11-05",
+   1005.8537,
+   80509.4,
+   0.587
+  ],
+  [
+   "2026-11-06",
+   1002.8018,
+   76300.0,
+   0.581
+  ]
+ ],
+ "open_trades": {
+  "BCH": {
+   "entry_day": "2026-11-03",
+   "entry": 277.14,
+   "pnl_pct": 0.35618731528695813
+  }
+ },
+ "closed": [],
+ "mode": "paper",
+ "rule": "long only: buy a close above the 55-day high while BTC is above its 200-day average and the coin's 55-day efficiency ratio >= 0.30; sell below the 20-day low or when BTC drops below its 200-day average. Vol target 40%/yr, max 3x gross, 0.75x per coin.",
+ "btc_start": 77104.4,
+ "updated": "2026-11-06T01:09:53+00:00",
+ "btc_above_200d": true
+}

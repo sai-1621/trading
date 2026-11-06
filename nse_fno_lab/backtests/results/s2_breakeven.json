@@ -1,0 +1,18 @@
+{
+ "NIFTY wing 1.0": {
+  "break_even_total": 0.574,
+  "break_even_avg_trade": 0.577
+ },
+ "NIFTY wing 1.35": {
+  "break_even_total": null,
+  "break_even_avg_trade": null
+ },
+ "SENSEX wing 1.0": {
+  "break_even_total": 0.599,
+  "break_even_avg_trade": 0.599
+ },
+ "SENSEX wing 1.35": {
+  "break_even_total": null,
+  "break_even_avg_trade": null
+ }
+}

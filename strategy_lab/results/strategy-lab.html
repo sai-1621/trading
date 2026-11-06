@@ -1,0 +1,149 @@
+<title>Order Blocks vs VWAP</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column, a verdict up top, one chart of before/after charges, then a ledger per market. */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #17202b; --mute: #5d6878; --line: #dde2ea;
+  --ink: #2f5d8a; --gain: #1d7a4f; --loss: #b23a3a; --loss-soft: #f6e3e3; --gain-soft: #e1f2e9;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f141b; --surface: #161d27; --fg: #e4e9f0; --mute: #95a1b2; --line: #2a3442;
+  --ink: #8db7e0; --gain: #5cc493; --loss: #f07f7f; --loss-soft: #3a1f23; --gain-soft: #17352a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0f141b; --surface: #161d27; --fg: #e4e9f0; --mute: #95a1b2; --line: #2a3442;
+  --ink: #8db7e0; --gain: #5cc493; --loss: #f07f7f; --loss-soft: #3a1f23; --gain-soft: #17352a; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.55 var(--body); }
+.wrap { max-width: 1000px; margin: 0 auto; padding-block: 40px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 40px; }
+.eyebrow { font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mute); }
+h1 { font: 700 clamp(32px, 5vw, 48px)/1.05 var(--display); margin: 10px 0 14px; text-wrap: balance; letter-spacing: -.01em; }
+h2 { font: 700 24px/1.2 var(--display); margin: 0 0 6px; text-wrap: balance; }
+h3 { font: 600 19px/1.2 var(--display); margin: 0; }
+p { margin: 0; max-width: 68ch; }
+.lede { font-size: 19px; }
+.mute, header p, .sub { color: var(--mute); }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 22px; }
+.fact { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; }
+.fact b { display: block; font: 600 28px/1.1 var(--mono); font-variant-numeric: tabular-nums; }
+.fact span { color: var(--mute); font-size: 14px; }
+.fact.bad b { color: var(--loss); }
+figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px 18px 10px; overflow-x: auto; }
+figure svg { width: 100%; min-width: 600px; height: auto; display: block; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 14px; color: var(--mute); margin: 4px 0 10px; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+.grid { stroke: var(--line); } .zero { stroke: var(--fg); stroke-width: 1.5; }
+.tick { fill: var(--mute); font: 12px var(--mono); }
+.grp { fill: var(--fg); font: 600 14px var(--body); }
+.lbl { fill: var(--fg); font: 14px var(--body); }
+.val { fill: var(--loss); font: 500 12px var(--mono); }
+.cost { stroke: var(--loss); stroke-width: 2; opacity: .45; }
+.gross { fill: var(--surface); stroke: var(--ink); stroke-width: 2; }
+.net { fill: var(--loss); }
+.mkt { display: grid; gap: 10px; }
+.mkt header p { font-size: 14px; }
+.scroll { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; min-width: 820px; font-size: 15px; }
+th { font: 600 12px/1.3 var(--body); letter-spacing: .03em; text-transform: uppercase; color: var(--mute); text-align: right; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: bottom; }
+th:first-child { text-align: left; }
+td { padding: 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tbody tr:last-child td { border-bottom: 0; }
+tr.base td { background: color-mix(in srgb, var(--bg) 60%, transparent); }
+td.n { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.tm { white-space: normal; min-width: 110px; }
+.set { font: 13px/1.4 var(--body); color: var(--mute); margin-top: 3px; max-width: 46ch; white-space: normal; }
+.r.gain { color: var(--gain); } .r.loss { color: var(--loss); }
+.pill { display: inline-block; font: 500 13px var(--mono); padding: 2px 8px; border-radius: 99px; }
+.pill.no { background: var(--loss-soft); color: var(--loss); } .pill.ok { background: var(--gain-soft); color: var(--gain); }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px; display: grid; gap: 8px; align-content: start; }
+.card ol { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+.notes { display: grid; gap: 10px; padding-left: 20px; margin: 0; max-width: 72ch; }
+code { font: 14px var(--mono); }
+</style>
+<div class="wrap">
+  <section>
+    <div class="eyebrow">Strategy lab · run 27 Oct 2026 · paper research, no real orders</div>
+    <h1>Order Blocks vs VWAP</h1>
+    <p class="lede">Neither strategy made money after charges in any market. Before charges both sit close to zero R per trade, so there is no edge for the charges to come out of. Neither has been added to the bots.</p>
+    <div class="facts">
+      <div class="fact"><b>432</b><span>setting combinations tested across 4 markets</span></div>
+      <div class="fact bad"><b>0</b><span>made money on the unseen check days at the bots' position sizes</span></div>
+      <div class="fact"><b>7,942</b><span>simulated trades for the best settings alone</span></div>
+      <div class="fact"><b>1 R</b><span>= the amount risked on a trade (entry to stop)</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Before and after charges, on the unseen days</h2>
+    <p class="sub">Best setting of each strategy (chosen on the pick days), measured on the check days. The gap between the dots is what charges and the bid/ask spread cost per trade.</p>
+    <figure>
+      <div class="legend"><span><i style="background:var(--surface);border:2px solid var(--ink)"></i>before charges</span><span><i style="background:var(--loss)"></i>after charges</span><span>◂ = off the scale</span></div>
+      <svg viewBox="0 0 760 468" role="img" aria-label="R per trade before and after charges, check days"><line x1="255.3" x2="255.3" y1="26" y2="446" class="grid"/><text x="255.3" y="462" text-anchor="middle" class="tick">−1.50R</text><line x1="381.8" x2="381.8" y1="26" y2="446" class="grid"/><text x="381.8" y="462" text-anchor="middle" class="tick">−1.00R</text><line x1="508.3" x2="508.3" y1="26" y2="446" class="grid"/><text x="508.3" y="462" text-anchor="middle" class="tick">−0.50R</text><line x1="634.8" x2="634.8" y1="26" y2="446" class="zero"/><text x="634.8" y="462" text-anchor="middle" class="tick">0R</text><line x1="698.0" x2="698.0" y1="26" y2="446" class="grid"/><text x="698.0" y="462" text-anchor="middle" class="tick">+0.25R</text><text x="640.8" y="20" class="tick">break-even</text><text x="0" y="52" class="grp">NSE stocks</text><text x="14" y="75.0" class="lbl">Current breakout bot</text><line x1="632.8" x2="561.7" y1="71.0" y2="71.0" class="cost"/><circle cx="632.8" cy="71.0" r="5" class="gross"><title>before charges −0.01R</title></circle><circle cx="561.7" cy="71.0" r="5.5" class="net"><title>after charges −0.29R</title></circle><text x="552.7" y="75.0" text-anchor="end" class="val">−0.29</text><text x="14" y="101.0" class="lbl">VWAP pullback</text><line x1="707.4" x2="596.3" y1="97.0" y2="97.0" class="cost"/><circle cx="707.4" cy="97.0" r="5" class="gross"><title>before charges +0.29R</title></circle><circle cx="596.3" cy="97.0" r="5.5" class="net"><title>after charges −0.15R</title></circle><text x="587.3" y="101.0" text-anchor="end" class="val">−0.15</text><text x="14" y="127.0" class="lbl">Order block</text><line x1="643.9" x2="475.2" y1="123.0" y2="123.0" class="cost"/><circle cx="643.9" cy="123.0" r="5" class="gross"><title>before charges +0.04R</title></circle><circle cx="475.2" cy="123.0" r="5.5" class="net"><title>after charges −0.63R</title></circle><text x="466.2" y="127.0" text-anchor="end" class="val">−0.63</text><text x="0" y="154" class="grp">US stocks</text><text x="14" y="177.0" class="lbl">Current breakout bot</text><line x1="628.2" x2="603.7" y1="173.0" y2="173.0" class="cost"/><circle cx="628.2" cy="173.0" r="5" class="gross"><title>before charges −0.03R</title></circle><circle cx="603.7" cy="173.0" r="5.5" class="net"><title>after charges −0.12R</title></circle><text x="594.7" y="177.0" text-anchor="end" class="val">−0.12</text><text x="14" y="203.0" class="lbl">VWAP pullback</text><line x1="615.1" x2="575.1" y1="199.0" y2="199.0" class="cost"/><circle cx="615.1" cy="199.0" r="5" class="gross"><title>before charges −0.08R</title></circle><circle cx="575.1" cy="199.0" r="5.5" class="net"><title>after charges −0.24R</title></circle><text x="566.1" y="203.0" text-anchor="end" class="val">−0.24</text><text x="14" y="229.0" class="lbl">Order block</text><line x1="621.4" x2="545.2" y1="225.0" y2="225.0" class="cost"/><circle cx="621.4" cy="225.0" r="5" class="gross"><title>before charges −0.05R</title></circle><circle cx="545.2" cy="225.0" r="5.5" class="net"><title>after charges −0.35R</title></circle><text x="536.2" y="229.0" text-anchor="end" class="val">−0.35</text><text x="0" y="256" class="grp">Crypto, INR markets</text><text x="14" y="279.0" class="lbl">Current breakout bot</text><line x1="519.9" x2="249.7" y1="275.0" y2="275.0" class="cost"/><circle cx="519.9" cy="275.0" r="5" class="gross"><title>before charges −0.45R</title></circle><circle cx="249.7" cy="275.0" r="5.5" class="net"><title>after charges −1.52R</title></circle><text x="240.7" y="279.0" text-anchor="end" class="val">−1.52</text><text x="14" y="305.0" class="lbl">VWAP pullback</text><line x1="543.0" x2="323.6" y1="301.0" y2="301.0" class="cost"/><circle cx="543.0" cy="301.0" r="5" class="gross"><title>before charges −0.36R</title></circle><circle cx="323.6" cy="301.0" r="5.5" class="net"><title>after charges −1.23R</title></circle><text x="314.6" y="305.0" text-anchor="end" class="val">−1.23</text><text x="14" y="331.0" class="lbl">Order block</text><line x1="694.8" x2="440.5" y1="327.0" y2="327.0" class="cost"/><circle cx="694.8" cy="327.0" r="5" class="gross"><title>before charges +0.24R</title></circle><circle cx="440.5" cy="327.0" r="5.5" class="net"><title>after charges −0.77R</title></circle><text x="431.5" y="331.0" text-anchor="end" class="val">−0.77</text><text x="0" y="358" class="grp">Crypto, USDT markets</text><text x="14" y="381.0" class="lbl">Current breakout bot</text><line x1="647.2" x2="499.2" y1="377.0" y2="377.0" class="cost"/><circle cx="647.2" cy="377.0" r="5" class="gross"><title>before charges +0.05R</title></circle><circle cx="499.2" cy="377.0" r="5.5" class="net"><title>after charges −0.54R</title></circle><text x="490.2" y="381.0" text-anchor="end" class="val">−0.54</text><text x="14" y="407.0" class="lbl">VWAP pullback</text><line x1="608.7" x2="495.1" y1="403.0" y2="403.0" class="cost"/><circle cx="608.7" cy="403.0" r="5" class="gross"><title>before charges −0.10R</title></circle><circle cx="495.1" cy="403.0" r="5.5" class="net"><title>after charges −0.55R</title></circle><text x="486.1" y="407.0" text-anchor="end" class="val">−0.55</text><text x="14" y="433.0" class="lbl">Order block</text><line x1="625.2" x2="413.9" y1="429.0" y2="429.0" class="cost"/><circle cx="625.2" cy="429.0" r="5" class="gross"><title>before charges −0.04R</title></circle><circle cx="413.9" cy="429.0" r="5.5" class="net"><title>after charges −0.87R</title></circle><text x="404.9" y="433.0" text-anchor="end" class="val">−0.87</text></svg>
+    </figure>
+  </section>
+
+  <section style="display:grid;gap:28px">
+    <div><h2>Market by market</h2><p class="sub">R per trade, averaged. Settings were picked on the earlier days only; the check days played no part in choosing them. "With Time Machine" re-runs the best setting through the bots' 10,000-replay gate (1,000 replays here).</p></div>
+    <section class="mkt" id="nse">
+  <header><h3>NSE stocks</h3><p>60 stocks · 2026-07-31 to 2026-10-26 · pick 38 days, check 20 days · Angel One intraday charges, ₹40,000 max position</p></header>
+  <div class="scroll"><table>
+    <thead><tr><th rowspan="2">Strategy and best settings</th><th colspan="3">Pick days (settings chosen here)</th><th colspan="3">Check days (unseen)</th><th rowspan="2">With Time Machine, check days</th><th rowspan="2">Settings that made money, check days</th></tr>
+    <tr><th>Trades</th><th>Before charges</th><th>After</th><th>Trades</th><th>Before charges</th><th>After</th></tr></thead>
+    <tbody><tr class="base"><td><b>Current breakout bot</b><div class="set">Opening-range breakout, as running now</div></td><td class="n">356</td><td class="n"><span class="r loss">−0.18R</span></td><td class="n"><span class="r loss">−0.54R</span></td><td class="n">101</td><td class="n"><span class="r loss">−0.01R</span></td><td class="n"><span class="r loss">−0.29R</span></td><td class="n">–</td><td class="n">–</td></tr><tr><td><b>VWAP pullback</b><div class="set">Sell short; 3 bars on the right side of VWAP before the dip; stop 1 ATR under VWAP; target 2R; any daily trend</div></td><td class="n">1048</td><td class="n"><span class="r gain">+0.03R</span></td><td class="n"><span class="r loss">−0.53R</span></td><td class="n">488</td><td class="n"><span class="r gain">+0.29R</span></td><td class="n"><span class="r loss">−0.15R</span></td><td class="n tm">8 kept, <span class="r gain">+0.36R</span></td><td class="n"><span class="pill no">0 of 48</span></td></tr><tr><td><b>Order block</b><div class="set">Sell short; zone = candle&#x27;s full range; fair value gap required; retest within 24 bars; target 2R; any daily trend</div></td><td class="n">877</td><td class="n"><span class="r gain">+0.05R</span></td><td class="n"><span class="r loss">−0.78R</span></td><td class="n">524</td><td class="n"><span class="r gain">+0.04R</span></td><td class="n"><span class="r loss">−0.63R</span></td><td class="n tm">2 kept, <span class="r gain">+0.11R</span></td><td class="n"><span class="pill no">0 of 96</span></td></tr></tbody></table></div></section><section class="mkt" id="us">
+  <header><h3>US stocks</h3><p>60 stocks · 2026-08-03 to 2026-10-26 · pick 40 days, check 20 days · IBKR commission and fees, $4,000 max position</p></header>
+  <div class="scroll"><table>
+    <thead><tr><th rowspan="2">Strategy and best settings</th><th colspan="3">Pick days (settings chosen here)</th><th colspan="3">Check days (unseen)</th><th rowspan="2">With Time Machine, check days</th><th rowspan="2">Settings that made money, check days</th></tr>
+    <tr><th>Trades</th><th>Before charges</th><th>After</th><th>Trades</th><th>Before charges</th><th>After</th></tr></thead>
+    <tbody><tr class="base"><td><b>Current breakout bot</b><div class="set">Opening-range breakout, as running now</div></td><td class="n">702</td><td class="n"><span class="r loss">−0.07R</span></td><td class="n"><span class="r loss">−0.16R</span></td><td class="n">354</td><td class="n"><span class="r loss">−0.03R</span></td><td class="n"><span class="r loss">−0.12R</span></td><td class="n">–</td><td class="n">–</td></tr><tr><td><b>VWAP pullback</b><div class="set">Buy (long); 3 bars on the right side of VWAP before the dip; stop 1 ATR under VWAP; target 2R; only with the daily trend</div></td><td class="n">492</td><td class="n"><span class="r loss">−0.02R</span></td><td class="n"><span class="r loss">−0.19R</span></td><td class="n">230</td><td class="n"><span class="r loss">−0.08R</span></td><td class="n"><span class="r loss">−0.24R</span></td><td class="n tm">30 kept, <span class="r loss">−0.12R</span></td><td class="n"><span class="pill no">0 of 48</span></td></tr><tr><td><b>Order block</b><div class="set">Buy (long); zone = candle&#x27;s full range; fair value gap required; retest within 24 bars; target the move&#x27;s high; any daily trend</div></td><td class="n">1195</td><td class="n"><span class="r gain">+0.06R</span></td><td class="n"><span class="r loss">−0.25R</span></td><td class="n">589</td><td class="n"><span class="r loss">−0.05R</span></td><td class="n"><span class="r loss">−0.35R</span></td><td class="n tm">13 kept, <span class="r gain">+0.22R</span></td><td class="n"><span class="pill no">0 of 96</span></td></tr></tbody></table></div></section><section class="mkt" id="crypto-inr">
+  <header><h3>Crypto, INR markets</h3><p>16 coins · 2026-06-30 to 2026-10-26 · pick 79 days, check 40 days · CoinDCX 0.59% fee per side</p></header>
+  <div class="scroll"><table>
+    <thead><tr><th rowspan="2">Strategy and best settings</th><th colspan="3">Pick days (settings chosen here)</th><th colspan="3">Check days (unseen)</th><th rowspan="2">With Time Machine, check days</th><th rowspan="2">Settings that made money, check days</th></tr>
+    <tr><th>Trades</th><th>Before charges</th><th>After</th><th>Trades</th><th>Before charges</th><th>After</th></tr></thead>
+    <tbody><tr class="base"><td><b>Current breakout bot</b><div class="set">Opening-range breakout, as running now</div></td><td class="n">198</td><td class="n"><span class="r loss">−0.35R</span></td><td class="n"><span class="r loss">−1.52R</span></td><td class="n">121</td><td class="n"><span class="r loss">−0.45R</span></td><td class="n"><span class="r loss">−1.52R</span></td><td class="n">–</td><td class="n">–</td></tr><tr><td><b>VWAP pullback</b><div class="set">Buy (long); 6 bars on the right side of VWAP before the dip; stop under the dip bar; target 2R; only with the daily trend</div></td><td class="n">349</td><td class="n"><span class="r loss">−0.29R</span></td><td class="n"><span class="r loss">−1.20R</span></td><td class="n">186</td><td class="n"><span class="r loss">−0.36R</span></td><td class="n"><span class="r loss">−1.23R</span></td><td class="n tm">0 kept</td><td class="n"><span class="pill no">0 of 24</span></td></tr><tr><td><b>Order block</b><div class="set">Buy (long); zone = candle&#x27;s full range; fair value gap required; retest within 24 bars; target the move&#x27;s high; only with the daily trend</div></td><td class="n">169</td><td class="n"><span class="r gain">+0.12R</span></td><td class="n"><span class="r loss">−1.02R</span></td><td class="n">99</td><td class="n"><span class="r gain">+0.24R</span></td><td class="n"><span class="r loss">−0.77R</span></td><td class="n tm">0 kept</td><td class="n"><span class="pill no">0 of 48</span></td></tr></tbody></table></div></section><section class="mkt" id="crypto-usdt">
+  <header><h3>Crypto, USDT markets</h3><p>25 coins · 2026-06-30 to 2026-10-26 · pick 79 days, check 40 days · CoinDCX 0.20% fee per side</p></header>
+  <div class="scroll"><table>
+    <thead><tr><th rowspan="2">Strategy and best settings</th><th colspan="3">Pick days (settings chosen here)</th><th colspan="3">Check days (unseen)</th><th rowspan="2">With Time Machine, check days</th><th rowspan="2">Settings that made money, check days</th></tr>
+    <tr><th>Trades</th><th>Before charges</th><th>After</th><th>Trades</th><th>Before charges</th><th>After</th></tr></thead>
+    <tbody><tr class="base"><td><b>Current breakout bot</b><div class="set">Opening-range breakout, as running now</div></td><td class="n">616</td><td class="n"><span class="r loss">−0.01R</span></td><td class="n"><span class="r loss">−0.76R</span></td><td class="n">296</td><td class="n"><span class="r gain">+0.05R</span></td><td class="n"><span class="r loss">−0.54R</span></td><td class="n">–</td><td class="n">–</td></tr><tr><td><b>VWAP pullback</b><div class="set">Buy (long); 3 bars on the right side of VWAP before the dip; stop 1 ATR under VWAP; target 1.5R; only with the daily trend</div></td><td class="n">603</td><td class="n"><span class="r gain">+0.09R</span></td><td class="n"><span class="r loss">−0.59R</span></td><td class="n">280</td><td class="n"><span class="r loss">−0.10R</span></td><td class="n"><span class="r loss">−0.55R</span></td><td class="n tm">28 kept, <span class="r loss">−0.13R</span></td><td class="n"><span class="pill no">0 of 24</span></td></tr><tr><td><b>Order block</b><div class="set">Buy (long); zone = candle&#x27;s full range; fair value gap required; retest within 24 bars; target the move&#x27;s high; only with the daily trend</div></td><td class="n">565</td><td class="n"><span class="r gain">+0.04R</span></td><td class="n"><span class="r loss">−0.98R</span></td><td class="n">248</td><td class="n"><span class="r loss">−0.04R</span></td><td class="n"><span class="r loss">−0.87R</span></td><td class="n tm">2 kept, <span class="r loss">−0.24R</span></td><td class="n"><span class="pill no">0 of 48</span></td></tr></tbody></table></div></section>
+  </section>
+
+  <section style="display:grid;gap:12px">
+    <h2>With much bigger positions</h2>
+    <p class="sub">Fixed brokerage weighs less on large trades, so this re-run shows the strategies at their cheapest. Pick days → check days, R per trade after charges.</p>
+    <div class="scroll"><table style="min-width:640px">
+      <thead><tr><th>Market</th><th>Current breakout bot, check</th><th>VWAP pullback</th><th>Order block</th></tr></thead>
+      <tbody><tr><td>NSE stocks<div class="set">₹10 lakh positions</div></td><td class="n"><span class="r loss">−0.13R</span></td><td class="n"><span class="r loss">−0.20R</span> → <span class="r gain">+0.11R</span><div class="set">8 of 48 settings positive</div></td><td class="n"><span class="r loss">−0.28R</span> → <span class="r loss">−0.23R</span><div class="set">0 of 96 settings positive</div></td></tr><tr><td>US stocks<div class="set">$100,000 positions</div></td><td class="n"><span class="r loss">−0.05R</span></td><td class="n"><span class="r loss">−0.06R</span> → <span class="r loss">−0.11R</span><div class="set">3 of 48 settings positive</div></td><td class="n"><span class="r loss">−0.02R</span> → <span class="r loss">−0.13R</span><div class="set">4 of 96 settings positive</div></td></tr></tbody></table></div>
+    <p>The one positive number, VWAP pullback <b>short</b> on NSE (+0.11R on the check days), lost −0.20R on the pick days first. The check days were a falling month, which favours short trades. That is the market's direction, not an edge, and it needs about ₹10 lakh of capital per trade.</p>
+  </section>
+
+  <section class="two">
+    <div class="card"><h3>Order block rules tested</h3><ol>
+      <li>Swing high: a bar higher than the two bars either side.</li>
+      <li>Break of structure: a close above the latest swing high.</li>
+      <li>Order block: the last down candle before that up-move; the zone runs from its high (or body) to its low.</li>
+      <li>Optional: the move must leave a fair value gap.</li>
+      <li>Buy with a limit order when price comes back into the zone; stop just under the zone; target 1R, 2R or the move's high.</li>
+    </ol><p class="mute">Shorts use the mirror image. One trade per stock per day; out by the bot's flat-by time.</p></div>
+    <div class="card"><h3>VWAP pullback rules tested</h3><ol>
+      <li>VWAP: the day's volume-weighted average price, from the open.</li>
+      <li>Trend: the last 3 or 6 bars closed above a rising VWAP.</li>
+      <li>Signal: a green bar that dips to VWAP and closes back above it.</li>
+      <li>Buy at that bar's close; stop under the dip bar or 1 ATR under VWAP; target 1R, 1.5R or 2R.</li>
+    </ol><p class="mute">Shorts use the mirror image. Both strategies were also tested with and without the bots' 20-day trend filter.</p></div>
+  </section>
+
+  <section style="display:grid;gap:10px">
+    <h2>Limits of this test</h2>
+    <ul class="notes">
+      <li>Free 5-minute stock data only goes back 60 days, so each stock period is about 2–3 months; crypto uses 4 months of 15-minute bars.</li>
+      <li>There is no single agreed definition of an order block. This is a common Smart Money Concepts version; other versions could differ, but a near-zero result before charges suggests the core idea adds little.</li>
+      <li>Crypto INR order blocks were positive before charges (+0.24R) on 99 trades, but the same rule on USDT markets was not, and the 0.59% fee per side wipes it out either way.</li>
+      <li>Short selling was tested for stocks only. CoinDCX spot does not allow it.</li>
+    </ul>
+    <p class="mute">Source: <code>begin\strategy_lab\lab.py</code>, results in <code>strategy_lab\results\</code>. The index ETF SIP remains the only approach that made money in these tests.</p>
+  </section>
+</div>

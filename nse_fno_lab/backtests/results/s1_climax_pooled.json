@@ -1,0 +1,34 @@
+[
+ {
+  "mode": "min g/t >= 1.75",
+  "trades": 38,
+  "win_pct": 44.7,
+  "profit_factor": 1.14,
+  "total": 3873,
+  "t": 0.35
+ },
+ {
+  "mode": "min g/t >= 2.0 (current)",
+  "trades": 29,
+  "win_pct": 44.8,
+  "profit_factor": 0.91,
+  "total": -1938,
+  "t": -0.21
+ },
+ {
+  "mode": "band 1.50-1.90",
+  "trades": 25,
+  "win_pct": 48.0,
+  "profit_factor": 1.14,
+  "total": 2385,
+  "t": 0.27
+ },
+ {
+  "mode": "band + pullback limit above 1.90",
+  "trades": 43,
+  "win_pct": 44.2,
+  "profit_factor": 1.19,
+  "total": 5483,
+  "t": 0.48
+ }
+]

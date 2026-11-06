@@ -1,0 +1,35 @@
+  loading 1/99 ACUTAAS       loading 2/99 ADANIENSOL    loading 3/99 ADANIENT      loading 4/99 ADANIGREEN    loading 5/99 ADANIPORTS    loading 6/99 ADANIPOWER    loading 7/99 APARINDS      loading 8/99 APOLLOHOSP    loading 9/99 ATHERENERG    loading 10/99 AXISBANK      loading 11/99 BAJAJ-AUTO    loading 12/99 BAJFINANCE    loading 13/99 BEL           loading 14/99 BHARTIARTL    loading 15/99 BHEL          loading 16/99 BSE           loading 17/99 CANBK         loading 18/99 CGPOWER       loading 19/99 CHENNPETRO    loading 20/99 CHOLAFIN      loading 21/99 COALINDIA     loading 22/99 COFORGE       loading 23/99 CUPID         loading 24/99 DIVISLAB      loading 25/99 DIXON         loading 26/99 DMART         loading 27/99 DRREDDY       loading 28/99 EICHERMOT     loading 29/99 ETERNAL       loading 30/99 FEDERALBNK    loading 31/99 GALLANTT      loading 32/99 GROWW         loading 33/99 GVT&D         loading 34/99 HAL           loading 35/99 HBLENGINE     loading 36/99 HCLTECH       loading 37/99 HDFCBANK      loading 38/99 HEROMOTOCO    loading 39/99 HINDALCO      loading 40/99 HINDUNILVR    loading 41/99 ICICIBANK     loading 42/99 IFCI          loading 43/99 INDHOTEL      loading 44/99 INDIGO        loading 45/99 INFY          loading 46/99 ITC           loading 47/99 JIOFIN        loading 48/99 JSWSTEEL      loading 49/99 KALYANKJIL    loading 50/99 KAYNES        loading 51/99 KOTAKBANK     loading 52/99 LAURUSLABS    loading 53/99 LENSKART      loading 54/99 LICI          loading 55/99 LT            loading 56/99 LTTS          loading 57/99 M&M           loading 58/99 MARUTI        loading 59/99 MAXHEALTH     loading 60/99 MCX           loading 61/99 MEESHO        loading 62/99 MRPL          loading 63/99 NESTLEIND     loading 64/99 NETWEB        loading 65/99 NTPC          loading 66/99 ONGC          loading 67/99 PAYTM         loading 68/99 PERSISTENT    loading 69/99 PFC           loading 70/99 PINELABS      loading 71/99 PNB           loading 72/99 POLICYBZR     loading 73/99 POLYCAB       loading 74/99 POWERINDIA    loading 75/99 RELIANCE      loading 76/99 SAIL          loading 77/99 SBILIFE       loading 78/99 SBIN          loading 79/99 SHRIRAMFIN    loading 80/99 SOLARINDS     loading 81/99 SONACOMS      loading 82/99 SUNPHARMA     loading 83/99 SWIGGY        loading 84/99 TARIL         loading 85/99 TATASTEEL     loading 86/99 TCS           loading 87/99 TDPOWERSYS    loading 88/99 TECHM         loading 89/99 TITAN         loading 90/99 TMCV          loading 91/99 TMPV          loading 92/99 TRENT         loading 93/99 TVSMOTOR      loading 94/99 ULTRACEMCO    loading 95/99 UNIONBANK     loading 96/99 VAML          loading 97/99 VEDL          loading 98/99 WELCORP       loading 99/99 WIPRO         93 stocks, trading days 2017-08-21 .. 2026-10-29, pick before 2023-10-05, check from 2023-10-05
+
+setting                                      | PICK trades  won%   avg% | CHECK trades  won%   avg% days
+RSI<5  exit rsi70 stop none  index up        |        1537  63.4  +0.44 |          929  66.4  +0.77  5.2  <- chosen
+RSI<5  exit sma5  stop none  index up        |        1578  62.0  +0.38 |          950  62.1  +0.53  4.0
+RSI<10 exit rsi70 stop none  index up        |        2707  62.1  +0.30 |         1580  65.0  +0.63  5.1
+RSI<5  exit rsi70 stop none  any mkt         |        1768  63.0  +0.29 |         1233  65.8  +0.55  5.2
+RSI<5  exit sma5  stop none  any mkt         |        1819  62.0  +0.27 |         1260  62.1  +0.43  4.0
+RSI<5  exit rsi70 stop -8%   index up        |        1664  62.4  +0.26 |          978  65.6  +0.53  4.6
+RSI<5  exit sma5  stop -8%   index up        |        1692  61.1  +0.21 |          995  62.0  +0.31  3.6
+RSI<10 exit sma5  stop none  index up        |        2870  60.7  +0.20 |         1654  60.8  +0.41  4.0
+RSI<10 exit rsi70 stop none  any mkt         |        3103  62.1  +0.17 |         2080  63.8  +0.42  5.2
+RSI<5  exit rsi70 stop -8%   any mkt         |        1931  61.5  +0.17 |         1301  64.7  +0.34  4.6
+RSI<20 exit rsi70 stop none  index up        |        4610  62.3  +0.17 |         2543  63.2  +0.49  4.9
+RSI<5  exit sma5  stop -8%   any mkt         |        1963  60.7  +0.14 |         1323  61.7  +0.23  3.6
+RSI<10 exit rsi70 stop -8%   index up        |        2944  61.2  +0.12 |         1692  64.9  +0.49  4.5
+RSI<20 exit rsi70 stop none  any mkt         |        5198  62.3  +0.08 |         3316  61.8  +0.35  5.0
+RSI<10 exit rsi70 stop -8%   any mkt         |        3414  60.9  +0.08 |         2247  63.4  +0.25  4.5
+RSI<10 exit sma5  stop none  any mkt         |        3286  60.7  +0.07 |         2183  60.3  +0.27  4.0
+RSI<10 exit sma5  stop -8%   index up        |        3083  60.1  +0.05 |         1758  61.3  +0.27  3.6
+RSI<20 exit sma5  stop none  index up        |        5014  59.7  +0.03 |         2744  60.3  +0.30  3.9
+RSI<10 exit sma5  stop -8%   any mkt         |        3570  59.9  +0.01 |         2342  60.6  +0.12  3.5
+RSI<20 exit rsi70 stop -8%   index up        |        5028  61.3  -0.02 |         2748  62.4  +0.26  4.3
+RSI<20 exit rsi70 stop -8%   any mkt         |        5747  60.9  -0.07 |         3614  61.1  +0.11  4.3
+RSI<20 exit sma5  stop none  any mkt         |        5659  59.7  -0.07 |         3607  59.6  +0.22  3.9
+RSI<20 exit sma5  stop -8%   index up        |        5416  59.3  -0.12 |         2947  60.1  +0.09  3.4
+RSI<20 exit sma5  stop -8%   any mkt         |        6190  59.0  -0.18 |         3898  59.4  +0.02  3.4
+
+Chosen on pick years: RSI<5  exit rsi70 stop none  index up
+CHECK years (2023-10-05 .. 2026-10-29, unseen):
+  dip rule      : 929 trades, 66.4% won, avg +0.77% per trade after charges (wins avg +2.93%, losses avg -3.51%), held 5.2 days
+  by year       : 2023: +0.52%  2024: +1.11%  2025: +0.37%  2026: -0.04%
+  any uptrend day, hold 5d (no dip needed): 47450 trades, 48.7% won, avg +0.18%
+  portfolio (2 positions x 40,000): 138 trades, 60.9% won, profit 5,339 = +6.7% of 80,000 over 3.0 years, worst drop 31.0%  {'2023': 8.4, '2024': 17.2, '2025': -11.9, '2026': -6.9}
+  holding the index: +17.3%   holding all 93 stocks: +211.9%

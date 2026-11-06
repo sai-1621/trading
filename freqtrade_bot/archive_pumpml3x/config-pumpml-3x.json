@@ -1,0 +1,10 @@
+{
+ "bot_name": "crypto_pumpml_3x",
+ "strategy": "PumpML",
+ "pumpml_leverage": 3,
+ "stoploss": -0.30,
+ "stake_amount": 100,
+ "max_open_trades": 5,
+ "dry_run": true,
+ "dry_run_wallet": 1000
+}
