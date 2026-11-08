@@ -23,9 +23,9 @@ BOTS = [
      "hours": "Paper experiment: machine-learning model, long or short after sudden moves, 1x. Checks every hour, 24/7; each trade lasts at most a day."},
     {"id": "pumpml15", "name": "Crypto ML 1.5% strongest-first", "dir": ROOT / "freqtrade_bot", "cur": "USDT", "task": "",
      "kind": "freqtrade", "mode": "ml", "config": "config-pump.json", "overlay": "config-pumpml15.json",
-     "db": "tradesv3.pumpml15.dryrun.sqlite", "log": "pumpml15.log", "strategy_file": "PumpML15.py", "min_pred": 0.015,
+     "virtual": "pumpml15_virtual.json", "db": "-", "log": "pumpml.log", "strategy_file": "PumpML.py", "min_pred": 0.015,
      "pairs_label": "all Binance USDT futures coins (list refreshes every 30 min, new listings included)",
-     "hours": "Paper copy of the ML bot with a stricter rule: trades only predictions of at least 1.5%, strongest first when slots are short. Own 1,000 USDT wallet. On trial until 6 Feb 2027."},
+     "hours": "Virtual wallet inside the main ML bot (since 7 Nov 2026, to save memory): same predictions, stricter rule: trades only predictions of at least 1.5%, strongest first when slots are short. Prices polled every 15 s; stops also checked against hourly candles and filled at the stop price, as an exchange-held stop would. Protections: a side pauses 12 h after 3 stop-outs in 24 h; everything pauses 24 h after an 8% drop in a week; 2 h cooldown per coin. Own 1,000 USDT wallet. On trial until 6 Feb 2027."},
     {"id": "sip", "name": "Index ETF SIP", "dir": ROOT / "index_etf_bot", "cur": "₹", "task": "Index ETF SIP Bot", "kind": "sip",
      "hours": "Buys on the first trading day of each month after 09:45 IST, never sells; values holdings after 15:35"},
 ]

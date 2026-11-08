@@ -1,8 +1,8 @@
 {
  "prereg": "PREREG_forward_1p5.md",
- "updated": "2026-11-06T02:45:56.607960+00:00",
- "events_logged": 0,
- "first_event": null,
+ "updated": "2026-11-08T06:00:09.089418+00:00",
+ "events_logged": 87,
+ "first_event": "2026-11-06 03:00:00+00:00",
  "rules": {
   "B1.5 ranked (shadow)": {
    "summary": {
@@ -13,10 +13,89 @@
   },
   "B0.5 as they come (current rule)": {
    "summary": {
-    "signals": 0,
-    "taken": 0
+    "signals": 8,
+    "taken": 8,
+    "closed": 5,
+    "open": 3,
+    "win_pct": 60.0,
+    "avg_pct": 1.223,
+    "pnl_usdt": 6.12,
+    "t": 0.33
    },
-   "trades": []
+   "trades": [
+    {
+     "pair": "HANA/USDT:USDT",
+     "side": "long",
+     "pred_pct": 1.25,
+     "entry_time": "2026-11-06 10:00:00+00:00",
+     "status": "closed",
+     "ret_pct": -4.684,
+     "exit_time": "2026-11-07 10:02:00+00:00"
+    },
+    {
+     "pair": "ON/USDT:USDT",
+     "side": "short",
+     "pred_pct": 0.54,
+     "entry_time": "2026-11-06 14:00:00+00:00",
+     "status": "closed",
+     "ret_pct": 5.7,
+     "exit_time": "2026-11-06 15:24:00+00:00"
+    },
+    {
+     "pair": "MARA/USDT:USDT",
+     "side": "long",
+     "pred_pct": 0.9,
+     "entry_time": "2026-11-06 15:00:00+00:00",
+     "status": "closed",
+     "ret_pct": 7.7,
+     "exit_time": "2026-11-06 20:11:00+00:00"
+    },
+    {
+     "pair": "LYN/USDT:USDT",
+     "side": "short",
+     "pred_pct": 0.68,
+     "entry_time": "2026-11-06 15:00:00+00:00",
+     "status": "closed",
+     "ret_pct": -10.3,
+     "exit_time": "2026-11-06 15:45:00+00:00"
+    },
+    {
+     "pair": "QNTX/USDT:USDT",
+     "side": "long",
+     "pred_pct": 0.53,
+     "entry_time": "2026-11-06 16:00:00+00:00",
+     "status": "closed",
+     "ret_pct": 7.7,
+     "exit_time": "2026-11-06 17:24:00+00:00"
+    },
+    {
+     "pair": "ESPORTS/USDT:USDT",
+     "side": "short",
+     "pred_pct": 0.66,
+     "entry_time": "2026-11-07 07:00:00+00:00",
+     "status": "open",
+     "ret_pct": null,
+     "exit_time": null
+    },
+    {
+     "pair": "KOMA/USDT:USDT",
+     "side": "short",
+     "pred_pct": 1.02,
+     "entry_time": "2026-11-07 09:00:00+00:00",
+     "status": "open",
+     "ret_pct": null,
+     "exit_time": null
+    },
+    {
+     "pair": "ESPORTS/USDT:USDT",
+     "side": "short",
+     "pred_pct": 0.59,
+     "entry_time": "2026-11-07 17:00:00+00:00",
+     "status": "open",
+     "ret_pct": null,
+     "exit_time": null
+    }
+   ]
   }
  }
 }

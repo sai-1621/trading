@@ -197,3 +197,57 @@ Events logged more than 15 minutes after their entry time (restart replays) are 
 highest predictions get them (via confirm_trade_entry). Own wallet (1,000 USDT), database
 `tradesv3.pumpml15.dryrun.sqlite`, log `logs/pumpml15.log`. Started by `run_pumpml15.ps1` (restarts it if it stops).
 Dashboard tab "Crypto ML 1.5% strongest-first". The pre-registered verdict still comes from `forward_shadow.py`.
+
+## Bias checks with freqtrade's own tools (6 Nov 2026) - PASS
+Config `user_data/config-analysis.json` (9 fixed coins, the live coin list cannot be used here), timerange
+2025-03-01 to 2026-10-29.
+- `recursive-analysis` (ETH, startup candles 199/299/509/510/999): no variance in any feature or prediction, and no
+  lookahead in the indicators. The live bot's shorter history gives the model the same inputs as the research.
+- `lookahead-analysis` (40 signals, min 10): no biased entries, exits or indicators.
+- Market mood is read from `breadth_1h.feather` in backtests but computed live in `bot_loop_start`. Same formula and
+  coin universe; freqtrade refreshes candles before bot_loop_start, so it uses the newest hour (at worst one hour old
+  via merge_asof).
+Note: the saved model was trained on all data up to Oct 2026, so a plain freqtrade backtest of PumpML on that period
+would look too good. The walk-forward scripts (ml_5y.py etc.) remain the real performance test.
+Update 6 Nov 2026 19:04: PumpML15 now also trials, in the live market (paper), freqtrade's stop-loss on exchange
+(config-pumpml15.json; simulated in dry-run) and three protections fixed in advance (strategy `protections`):
+StoplossGuard 3 losing stop-outs per side in 24 h -> that side pauses 12 h; MaxDrawdown 8% (equity) over 7 days with
+>= 5 trades -> pause 24 h; CooldownPeriod 2 h per coin. The main PumpML bot is unchanged.
+
+## 1.5% bot merged into the main ML bot (7 Nov 2026)
+
+The separate PumpML15 freqtrade process repeated the main bot's work (522 coins, same model) and used about 1.5-1.8 GB
+of memory. It is now a virtual wallet inside PumpML (`user_data/virtual_book.py`, state in
+`user_data/pumpml15_virtual.json`): same 1.5% bar, strongest first, 5 x 100 USDT on its own 1,000 USDT, same exits and
+the same three protections, simulated. Prices are polled every 15 s; hourly candles are also checked for stop wicks,
+filled at the stop price. `run_pumpml15.ps1` and `PumpML15.py` are kept but not running. It had made no trades before
+the merge. The pre-registered measure is still `forward_shadow.py`.
+
+## Retrain 7 Nov 2026 and forward head-to-head (PREREG_h2h.md, forward_h2h.py)
+
+Model retrained with retrain_model.py (36,024 events to 7 Nov; old one in models/archive/). From the 7 Nov 12:46 IST
+restart, the old model (models/compare_old.joblib, trained to 29 Oct) also scores every event; its predictions are
+logged next to the live model's and never traded. Review on or after 5 Dec 2026 with at least 100 events where either
+model trades (extend to 2 Jan 2027). Old wins only with paired t >= 2.0; otherwise the live model and monthly
+retraining stay. Progress: `python forward_h2h.py --count`.
+
+## Trailing-stop distance test (8 Nov 2026) - FAIL by the pre-set rule (PREREG_trail.md, trail_test.py)
+
+Average net return per trade on the ML model's picks (19,386 trades, no portfolio limit):
+
+| exit | pick 2021-24 | holdout 2025-26 |
+|---|---|---|
+| FIXED (bot today) | -0.17% (t -2.4) | -0.06% (t -0.9) |
+| trail 10%, 24 h | -0.11% | +0.31% (t 3.5) |
+| trail 15%, 24 h | +0.08% | +0.36% (t 3.3) |
+| trail 20%, 24 h | +0.23% (t 2.1) | +0.31% (t 2.5) |
+| trail 25%, 72 h (chosen in pick) | +0.89% (t 5.6) | -0.11% |
+
+The pre-set choice (best in pick: trail 25%/72 h) lost in the holdout, so fixed exits stay. Trail 15-20% with a 24 h
+limit beat FIXED in both periods, but it was seen only after the holdout was opened: a hypothesis for a fresh
+(forward) test, not a result. Tight trails (3-5%) were worst. t-stats are inflated by trades bunched in the same hours.
+
+Forward test of the lead (PREREG_forward_trail.md, forward_trail.py): every PumpML trade opened from 8 Nov 2026
+09:00 IST is replayed on 1-minute candles with the fixed exits and with a 20% trail (24 h). Review on or after
+5 Dec 2026 with >= 100 trades; the trail wins only with paired t >= 2.0, and even then only earns a full retrain test.
+Progress: `python forward_trail.py --count`.

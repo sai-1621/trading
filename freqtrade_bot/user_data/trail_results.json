@@ -1,0 +1,703 @@
+{
+ "prereg": "PREREG_trail.md",
+ "events": 49780,
+ "model_trades": 19386,
+ "groups": {
+  "model picks": {
+   "FIXED": {
+    "pick_avg_pct": -0.174,
+    "pick_t": -2.4,
+    "pick_n": 8585,
+    "hold_avg_pct": -0.061,
+    "hold_t": -0.93,
+    "hold_n": 10801
+   },
+   "T3-24h": {
+    "pick_avg_pct": -0.627,
+    "pick_t": -15.39,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.209,
+    "hold_t": 4.14,
+    "hold_n": 10801
+   },
+   "T5-24h": {
+    "pick_avg_pct": -0.421,
+    "pick_t": -7.31,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.263,
+    "hold_t": 4.26,
+    "hold_n": 10801
+   },
+   "T8-24h": {
+    "pick_avg_pct": -0.18,
+    "pick_t": -2.25,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.309,
+    "hold_t": 3.86,
+    "hold_n": 10801
+   },
+   "T10-24h": {
+    "pick_avg_pct": -0.111,
+    "pick_t": -1.23,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.311,
+    "hold_t": 3.48,
+    "hold_n": 10801
+   },
+   "T12-24h": {
+    "pick_avg_pct": -0.066,
+    "pick_t": -0.68,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.312,
+    "hold_t": 3.12,
+    "hold_n": 10801
+   },
+   "T15-24h": {
+    "pick_avg_pct": 0.082,
+    "pick_t": 0.78,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.363,
+    "hold_t": 3.32,
+    "hold_n": 10801
+   },
+   "T20-24h": {
+    "pick_avg_pct": 0.232,
+    "pick_t": 2.1,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.307,
+    "hold_t": 2.54,
+    "hold_n": 10801
+   },
+   "T25-24h": {
+    "pick_avg_pct": 0.392,
+    "pick_t": 3.41,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.149,
+    "hold_t": 1.18,
+    "hold_n": 10801
+   },
+   "T3-72h": {
+    "pick_avg_pct": -0.618,
+    "pick_t": -15.07,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.211,
+    "hold_t": 4.17,
+    "hold_n": 10801
+   },
+   "T5-72h": {
+    "pick_avg_pct": -0.327,
+    "pick_t": -5.42,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.257,
+    "hold_t": 4.11,
+    "hold_n": 10801
+   },
+   "T8-72h": {
+    "pick_avg_pct": 0.028,
+    "pick_t": 0.32,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.259,
+    "hold_t": 3.08,
+    "hold_n": 10801
+   },
+   "T10-72h": {
+    "pick_avg_pct": 0.099,
+    "pick_t": 0.97,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.184,
+    "hold_t": 1.91,
+    "hold_n": 10801
+   },
+   "T12-72h": {
+    "pick_avg_pct": 0.149,
+    "pick_t": 1.3,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.165,
+    "hold_t": 1.49,
+    "hold_n": 10801
+   },
+   "T15-72h": {
+    "pick_avg_pct": 0.455,
+    "pick_t": 3.45,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.215,
+    "hold_t": 1.71,
+    "hold_n": 10801
+   },
+   "T20-72h": {
+    "pick_avg_pct": 0.734,
+    "pick_t": 5.03,
+    "pick_n": 8585,
+    "hold_avg_pct": 0.12,
+    "hold_t": 0.83,
+    "hold_n": 10801
+   },
+   "T25-72h": {
+    "pick_avg_pct": 0.891,
+    "pick_t": 5.61,
+    "pick_n": 8585,
+    "hold_avg_pct": -0.108,
+    "hold_t": -0.67,
+    "hold_n": 10801
+   }
+  },
+  "long after pump": {
+   "FIXED": {
+    "pick_avg_pct": -0.508,
+    "pick_t": -6.49,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.868,
+    "hold_t": -16.58,
+    "hold_n": 20191
+   },
+   "T3-24h": {
+    "pick_avg_pct": -0.4,
+    "pick_t": -8.34,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.506,
+    "hold_t": -12.52,
+    "hold_n": 20191
+   },
+   "T5-24h": {
+    "pick_avg_pct": -0.492,
+    "pick_t": -7.72,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.551,
+    "hold_t": -10.74,
+    "hold_n": 20191
+   },
+   "T8-24h": {
+    "pick_avg_pct": -0.504,
+    "pick_t": -5.63,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.577,
+    "hold_t": -8.36,
+    "hold_n": 20191
+   },
+   "T10-24h": {
+    "pick_avg_pct": -0.486,
+    "pick_t": -4.59,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.621,
+    "hold_t": -7.69,
+    "hold_n": 20191
+   },
+   "T12-24h": {
+    "pick_avg_pct": -0.47,
+    "pick_t": -4.02,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.694,
+    "hold_t": -7.62,
+    "hold_n": 20191
+   },
+   "T15-24h": {
+    "pick_avg_pct": -0.413,
+    "pick_t": -3.19,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.713,
+    "hold_t": -6.82,
+    "hold_n": 20191
+   },
+   "T20-24h": {
+    "pick_avg_pct": -0.34,
+    "pick_t": -2.49,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.706,
+    "hold_t": -5.66,
+    "hold_n": 20191
+   },
+   "T25-24h": {
+    "pick_avg_pct": -0.127,
+    "pick_t": -0.87,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.608,
+    "hold_t": -4.37,
+    "hold_n": 20191
+   },
+   "T3-72h": {
+    "pick_avg_pct": -0.399,
+    "pick_t": -8.31,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.504,
+    "hold_t": -12.48,
+    "hold_n": 20191
+   },
+   "T5-72h": {
+    "pick_avg_pct": -0.513,
+    "pick_t": -8.04,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.561,
+    "hold_t": -10.91,
+    "hold_n": 20191
+   },
+   "T8-72h": {
+    "pick_avg_pct": -0.552,
+    "pick_t": -5.83,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.547,
+    "hold_t": -7.68,
+    "hold_n": 20191
+   },
+   "T10-72h": {
+    "pick_avg_pct": -0.639,
+    "pick_t": -5.46,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.555,
+    "hold_t": -6.5,
+    "hold_n": 20191
+   },
+   "T12-72h": {
+    "pick_avg_pct": -0.674,
+    "pick_t": -4.99,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.58,
+    "hold_t": -5.79,
+    "hold_n": 20191
+   },
+   "T15-72h": {
+    "pick_avg_pct": -0.458,
+    "pick_t": -2.83,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.525,
+    "hold_t": -4.39,
+    "hold_n": 20191
+   },
+   "T20-72h": {
+    "pick_avg_pct": -0.38,
+    "pick_t": -2.1,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.456,
+    "hold_t": -3.02,
+    "hold_n": 20191
+   },
+   "T25-72h": {
+    "pick_avg_pct": 0.007,
+    "pick_t": 0.04,
+    "pick_n": 8164,
+    "hold_avg_pct": 0.004,
+    "hold_t": 0.02,
+    "hold_n": 20191
+   }
+  },
+  "short after pump": {
+   "FIXED": {
+    "pick_avg_pct": -0.402,
+    "pick_t": -5.18,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.516,
+    "hold_t": -10.0,
+    "hold_n": 20191
+   },
+   "T3-24h": {
+    "pick_avg_pct": -0.509,
+    "pick_t": -12.63,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.541,
+    "hold_t": -17.94,
+    "hold_n": 20191
+   },
+   "T5-24h": {
+    "pick_avg_pct": -0.501,
+    "pick_t": -9.09,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.474,
+    "hold_t": -11.75,
+    "hold_n": 20191
+   },
+   "T8-24h": {
+    "pick_avg_pct": -0.571,
+    "pick_t": -7.85,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.416,
+    "hold_t": -7.84,
+    "hold_n": 20191
+   },
+   "T10-24h": {
+    "pick_avg_pct": -0.593,
+    "pick_t": -7.2,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.388,
+    "hold_t": -6.41,
+    "hold_n": 20191
+   },
+   "T12-24h": {
+    "pick_avg_pct": -0.69,
+    "pick_t": -7.67,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.357,
+    "hold_t": -5.34,
+    "hold_n": 20191
+   },
+   "T15-24h": {
+    "pick_avg_pct": -0.72,
+    "pick_t": -7.3,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.313,
+    "hold_t": -4.13,
+    "hold_n": 20191
+   },
+   "T20-24h": {
+    "pick_avg_pct": -0.814,
+    "pick_t": -7.34,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.335,
+    "hold_t": -3.81,
+    "hold_n": 20191
+   },
+   "T25-24h": {
+    "pick_avg_pct": -0.893,
+    "pick_t": -7.46,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.289,
+    "hold_t": -2.96,
+    "hold_n": 20191
+   },
+   "T3-72h": {
+    "pick_avg_pct": -0.499,
+    "pick_t": -12.3,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.539,
+    "hold_t": -17.85,
+    "hold_n": 20191
+   },
+   "T5-72h": {
+    "pick_avg_pct": -0.44,
+    "pick_t": -7.7,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.457,
+    "hold_t": -11.05,
+    "hold_n": 20191
+   },
+   "T8-72h": {
+    "pick_avg_pct": -0.479,
+    "pick_t": -6.0,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.371,
+    "hold_t": -6.56,
+    "hold_n": 20191
+   },
+   "T10-72h": {
+    "pick_avg_pct": -0.519,
+    "pick_t": -5.58,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.337,
+    "hold_t": -5.14,
+    "hold_n": 20191
+   },
+   "T12-72h": {
+    "pick_avg_pct": -0.66,
+    "pick_t": -6.34,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.349,
+    "hold_t": -4.76,
+    "hold_n": 20191
+   },
+   "T15-72h": {
+    "pick_avg_pct": -0.815,
+    "pick_t": -6.93,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.35,
+    "hold_t": -4.15,
+    "hold_n": 20191
+   },
+   "T20-72h": {
+    "pick_avg_pct": -0.998,
+    "pick_t": -7.33,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.432,
+    "hold_t": -4.33,
+    "hold_n": 20191
+   },
+   "T25-72h": {
+    "pick_avg_pct": -1.224,
+    "pick_t": -8.19,
+    "pick_n": 8164,
+    "hold_avg_pct": -0.514,
+    "hold_t": -4.58,
+    "hold_n": 20191
+   }
+  },
+  "long after dump": {
+   "FIXED": {
+    "pick_avg_pct": 0.016,
+    "pick_t": 0.2,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.926,
+    "hold_t": -16.07,
+    "hold_n": 14987
+   },
+   "T3-24h": {
+    "pick_avg_pct": -0.747,
+    "pick_t": -17.93,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.532,
+    "hold_t": -14.82,
+    "hold_n": 14987
+   },
+   "T5-24h": {
+    "pick_avg_pct": -0.393,
+    "pick_t": -5.96,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.681,
+    "hold_t": -13.67,
+    "hold_n": 14987
+   },
+   "T8-24h": {
+    "pick_avg_pct": 0.237,
+    "pick_t": 2.6,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.815,
+    "hold_t": -11.74,
+    "hold_n": 14987
+   },
+   "T10-24h": {
+    "pick_avg_pct": 0.251,
+    "pick_t": 2.46,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.773,
+    "hold_t": -9.46,
+    "hold_n": 14987
+   },
+   "T12-24h": {
+    "pick_avg_pct": 0.269,
+    "pick_t": 2.41,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.64,
+    "hold_t": -7.1,
+    "hold_n": 14987
+   },
+   "T15-24h": {
+    "pick_avg_pct": 0.35,
+    "pick_t": 2.93,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.491,
+    "hold_t": -4.87,
+    "hold_n": 14987
+   },
+   "T20-24h": {
+    "pick_avg_pct": 0.682,
+    "pick_t": 5.53,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.403,
+    "hold_t": -3.42,
+    "hold_n": 14987
+   },
+   "T25-24h": {
+    "pick_avg_pct": 0.902,
+    "pick_t": 7.33,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.304,
+    "hold_t": -2.31,
+    "hold_n": 14987
+   },
+   "T3-72h": {
+    "pick_avg_pct": -0.763,
+    "pick_t": -18.3,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.532,
+    "hold_t": -14.76,
+    "hold_n": 14987
+   },
+   "T5-72h": {
+    "pick_avg_pct": -0.412,
+    "pick_t": -5.92,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.65,
+    "hold_t": -12.72,
+    "hold_n": 14987
+   },
+   "T8-72h": {
+    "pick_avg_pct": 0.129,
+    "pick_t": 1.23,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.829,
+    "hold_t": -11.23,
+    "hold_n": 14987
+   },
+   "T10-72h": {
+    "pick_avg_pct": 0.095,
+    "pick_t": 0.8,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.724,
+    "hold_t": -8.07,
+    "hold_n": 14987
+   },
+   "T12-72h": {
+    "pick_avg_pct": 0.063,
+    "pick_t": 0.47,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.483,
+    "hold_t": -4.72,
+    "hold_n": 14987
+   },
+   "T15-72h": {
+    "pick_avg_pct": 0.281,
+    "pick_t": 1.88,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.101,
+    "hold_t": -0.84,
+    "hold_n": 14987
+   },
+   "T20-72h": {
+    "pick_avg_pct": 0.597,
+    "pick_t": 3.7,
+    "pick_n": 6438,
+    "hold_avg_pct": 0.406,
+    "hold_t": 2.59,
+    "hold_n": 14987
+   },
+   "T25-72h": {
+    "pick_avg_pct": 0.719,
+    "pick_t": 4.2,
+    "pick_n": 6438,
+    "hold_avg_pct": 0.995,
+    "hold_t": 4.77,
+    "hold_n": 14987
+   }
+  },
+  "short after dump": {
+   "FIXED": {
+    "pick_avg_pct": -1.138,
+    "pick_t": -14.41,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.405,
+    "hold_t": -7.24,
+    "hold_n": 14987
+   },
+   "T3-24h": {
+    "pick_avg_pct": -0.484,
+    "pick_t": -11.62,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.259,
+    "hold_t": -6.41,
+    "hold_n": 14987
+   },
+   "T5-24h": {
+    "pick_avg_pct": -0.569,
+    "pick_t": -10.45,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.174,
+    "hold_t": -3.41,
+    "hold_n": 14987
+   },
+   "T8-24h": {
+    "pick_avg_pct": -0.998,
+    "pick_t": -14.14,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.092,
+    "hold_t": -1.42,
+    "hold_n": 14987
+   },
+   "T10-24h": {
+    "pick_avg_pct": -1.2,
+    "pick_t": -15.42,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.149,
+    "hold_t": -2.1,
+    "hold_n": 14987
+   },
+   "T12-24h": {
+    "pick_avg_pct": -1.455,
+    "pick_t": -17.59,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.268,
+    "hold_t": -3.49,
+    "hold_n": 14987
+   },
+   "T15-24h": {
+    "pick_avg_pct": -1.818,
+    "pick_t": -20.24,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.348,
+    "hold_t": -4.13,
+    "hold_n": 14987
+   },
+   "T20-24h": {
+    "pick_avg_pct": -2.157,
+    "pick_t": -21.82,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.458,
+    "hold_t": -4.97,
+    "hold_n": 14987
+   },
+   "T25-24h": {
+    "pick_avg_pct": -2.197,
+    "pick_t": -20.72,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.628,
+    "hold_t": -6.31,
+    "hold_n": 14987
+   },
+   "T3-72h": {
+    "pick_avg_pct": -0.474,
+    "pick_t": -11.32,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.259,
+    "hold_t": -6.4,
+    "hold_n": 14987
+   },
+   "T5-72h": {
+    "pick_avg_pct": -0.457,
+    "pick_t": -7.96,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.224,
+    "hold_t": -4.41,
+    "hold_n": 14987
+   },
+   "T8-72h": {
+    "pick_avg_pct": -0.701,
+    "pick_t": -8.5,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.224,
+    "hold_t": -3.36,
+    "hold_n": 14987
+   },
+   "T10-72h": {
+    "pick_avg_pct": -0.815,
+    "pick_t": -8.54,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.356,
+    "hold_t": -4.74,
+    "hold_n": 14987
+   },
+   "T12-72h": {
+    "pick_avg_pct": -1.025,
+    "pick_t": -9.75,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.548,
+    "hold_t": -6.61,
+    "hold_n": 14987
+   },
+   "T15-72h": {
+    "pick_avg_pct": -1.579,
+    "pick_t": -13.76,
+    "pick_n": 6438,
+    "hold_avg_pct": -0.735,
+    "hold_t": -7.87,
+    "hold_n": 14987
+   },
+   "T20-72h": {
+    "pick_avg_pct": -2.464,
+    "pick_t": -19.11,
+    "pick_n": 6438,
+    "hold_avg_pct": -1.062,
+    "hold_t": -9.97,
+    "hold_n": 14987
+   },
+   "T25-72h": {
+    "pick_avg_pct": -2.98,
+    "pick_t": -21.35,
+    "pick_n": 6438,
+    "hold_avg_pct": -1.426,
+    "hold_t": -12.12,
+    "hold_n": 14987
+   }
+  }
+ },
+ "decision": {
+  "chosen_in_pick": "T25-72h",
+  "chosen_holdout_avg_pct": -0.108,
+  "fixed_holdout_avg_pct": -0.061,
+  "trail_wins": false
+ }
+}

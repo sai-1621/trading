@@ -145,6 +145,15 @@ def collect_ft(b):
             con.close()
         except sqlite3.Error:
             trades = []
+    vlog = None
+    if b.get("virtual"):                     # a virtual wallet kept by another bot's strategy (no database)
+        try:
+            vs = json.loads((ud / b["virtual"]).read_text(encoding="utf-8"))
+            trades = sorted(vs.get("trades", []), key=lambda t: -t["id"])
+            vlog = vs.get("log", [])
+            wallet0 = float(vs.get("wallet_start") or wallet0)
+        except (OSError, ValueError):
+            trades, vlog = [], []
     prices = {}
     fut = cfg.get("trading_mode") == "futures"
     tick = _get("https://fapi.binance.com/fapi/v1/ticker/price" if fut else "https://api.binance.com/api/v3/ticker/price", 30) or []
@@ -187,6 +196,8 @@ def collect_ft(b):
                          if not re.search(r"heartbeat|uvicorn|numexpr|Sending rpc message: \{'type': (status|startup)", ln)]
         except OSError:
             pass
+    if vlog is not None:
+        lines = vlog or ["(no virtual-wallet activity yet: waiting for a prediction of at least 1.5%)"]
     sfile = ud / "strategies" / b.get("strategy_file", f"{strat}.py")
     fast = mode in ("pump", "ml")
     rule = _rule(sfile, strat) if mode == "pump" else ({"jump": 0.05, "volx": 3.0, "abs": True} if mode == "ml" else {})

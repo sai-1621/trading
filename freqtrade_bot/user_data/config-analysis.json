@@ -1,0 +1,7 @@
+{
+  "exchange": {"name": "binance", "pair_whitelist": ["ETH/USDT:USDT", "SOL/USDT:USDT", "XRP/USDT:USDT", "DOGE/USDT:USDT",
+               "SUI/USDT:USDT", "WIF/USDT:USDT", "1000PEPE/USDT:USDT", "TIA/USDT:USDT", "BTC/USDT:USDT"]},
+  "pairlists": [{"method": "StaticPairList"}],
+  "max_open_trades": 50,
+  "dry_run_wallet": 1000000
+}

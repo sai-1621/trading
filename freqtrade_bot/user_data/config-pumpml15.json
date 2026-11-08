@@ -3,5 +3,14 @@
   "strategy": "PumpML15",
   "stake_amount": 100,
   "max_open_trades": 5,
-  "dry_run_wallet": 1000
+  "dry_run_wallet": 1000,
+  "order_types": {
+    "entry": "market",
+    "exit": "market",
+    "emergency_exit": "market",
+    "force_exit": "market",
+    "stoploss": "market",
+    "stoploss_on_exchange": true,
+    "stoploss_on_exchange_interval": 60
+  }
 }

@@ -61,3 +61,5 @@ dashboard/share/
 strategy_lab/results/candidates_*.json
 meta_lab/results/iter1_trades.csv
 meta_lab/results/iter2_trades.csv
+freqtrade_bot/user_data/pumpml15_virtual.json*
+freqtrade_bot/user_data/forward_trail_cache.json

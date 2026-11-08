@@ -1,5 +1,5 @@
 {
- "run_at": "2026-10-30T02:21:31.688199+00:00",
+ "run_at": "2026-11-07T06:33:37.841296+00:00",
  "features": [
   "jump",
   "vol_x",
@@ -24,7 +24,7 @@
   "breadth",
   "log_price"
  ],
- "events": 35340,
+ "events": 36024,
  "settings": {
   "fee_round_trip": 0.003,
   "long": [
@@ -40,497 +40,517 @@
  },
  "runs": {
   "all events, always long": {
-   "trades": 2928,
-   "win_pct": 45.6,
-   "avg_net_pct": -0.73,
-   "pnl_usdt": -2136.8,
-   "longs": 2928,
+   "trades": 2967,
+   "win_pct": 44.9,
+   "avg_net_pct": -0.85,
+   "pnl_usdt": -2527.8,
+   "longs": 2967,
    "shorts": 0,
    "by_year": {
     "2025": {
      "trades": 1377,
-     "avg_net_pct": -0.52,
-     "pnl_usdt": -721.0
+     "avg_net_pct": -0.79,
+     "pnl_usdt": -1092.9
     },
     "2026": {
-     "trades": 1551,
-     "avg_net_pct": -0.91,
-     "pnl_usdt": -1415.8
+     "trades": 1590,
+     "avg_net_pct": -0.9,
+     "pnl_usdt": -1435.0
     }
    },
-   "months_positive": "1/19",
+   "months_positive": "0/20",
    "by_month": {
     "2025-04": {
      "trades": 149,
-     "pnl_usdt": -73.0
+     "pnl_usdt": -65.1
     },
     "2025-05": {
      "trades": 153,
-     "pnl_usdt": -216.0
+     "pnl_usdt": -144.7
     },
     "2025-06": {
      "trades": 141,
-     "pnl_usdt": -53.6
+     "pnl_usdt": -111.1
     },
     "2025-07": {
      "trades": 152,
-     "pnl_usdt": -64.9
+     "pnl_usdt": -170.2
     },
     "2025-08": {
      "trades": 157,
-     "pnl_usdt": -52.8
+     "pnl_usdt": -71.9
     },
     "2025-09": {
      "trades": 150,
-     "pnl_usdt": 89.9
+     "pnl_usdt": -5.8
     },
     "2025-10": {
      "trades": 160,
-     "pnl_usdt": -40.1
+     "pnl_usdt": -241.0
     },
     "2025-11": {
      "trades": 155,
-     "pnl_usdt": -216.2
+     "pnl_usdt": -132.9
     },
     "2025-12": {
      "trades": 160,
-     "pnl_usdt": -94.3
+     "pnl_usdt": -150.2
     },
     "2026-01": {
      "trades": 158,
-     "pnl_usdt": -38.6
+     "pnl_usdt": -98.8
     },
     "2026-02": {
      "trades": 144,
-     "pnl_usdt": -148.6
+     "pnl_usdt": -39.1
     },
     "2026-03": {
      "trades": 160,
-     "pnl_usdt": -223.0
+     "pnl_usdt": -283.8
     },
     "2026-04": {
      "trades": 155,
-     "pnl_usdt": -67.0
+     "pnl_usdt": -240.9
     },
     "2026-05": {
      "trades": 155,
-     "pnl_usdt": -249.9
+     "pnl_usdt": -198.5
     },
     "2026-06": {
      "trades": 158,
-     "pnl_usdt": -294.4
+     "pnl_usdt": -114.0
     },
     "2026-07": {
      "trades": 158,
-     "pnl_usdt": -87.7
+     "pnl_usdt": -80.6
     },
     "2026-08": {
      "trades": 160,
-     "pnl_usdt": -66.1
+     "pnl_usdt": -39.9
     },
     "2026-09": {
      "trades": 154,
-     "pnl_usdt": -151.0
+     "pnl_usdt": -123.1
     },
     "2026-10": {
-     "trades": 149,
-     "pnl_usdt": -89.4
+     "trades": 157,
+     "pnl_usdt": -175.0
+    },
+    "2026-11": {
+     "trades": 31,
+     "pnl_usdt": -41.3
     }
    }
   },
   "all events, always short": {
-   "trades": 2928,
-   "win_pct": 60.9,
-   "avg_net_pct": -0.27,
-   "pnl_usdt": -787.9,
+   "trades": 2967,
+   "win_pct": 60.8,
+   "avg_net_pct": -0.28,
+   "pnl_usdt": -816.7,
    "longs": 0,
-   "shorts": 2928,
+   "shorts": 2967,
    "by_year": {
     "2025": {
      "trades": 1377,
-     "avg_net_pct": -0.32,
-     "pnl_usdt": -445.5
+     "avg_net_pct": -0.1,
+     "pnl_usdt": -141.2
     },
     "2026": {
-     "trades": 1551,
-     "avg_net_pct": -0.22,
-     "pnl_usdt": -342.4
+     "trades": 1590,
+     "avg_net_pct": -0.42,
+     "pnl_usdt": -675.4
     }
    },
-   "months_positive": "5/19",
+   "months_positive": "6/20",
    "by_month": {
     "2025-04": {
      "trades": 149,
-     "pnl_usdt": -42.5
+     "pnl_usdt": -60.6
     },
     "2025-05": {
      "trades": 153,
-     "pnl_usdt": 98.8
+     "pnl_usdt": 88.7
     },
     "2025-06": {
      "trades": 141,
-     "pnl_usdt": -75.1
+     "pnl_usdt": -24.9
     },
     "2025-07": {
      "trades": 152,
-     "pnl_usdt": -182.0
+     "pnl_usdt": -103.7
     },
     "2025-08": {
      "trades": 157,
-     "pnl_usdt": -45.9
+     "pnl_usdt": -40.2
     },
     "2025-09": {
      "trades": 150,
-     "pnl_usdt": -72.1
+     "pnl_usdt": -36.1
     },
     "2025-10": {
      "trades": 160,
-     "pnl_usdt": -216.3
+     "pnl_usdt": 12.0
     },
     "2025-11": {
      "trades": 155,
-     "pnl_usdt": 83.8
+     "pnl_usdt": 0.0
     },
     "2025-12": {
      "trades": 160,
-     "pnl_usdt": 5.8
+     "pnl_usdt": 23.5
     },
     "2026-01": {
      "trades": 158,
-     "pnl_usdt": -39.9
+     "pnl_usdt": 9.9
     },
     "2026-02": {
      "trades": 144,
-     "pnl_usdt": -21.9
+     "pnl_usdt": -49.8
     },
     "2026-03": {
      "trades": 160,
-     "pnl_usdt": -13.3
+     "pnl_usdt": 75.5
     },
     "2026-04": {
      "trades": 155,
-     "pnl_usdt": -146.4
+     "pnl_usdt": -116.9
     },
     "2026-05": {
      "trades": 155,
-     "pnl_usdt": 23.7
+     "pnl_usdt": -43.0
     },
     "2026-06": {
      "trades": 158,
-     "pnl_usdt": 111.0
+     "pnl_usdt": -152.9
     },
     "2026-07": {
      "trades": 158,
-     "pnl_usdt": -66.5
+     "pnl_usdt": -94.8
     },
     "2026-08": {
      "trades": 160,
-     "pnl_usdt": -42.8
+     "pnl_usdt": -40.4
     },
     "2026-09": {
      "trades": 154,
-     "pnl_usdt": -69.1
+     "pnl_usdt": -118.0
     },
     "2026-10": {
-     "trades": 149,
-     "pnl_usdt": -77.2
+     "trades": 157,
+     "pnl_usdt": -79.8
+    },
+    "2026-11": {
+     "trades": 31,
+     "pnl_usdt": -65.3
     }
    }
   },
   "model, pred >= 0.0%": {
-   "trades": 2862,
-   "win_pct": 57.9,
-   "avg_net_pct": -0.1,
-   "pnl_usdt": -272.0,
-   "longs": 883,
-   "shorts": 1979,
+   "trades": 2897,
+   "win_pct": 57.3,
+   "avg_net_pct": -0.15,
+   "pnl_usdt": -442.9,
+   "longs": 914,
+   "shorts": 1983,
    "by_year": {
     "2025": {
-     "trades": 1351,
-     "avg_net_pct": -0.06,
-     "pnl_usdt": -86.3
+     "trades": 1346,
+     "avg_net_pct": -0.32,
+     "pnl_usdt": -430.1
     },
     "2026": {
-     "trades": 1511,
-     "avg_net_pct": -0.12,
-     "pnl_usdt": -185.7
+     "trades": 1551,
+     "avg_net_pct": -0.01,
+     "pnl_usdt": -12.8
     }
    },
-   "months_positive": "11/19",
+   "months_positive": "10/20",
    "by_month": {
     "2025-04": {
      "trades": 148,
-     "pnl_usdt": -55.3
+     "pnl_usdt": -66.5
     },
     "2025-05": {
      "trades": 145,
-     "pnl_usdt": -89.6
+     "pnl_usdt": -108.6
     },
     "2025-06": {
      "trades": 138,
-     "pnl_usdt": 1.9
+     "pnl_usdt": 49.1
     },
     "2025-07": {
      "trades": 148,
-     "pnl_usdt": 3.8
+     "pnl_usdt": -140.6
     },
     "2025-08": {
      "trades": 155,
-     "pnl_usdt": -47.7
+     "pnl_usdt": 3.1
     },
     "2025-09": {
      "trades": 150,
-     "pnl_usdt": 12.6
+     "pnl_usdt": 28.1
     },
     "2025-10": {
      "trades": 157,
-     "pnl_usdt": -87.6
+     "pnl_usdt": -154.2
     },
     "2025-11": {
-     "trades": 152,
-     "pnl_usdt": 174.0
-    },
-    "2025-12": {
-     "trades": 158,
-     "pnl_usdt": 1.5
-    },
-    "2026-01": {
-     "trades": 154,
-     "pnl_usdt": 36.5
-    },
-    "2026-02": {
-     "trades": 139,
+     "trades": 150,
      "pnl_usdt": 61.7
     },
+    "2025-12": {
+     "trades": 155,
+     "pnl_usdt": -102.1
+    },
+    "2026-01": {
+     "trades": 153,
+     "pnl_usdt": 36.2
+    },
+    "2026-02": {
+     "trades": 140,
+     "pnl_usdt": -29.0
+    },
     "2026-03": {
-     "trades": 156,
-     "pnl_usdt": 19.4
+     "trades": 155,
+     "pnl_usdt": 63.7
     },
     "2026-04": {
-     "trades": 150,
-     "pnl_usdt": 4.5
+     "trades": 153,
+     "pnl_usdt": 75.7
     },
     "2026-05": {
      "trades": 155,
-     "pnl_usdt": -97.0
+     "pnl_usdt": -272.2
     },
     "2026-06": {
      "trades": 151,
-     "pnl_usdt": 1.7
+     "pnl_usdt": -33.7
     },
     "2026-07": {
      "trades": 152,
-     "pnl_usdt": -47.3
+     "pnl_usdt": -84.1
     },
     "2026-08": {
-     "trades": 158,
-     "pnl_usdt": -163.5
+     "trades": 157,
+     "pnl_usdt": -32.3
     },
     "2026-09": {
-     "trades": 149,
-     "pnl_usdt": 43.3
+     "trades": 150,
+     "pnl_usdt": 52.9
     },
     "2026-10": {
-     "trades": 147,
-     "pnl_usdt": -44.9
+     "trades": 154,
+     "pnl_usdt": 198.2
+    },
+    "2026-11": {
+     "trades": 31,
+     "pnl_usdt": 11.8
     }
    }
   },
   "model, pred >= 0.5% (main)": {
-   "trades": 2569,
-   "win_pct": 58.8,
-   "avg_net_pct": 0.04,
-   "pnl_usdt": 112.3,
-   "longs": 805,
-   "shorts": 1764,
+   "trades": 2587,
+   "win_pct": 58.4,
+   "avg_net_pct": -0.02,
+   "pnl_usdt": -50.4,
+   "longs": 801,
+   "shorts": 1786,
    "by_year": {
     "2025": {
-     "trades": 1324,
-     "avg_net_pct": 0.12,
-     "pnl_usdt": 160.2
+     "trades": 1319,
+     "avg_net_pct": 0.09,
+     "pnl_usdt": 114.6
     },
     "2026": {
-     "trades": 1245,
-     "avg_net_pct": -0.04,
-     "pnl_usdt": -47.8
+     "trades": 1268,
+     "avg_net_pct": -0.13,
+     "pnl_usdt": -164.9
     }
    },
-   "months_positive": "10/19",
+   "months_positive": "9/20",
    "by_month": {
     "2025-04": {
      "trades": 147,
-     "pnl_usdt": -54.4
+     "pnl_usdt": 15.7
     },
     "2025-05": {
      "trades": 142,
-     "pnl_usdt": -107.2
+     "pnl_usdt": -125.2
     },
     "2025-06": {
      "trades": 134,
-     "pnl_usdt": -7.3
+     "pnl_usdt": -79.6
     },
     "2025-07": {
      "trades": 147,
-     "pnl_usdt": 85.7
+     "pnl_usdt": 77.7
     },
     "2025-08": {
      "trades": 154,
-     "pnl_usdt": 80.0
+     "pnl_usdt": 113.8
     },
     "2025-09": {
      "trades": 147,
-     "pnl_usdt": 30.9
+     "pnl_usdt": 69.6
     },
     "2025-10": {
      "trades": 156,
-     "pnl_usdt": -96.4
+     "pnl_usdt": -80.4
     },
     "2025-11": {
-     "trades": 150,
-     "pnl_usdt": 67.0
+     "trades": 149,
+     "pnl_usdt": 13.7
     },
     "2025-12": {
-     "trades": 147,
-     "pnl_usdt": 161.7
+     "trades": 143,
+     "pnl_usdt": 109.3
     },
     "2026-01": {
-     "trades": 139,
-     "pnl_usdt": 48.6
+     "trades": 136,
+     "pnl_usdt": -22.8
     },
     "2026-02": {
-     "trades": 133,
-     "pnl_usdt": -97.0
+     "trades": 126,
+     "pnl_usdt": -67.7
     },
     "2026-03": {
-     "trades": 132,
-     "pnl_usdt": 61.7
+     "trades": 131,
+     "pnl_usdt": 71.8
     },
     "2026-04": {
-     "trades": 139,
-     "pnl_usdt": 36.9
+     "trades": 143,
+     "pnl_usdt": -29.0
     },
     "2026-05": {
-     "trades": 135,
-     "pnl_usdt": -100.2
+     "trades": 143,
+     "pnl_usdt": -107.1
     },
     "2026-06": {
-     "trades": 114,
-     "pnl_usdt": 33.5
+     "trades": 102,
+     "pnl_usdt": -40.0
     },
     "2026-07": {
-     "trades": 127,
-     "pnl_usdt": -43.2
+     "trades": 118,
+     "pnl_usdt": -107.6
     },
     "2026-08": {
      "trades": 141,
-     "pnl_usdt": -0.3
+     "pnl_usdt": 143.7
     },
     "2026-09": {
-     "trades": 113,
-     "pnl_usdt": -12.3
+     "trades": 132,
+     "pnl_usdt": 40.0
     },
     "2026-10": {
-     "trades": 72,
-     "pnl_usdt": 24.5
+     "trades": 80,
+     "pnl_usdt": -25.5
+    },
+    "2026-11": {
+     "trades": 16,
+     "pnl_usdt": -20.8
     }
    }
   },
   "model, pred >= 1.0%": {
-   "trades": 1921,
-   "win_pct": 58.1,
-   "avg_net_pct": -0.04,
-   "pnl_usdt": -68.7,
-   "longs": 610,
-   "shorts": 1311,
+   "trades": 1942,
+   "win_pct": 57.6,
+   "avg_net_pct": -0.08,
+   "pnl_usdt": -163.8,
+   "longs": 615,
+   "shorts": 1327,
    "by_year": {
     "2025": {
-     "trades": 1250,
-     "avg_net_pct": -0.18,
-     "pnl_usdt": -219.2
+     "trades": 1226,
+     "avg_net_pct": -0.23,
+     "pnl_usdt": -277.7
     },
     "2026": {
-     "trades": 671,
-     "avg_net_pct": 0.22,
-     "pnl_usdt": 150.4
+     "trades": 716,
+     "avg_net_pct": 0.16,
+     "pnl_usdt": 113.9
     }
    },
-   "months_positive": "12/19",
+   "months_positive": "11/20",
    "by_month": {
     "2025-04": {
      "trades": 144,
-     "pnl_usdt": -131.0
+     "pnl_usdt": -133.0
     },
     "2025-05": {
      "trades": 141,
-     "pnl_usdt": -112.3
+     "pnl_usdt": -42.9
     },
     "2025-06": {
      "trades": 128,
-     "pnl_usdt": 37.6
+     "pnl_usdt": -12.3
     },
     "2025-07": {
      "trades": 141,
-     "pnl_usdt": 42.3
+     "pnl_usdt": 95.7
     },
     "2025-08": {
      "trades": 145,
-     "pnl_usdt": 47.1
+     "pnl_usdt": 49.9
     },
     "2025-09": {
      "trades": 145,
-     "pnl_usdt": -119.9
+     "pnl_usdt": -115.3
     },
     "2025-10": {
      "trades": 153,
-     "pnl_usdt": 10.1
+     "pnl_usdt": 39.5
     },
     "2025-11": {
-     "trades": 143,
-     "pnl_usdt": -99.0
+     "trades": 129,
+     "pnl_usdt": -174.6
     },
     "2025-12": {
-     "trades": 110,
-     "pnl_usdt": 106.0
+     "trades": 100,
+     "pnl_usdt": 15.3
     },
     "2026-01": {
-     "trades": 98,
-     "pnl_usdt": 92.3
+     "trades": 69,
+     "pnl_usdt": 41.5
     },
     "2026-02": {
-     "trades": 90,
-     "pnl_usdt": 19.9
+     "trades": 100,
+     "pnl_usdt": 37.2
     },
     "2026-03": {
-     "trades": 70,
-     "pnl_usdt": 20.0
+     "trades": 81,
+     "pnl_usdt": 2.1
     },
     "2026-04": {
-     "trades": 79,
-     "pnl_usdt": 36.2
+     "trades": 101,
+     "pnl_usdt": 46.4
     },
     "2026-05": {
-     "trades": 69,
-     "pnl_usdt": -25.0
+     "trades": 93,
+     "pnl_usdt": -2.2
     },
     "2026-06": {
-     "trades": 37,
-     "pnl_usdt": 83.1
+     "trades": 35,
+     "pnl_usdt": -40.8
     },
     "2026-07": {
-     "trades": 63,
-     "pnl_usdt": -90.3
+     "trades": 47,
+     "pnl_usdt": -155.0
     },
     "2026-08": {
-     "trades": 92,
-     "pnl_usdt": 20.3
+     "trades": 71,
+     "pnl_usdt": 74.9
     },
     "2026-09": {
-     "trades": 50,
-     "pnl_usdt": 22.5
+     "trades": 81,
+     "pnl_usdt": 80.9
     },
     "2026-10": {
-     "trades": 23,
-     "pnl_usdt": -28.6
+     "trades": 30,
+     "pnl_usdt": 37.6
+    },
+    "2026-11": {
+     "trades": 8,
+     "pnl_usdt": -8.7
     }
    }
   }

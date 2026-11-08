@@ -13,8 +13,9 @@ profit and loss on the margin are that move times the leverage. A leveraged conf
 hour; in backtests it comes from user_data/breadth_1h.feather.
 """
 import json
+import logging
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import joblib
@@ -28,6 +29,7 @@ USER_DATA = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(USER_DATA))
 from ml_features import BREADTH_WINDOW, add_market, breadth_from, btc_features, is_event, pair_features  # noqa: E402
 
+logger = logging.getLogger(__name__)
 BTC = "BTC/USDT:USDT"
 # Every scored event (traded or not) is appended here, for forward shadow tests (user_data/forward_shadow.py).
 EVENT_LOG = USER_DATA / "pumpml_events.jsonl"
@@ -54,9 +56,66 @@ class PumpML(IStrategy):
         b = joblib.load(USER_DATA / "models" / "pumpml.joblib")
         self.feats, self.min_pred = b["features"], b["min_pred"]
         self.m_long, self.m_short = b["long"], b["short"]
+        self.model_trained = b.get("trained_at")
+        # head-to-head (PREREG_h2h.md): the old frozen model also scores every event, logged only, never traded
+        self.m_cmp = None
+        try:
+            c = joblib.load(USER_DATA / "models" / "compare_old.joblib")
+            if c["features"] == self.feats:
+                self.m_cmp = (c["long"], c["short"], c.get("trained_at"))
+        except Exception:  # noqa: BLE001
+            self.m_cmp = None
         self._breadth = None
         self._breadth_key = None
         self._logged = set()
+        # 1.5% rule as a virtual wallet (replaces the separate PumpML15 bot, see user_data/virtual_book.py)
+        self._vbook = None
+        if (type(self).__name__ == "PumpML" and self.dp.runmode in (RunMode.LIVE, RunMode.DRY_RUN)
+                and self.config.get("pumpml15_virtual", True)):
+            try:
+                from virtual_book import VirtualBook
+                self._vbook = VirtualBook(str(USER_DATA / "pumpml15_virtual.json"))
+                if not self._vbook.s["started"]:
+                    self._vbook.s["started"] = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+                self._vbook.save()
+            except Exception:  # noqa: BLE001
+                logger.exception("virtual 1.5%% book disabled")
+                self._vbook = None
+
+    def _vbook_tick(self, now: datetime) -> None:
+        """Run the virtual 1.5% book. Never lets an error reach trading."""
+        vb = getattr(self, "_vbook", None)
+        if vb is None:
+            return
+        try:
+            changed = False
+            hour = now.replace(minute=0, second=0, microsecond=0)
+            if vb.last_candle_check != hour:          # stop wicks in closed hourly candles
+                vb.last_candle_check = hour
+                for t in vb.open_trades():
+                    df = self.dp.get_pair_dataframe(t["pair"], self.timeframe)
+                    if df is None or not len(df):
+                        continue
+                    for r in df.tail(26).itertuples():
+                        if r.date + timedelta(hours=1) <= now:
+                            vb.check_candle(t, r.date.to_pydatetime(), float(r.high), float(r.low), now)
+                changed = True
+            if vb.last_poll is None or (now - vb.last_poll).total_seconds() >= 15:
+                vb.last_poll = now
+                for t in vb.open_trades():
+                    px = (self.dp.ticker(t["pair"]) or {}).get("last")
+                    if px:
+                        vb.check_price(t, float(px), now)
+                        changed = changed or not t["is_open"]
+            if vb.signals:
+                latest = max(vb.signals)
+                cand = datetime.strptime(latest, "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone.utc)
+                vb.enter(now, cand, lambda p: (self.dp.ticker(p) or {}).get("last"))
+                changed = True
+            if changed:
+                vb.save()
+        except Exception:  # noqa: BLE001
+            logger.exception("virtual 1.5%% book tick failed")
 
     def informative_pairs(self):
         return [(BTC, self.timeframe)]
@@ -68,6 +127,7 @@ class PumpML(IStrategy):
     def bot_loop_start(self, current_time: datetime, **kwargs) -> None:
         if self.dp.runmode not in (RunMode.LIVE, RunMode.DRY_RUN):
             return
+        self._vbook_tick(current_time)
         key = current_time.replace(minute=0, second=0, microsecond=0)
         if self._breadth_key == key:
             return
@@ -98,9 +158,27 @@ class PumpML(IStrategy):
             X = f.loc[rows, self.feats]
             f.loc[rows, "pred_long"] = self.m_long.predict(X)
             f.loc[rows, "pred_short"] = self.m_short.predict(X)
-        for c in ("event", "pred_long", "pred_short", "jump", "vol_x", "breadth"):
+        f["pred_long_old"] = np.nan
+        f["pred_short_old"] = np.nan
+        if getattr(self, "m_cmp", None) is not None and len(rows):
+            try:
+                last = rows[-1:]                           # only the latest candle is logged
+                f.loc[last, "pred_long_old"] = self.m_cmp[0].predict(f.loc[last, self.feats])
+                f.loc[last, "pred_short_old"] = self.m_cmp[1].predict(f.loc[last, self.feats])
+            except Exception:  # noqa: BLE001
+                pass
+        for c in ("event", "pred_long", "pred_short", "pred_long_old", "pred_short_old", "jump", "vol_x", "breadth"):
             df[c] = f[c].to_numpy()
         self._log_event(df, metadata["pair"])
+        vb = getattr(self, "_vbook", None)
+        if vb is not None and len(df):
+            try:
+                last = df.iloc[-1]
+                if bool(last["event"]) and not pd.isna(last["pred_long"]):
+                    vb.offer(metadata["pair"], last["date"].to_pydatetime(), last["pred_long"], last["pred_short"],
+                             last["close"])
+            except Exception:  # noqa: BLE001
+                pass
         return df
 
     def _log_event(self, df: DataFrame, pair: str) -> None:
@@ -117,7 +195,11 @@ class PumpML(IStrategy):
             self._logged.add(key)
             rec = {"pair": pair, "candle": str(last["date"]), "entry_time": str(last["date"] + timedelta(hours=1)),
                    "close": float(last["close"]), "pred_long": float(last["pred_long"]),
-                   "pred_short": float(last["pred_short"]), "logged_at": datetime.utcnow().isoformat() + "Z"}
+                   "pred_short": float(last["pred_short"]), "logged_at": datetime.utcnow().isoformat() + "Z",
+                   "model": getattr(self, "model_trained", None)}
+            if "pred_long_old" in last and not pd.isna(last["pred_long_old"]):
+                rec |= {"pred_long_old": float(last["pred_long_old"]), "pred_short_old": float(last["pred_short_old"]),
+                        "model_old": self.m_cmp[2] if self.m_cmp else None}
             with open(EVENT_LOG, "a", encoding="utf-8") as fh:
                 fh.write(json.dumps(rec) + "\n")
         except Exception:  # noqa: BLE001
