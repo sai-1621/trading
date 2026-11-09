@@ -56,7 +56,8 @@ def _init(stocks=None, nifty=None):
 def variant_params(v):
     return rule.live_params(or_minutes=v["or_minutes"], stop_rule=v["stop_rule"], target_r=v["target_r"],
                             entry_to=market.hhmm(v["entry_to"]), trend_filter=True,
-                            min_volume_x=1.0, entry_from=market.hhmm("09:30"), flat_by=market.hhmm("15:10"))
+                            min_volume_x=1.0, entry_from=market.hhmm("09:30"), flat_by=market.hhmm("15:10"),
+                            skip_thin=False)  # the pre-registered rule: a thin first close above means no trade
 
 
 def trades(v, period):

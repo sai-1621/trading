@@ -1,7 +1,9 @@
 """The opening-range breakout rule on one past NSE session, shared by the Time Machine's history and backtest.py.
 
-It mirrors the live bot: the first bar after the range that closes above the range high is the only possible
-trigger; it must close inside the entry window and pass the volume check, or the session has no trade.
+It mirrors the live bot: the trigger is the first bar after the range that closes above the range high with
+enough volume (a thin close above is skipped, as in trader-entry); it must close inside the entry window, or the
+session has no trade. Parameter sets without "skip_thin" (the pre-registered research) keep the old rule: the first
+close above is the only possible trigger, and a thin one means no trade.
 Costs are Angel One's real charges for a position sized the way the Budget Manager would size it.
 """
 import config
@@ -14,7 +16,7 @@ def live_params(**over):
     p = {"or_minutes": config.OR_MINUTES, "stop_rule": config.STOP_RULE, "target_r": config.TARGET_R,
          "min_volume_x": config.MIN_VOLUME_X, "entry_from": market.hhmm(config.NO_ENTRIES_BEFORE),
          "entry_to": market.hhmm(config.NO_ENTRIES_AFTER), "flat_by": market.hhmm(config.FLAT_BY),
-         "trend_filter": config.TREND_FILTER}
+         "trend_filter": config.TREND_FILTER, "skip_thin": True}
     p.update(over)
     return p
 
@@ -43,13 +45,17 @@ def simulate_day(bars, p, spread_frac=None, above_ma20=None):
     n_or = p["or_minutes"] // market.BAR_MIN
     hi, lo = max(b["h"] for b in bars[:n_or]), min(b["l"] for b in bars[:n_or])
     avg_vol = sum(b["v"] for b in bars[:n_or]) / n_or
-    trig = next((i for i in range(n_or, len(bars)) if bars[i]["c"] > hi), None)
+    def thin(i):
+        return p["min_volume_x"] > 0 and bars[i]["v"] < p["min_volume_x"] * avg_vol
+
+    skip_thin = p.get("skip_thin", False)
+    trig = next((i for i in range(n_or, len(bars)) if bars[i]["c"] > hi and not (skip_thin and thin(i))), None)
     if trig is None:
         return None
     close_min = market.OPEN_MIN + (trig + 1) * market.BAR_MIN
     if not (p["entry_from"] <= close_min <= p["entry_to"]):
         return None
-    if p["min_volume_x"] > 0 and bars[trig]["v"] < p["min_volume_x"] * avg_vol:
+    if thin(trig):
         return None
 
     e = bars[trig]["c"] * (1 + spread_frac / 2)

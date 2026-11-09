@@ -180,6 +180,8 @@ class Bot:
                  "history %s trades: %s target %s stop, avg R after costs %s | seed %s", sym, tm["verdict"],
                  tm["target_first_pct"], tm["stop_first_pct"], tm["neither_pct"], tm["avg_r_after_costs"],
                  h["trades"], h["target"], h["stop"], h["avg_r_net"], tm["seed"])
+        for note in tm.get("notes", []):
+            log.info("TIME MACHINE: %s %s", sym, note)
         rec["time_machine"] = {k: tm[k] for k in ("verdict", "target_first_pct", "stop_first_pct", "neither_pct", "avg_r_after_costs")}
         if not tm["take"]:
             log.info("TIME MACHINE: %s skipped, odds do not beat break-even after charges", sym)
@@ -192,12 +194,19 @@ class Bot:
         log.info("BUDGET: %s buy %d shares (Rs %.0f), max loss Rs %.0f incl. charges, decided by %s",
                  sym, order["qty"], order["value"], order["max_loss"], order["decided_by"])
         rec.update(qty=order["qty"], value=order["value"], max_loss=order["max_loss"])
-        verdict = risk.check_entry(order, plan, s, cash, s["news"].get(sym))
+        # trader-risk measures from the higher of the plan's entry and a fresh price: the Time Machine takes a while
+        try:
+            bid, ask, _ = self.data.quote(sym)
+        except Exception as e:  # noqa: BLE001
+            log.warning("RISK: no fresh price for %s (%s), checking from the plan's entry", sym, e)
+        verdict = risk.check_entry(order, plan, s, cash, s["news"].get(sym), fresh_price=ask)
         write_json("risk.json", verdict)
         if verdict["verdict"] == "BLOCK":
             log.info("RISK: %s BLOCK: %s", sym, "; ".join(verdict["reasons"]))
             return skip("risk", "; ".join(verdict["reasons"]))
-        log.info("RISK: %s PASS", sym)
+        log.info("RISK: %s PASS (checked from entry %.2f, max loss Rs %.0f, reward:risk %.2f)", sym,
+                 verdict["checked_entry"], verdict["max_loss"], verdict["reward_risk"])
+        order = {**order, "max_loss": max(order["max_loss"], verdict["max_loss"])}  # today's risk counts the worse one
         pos = broker.buy(self.angel, s, order, plan, ask)
         journal.signal({**rec, "decision": "BOUGHT" if pos else "SKIPPED", "stage": "broker",
                         "reason": "" if pos else "order not filled", "fill": pos["entry"] if pos else None})

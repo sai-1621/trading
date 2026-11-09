@@ -7,7 +7,8 @@
    both counts as the stop.
 3. 10,000 replays (seed 19): target first, stop first, neither (still open at FLAT_BY).
 4. The history: the same rule (skills/rule.py) on every past session, after Angel One's charges.
-5. Verdict vs break-even 1/(1+R), adjusted for charges and spread. The bot only trades when the odds
+5. Verdict vs break-even 1/(1+R), adjusted for charges and spread, with trader-timemachine's notes under it
+   (over 40% of replays hit neither; the average R goes against the lean). The bot only trades when the odds
    clear break-even after costs and the average R after costs is positive.
 """
 import random
@@ -21,6 +22,7 @@ import market
 from skills import rule
 
 WINDOW = 2
+MANY_NEITHER = 0.40
 
 
 def needed_bars():
@@ -113,8 +115,16 @@ def replay(full, plan, spread, replays=None):
     else:
         verdict = "Strongly toward the target" if edge > 0 else "Strongly toward the stop"
 
+    # trader-timemachine's lines under the verdict
+    notes = []
+    if nf / n > MANY_NEITHER:
+        notes.append(f"{nf / n * 100:.1f}% of the replays hit neither by {config.FLAT_BY}; "
+                     f"the price at {config.FLAT_BY} decides those")
+    if decided and abs(edge) >= 5 and (edge > 0) != (avg_r_net > 0):
+        notes.append(f"average R after costs is {avg_r_net:+.3f}, against the lean")
+
     return {"ok": True, "take": decided > 0 and edge >= config.TM_MIN_EDGE_PTS and avg_r_net > 0,
-            "verdict": verdict, "seed": config.TM_SEED, "replays": n, "sessions": len(full),
+            "verdict": verdict, "notes": notes, "seed": config.TM_SEED, "replays": n, "sessions": len(full),
             "target_first_pct": round(tf / n * 100, 1), "stop_first_pct": round(sf / n * 100, 1),
             "neither_pct": round(nf / n * 100, 1), "green_pct": round(green / n * 100, 1),
             "avg_r": round(r_total / n, 3), "cost_r": round(cost_r, 3), "avg_r_after_costs": round(avg_r_net, 3),

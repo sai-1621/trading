@@ -15,7 +15,10 @@ import costs
 def size(plan, cash):
     e, stop = plan["entry"], plan["stop"]
     risk = e - stop
-    buffer = config.BUDGET * config.CASH_BUFFER_PCT / 100
+    if risk <= 0:
+        return {"symbol": plan["symbol"], "qty": 0, "entry": e, "stop": stop, "target": plan["target"],
+                "max_loss": 0.0, "value": 0.0, "ok": False, "reason": f"stop {stop} is not below the entry {e}"}
+    buffer =config.BUDGET * config.CASH_BUFFER_PCT / 100
     usable = max(0.0, min(cash, config.BUDGET) - buffer)
     limits = {
         "position cap": config.BUDGET * config.MAX_POSITION_PCT / 100 * config.LEVERAGE / e,
@@ -35,6 +38,14 @@ def size(plan, cash):
            "entry": e, "value": round(value, 2), "stop": stop, "target": plan["target"],
            "max_loss": round(max_loss, 2), "charges_round_trip": round(costs.round_trip(value, value), 2),
            "decided_by": decided_by, "limits": {k: int(v) for k, v in limits.items()}}
+    # trader-budget's refusals: no order is written for these
+    rr = (plan["target"] - e) / risk
+    if plan["target"] <= e:
+        return {**out, "ok": False, "reason": f"target {plan['target']} is not above the entry {e}"}
+    if rr < config.MIN_REWARD_RISK:
+        return {**out, "ok": False, "reason": f"reward:risk {rr:.2f} under {config.MIN_REWARD_RISK}"}
+    if plan["symbol"] in config.BLOCKED:
+        return {**out, "ok": False, "reason": "blocked stock"}
     if qty <= 0:
         return {**out, "ok": False, "reason": f"0 shares ({decided_by} decided it)"}
     if value < config.MIN_ORDER:

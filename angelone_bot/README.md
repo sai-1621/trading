@@ -7,17 +7,19 @@ Long only. Runs in **paper mode** (fake money, real prices) and refuses real mon
 > **Results on 27 Oct 2026:** the opening-range rule lost about 0.2R per trade after charges on 20 unseen sessions
 > (40 stocks). None of the swing strategies in `research.py` beat buy-and-hold over the last ~20 months.
 > Do not trade these rules with real money. Paper trade, re-test later, or bring a new rule and test it the same way.
+> These results used the older entry rule (a thin first close above = no trade). Since 8 Nov 2026 the live rule skips
+> the thin bar and takes the next strong close, as trader-entry does; re-run `backtest.py` for numbers on that rule.
 
 ## How it trades (all times IST)
 | step | skill | what it does |
 | --- | --- | --- |
 | 1 | Scanner | Before 9:15: the 30 most traded NIFTY 100 stocks (by 20-day traded value), tags 20-day breakout, bull flag, reclaim of the 20-day average, oversold, oversold bounce, and the uptrend filter |
 | 2 | News | Today's Google News headlines per stock; **results or board meeting news = no new trade in that stock today** |
-| 3 | Entry | Opening range 9:15–9:30 on 5-minute bars; the first bar that **closes** above it (or above the 20-day closing high) with volume at least the range average, between 9:30 and 14:30 |
+| 3 | Entry | Opening range 9:15–9:30 on 5-minute bars; the first bar that **closes** above it (or above the 20-day closing high) with volume at least the range average (a thin close above is skipped and the next strong one counts), between 9:30 and 14:30 |
 | 4 | Exit plan | Stop at the range midpoint (ATR for the 20-day setup), rounded to the 5-paise tick; target 2R; out by 15:10 |
 | 5 | Time Machine | 10,000 replays from the stock's last 60 days of 5-minute bars + the same rule on every past session. **Trades only if the odds beat break-even after charges** |
-| 6 | Budget | Whole shares; the smallest of max loss (Rs 500 incl. charges), position cap, max order, cash after a 10% buffer |
-| 7 | Risk | Daily loss limit, 3 trades a day, entry window, market open, duplicates, 2 open positions, news risk |
+| 6 | Budget | Whole shares; the smallest of max loss (Rs 500 incl. charges), position cap, max order, cash after a 10% buffer. Refuses reward:risk under the minimum, a target not above the entry, a blocked stock |
+| 7 | Risk | Re-checks loss at the stop and reward:risk from the **higher of the plan's entry and a fresh price**; daily loss limit, 3 trades a day, entry window, market open, duplicates, 2 open positions, order size and position cap, news risk |
 | 8 | Broker | Intraday market order on Angel One (or paper) |
 | 9 | Alerts | Every 20 seconds: sells at the stop, the target or 15:10 (before Angel One's auto square-off, which costs extra) |
 

@@ -2,7 +2,8 @@
 
 Opening range (orb): high and low of the first OR_MINUTES (9:15-9:30 by default) on 5-minute bars.
 Level: the 20-day closing high from the scanner, when it sits above the opening range.
-The trigger is the FIRST completed bar after the range that CLOSES above the level; only the newest closed
+The trigger is the FIRST completed bar after the range that CLOSES above the level with volume of at least
+MIN_VOLUME_X times the range average (a thin close above is skipped, as in trader-entry); only the newest closed
 bar can trigger (an older one is a late entry, a different trade). Long side only. It never places an order.
 """
 from datetime import timedelta
@@ -14,6 +15,10 @@ from skills import today_bars
 
 def closed_today(bars, t):
     return [b for b in today_bars(bars, t.date()) if b["t"] + timedelta(minutes=market.BAR_MIN) <= t]
+
+
+def thin(bar, or_vol):
+    return config.MIN_VOLUME_X > 0 and bar["v"] < config.MIN_VOLUME_X * or_vol
 
 
 def check(symbol, bars, level_20d, t):
@@ -42,14 +47,13 @@ def check(symbol, bars, level_20d, t):
     if config.USE_LEVEL_SETUP and level_20d and level_20d > or_high:
         setups.append(("level", level_20d))
     for setup, level in setups:
-        above = [b for b in after if b["c"] > level]
+        above = [b for b in after if b["c"] > level and not thin(b, or_vol)]
         if not above:
+            if last["c"] > level:
+                out.update(status="waiting", setup=setup, level=level, note="closed above, volume too low")
             continue
         if above[0]["t"] != last["t"]:
             out.update(status="expired", setup=setup, level=level)
-            continue
-        if config.MIN_VOLUME_X > 0 and last["v"] < config.MIN_VOLUME_X * or_vol:
-            out.update(status="waiting", setup=setup, level=level, note="closed above, volume too low")
             continue
         out.update(status="triggered", setup=setup, level=level, price=last["c"],
                    bar_time=last["t"].isoformat(), bar_index=market.bar_index(last["t"]))

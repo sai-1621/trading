@@ -2,17 +2,21 @@
 
     python build_share.py
 
+The crypto (freqtrade) bots come from the EC2 server when the SSH tunnel to it is open; otherwise from this PC.
 Reads the same files as dashboard.py (never changes them) and embeds a snapshot of the trades, signals,
 skipped-signal follow-ups, watchlists and strategy test results. No process ids, file paths or logs.
 """
 import json
+import os
 import re
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
 import dashboard
 
 OUT = Path(__file__).resolve().parent / "share" / "paper-trading.html"
+REMOTE_URL = os.getenv("SHARE_REMOTE", "http://localhost:8800/api/data")  # the EC2 dashboard, through the SSH tunnel
 
 
 def _j(p):
@@ -54,8 +58,26 @@ def tests_for(bot_dir):
     return out
 
 
+def remote_bots(url):
+    """The crypto bots run on the EC2 server. With the SSH tunnel open
+    (ssh -i Trading-bot.pem -L 8800:localhost:8800 ec2-user@3.27.152.78), the server's dashboard answers on
+    localhost:8800; its freqtrade bots replace the stale local copies. Returns {} when the tunnel is closed."""
+    try:
+        with urllib.request.urlopen(url, timeout=10) as r:
+            bots = json.load(r)["bots"]
+    except (OSError, ValueError, KeyError) as e:
+        print(f"Server data not used ({e}); is the SSH tunnel open? Crypto bots come from this PC's files.")
+        return {}
+    return {b["id"]: b for b in bots if b.get("kind") == "freqtrade"}
+
+
 def build():
     data = dashboard.collect()
+    remote = remote_bots(REMOTE_URL)
+    for i, b in enumerate(data["bots"]):
+        if b.get("id") in remote:
+            data["bots"][i] = {**remote[b["id"]], "source": "EC2 server"}
+            print(f"{b['id']}: live data from the EC2 server")
     from sip_view import SIP_JS
     from ft_view import FT_JS
     from expiry_view import EXPIRY_JS
@@ -65,7 +87,7 @@ def build():
     EXPIRY_JS = re.sub(r" Refresh: <code>.*?</code>", "", EXPIRY_JS)
     views = SIP_JS + FT_JS + EXPIRY_JS + SWING_JS + TREND_JS
     for b, cfg in zip(data["bots"], dashboard.BOTS):
-        for k in ("started", "log", "log_age_s", "exists"):
+        for k in ("started", "log", "log_age_s", "log_age", "exists"):
             b.pop(k, None)
         if isinstance(b.get("status"), dict):
             b["status"].pop("pid", None)
